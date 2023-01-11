@@ -6,25 +6,19 @@ description: A week-to-week description of the content covered in the course.
 course:
   edstem: https://edstem.org/us/courses/25695/
   faq: https://ds100.org/fa22faq
-currWeekNumber: 12
+currWeekNumber: 1
 ---
 
 # Principles and Techniques of Data Science
 
 {: .mb-2 }
-UC Berkeley, Fall 2022
+UC Berkeley, Spring 2023
 {: .mb-0 .fs-6 .text-grey-dk-000 }
-
+<!-- 
 <p>
 <a href="https://berkeley.zoom.us/j/93160108652?pwd=dHlJcDlBSml4RGZ5NGhBTzFaS1dTZz09" class="btn btn-blue">Lecture Zoom</a>
 <a href="https://edstem.org/us/courses/25695/discussion/1699429" class="btn btn-purple">Discussion Sign-Up</a>
 <a href="https://oh.ds100.org/" class="btn btn-green">Office Hour Queue</a>
-</p>
-<!-- 
-<p>
-<a href="https://berkeley.zoom.us/j/94237360710" class="btn btn-blue">Lecture Zoom</a>
-<a href="https://edstem.org/us/courses/15436/discussion/1021263" class="btn btn-purple">Discussion Sign-Up/Zoom</a>
-<a href="{{site.baseurl}}/calendar" class="btn btn-green">Office Hour</a>
 </p>
 -->
 
@@ -39,6 +33,7 @@ UC Berkeley, Fall 2022
 
 Jump to current week: [here](#week-{{page.currWeekNumber}}).
 
+# **This site is currently being built**
 + Frequently Asked Questions: Before posting on the [class Ed]({{page.course.edstem}}), please read the [class FAQ page]({{page.course.faq}}).
 + The [Syllabus]({{site.baseurl}}/syllabus) contains a detailed explanation of how each course component will work this Fall, please take time to take a look.
 + **Note:** The schedule of lectures and assignments is subject to change.

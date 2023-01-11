@@ -1,16 +1,19 @@
 ---
-title: Week 14
-weekNumber: 14
+title: Week 13
+weekNumber: 13
 days:
-- date: 2022-11-22
+- date: 2023-04-18
   events:
-    ? '**Lecture 26**{: .label .label-lecture } [Decision Trees](lecture/lec26)'
-    : '[Ch. 23](https://www.textbook.ds100.org/ch/23/dtrees_intro.html)'
-    ? '**Discussion 13**{: .label .label-disc } Removed due to strike.' 
-    ? '**Lab 14**{: .label .label-lab } [Decision Trees & Random Forests](https://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/fa22&urlpath=lab/tree/fa22/lab/lab14/lab14.ipynb)'
-    ? '**Project 2B**{: .label .label-hw } [Spam & Ham II](https://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/fa22&urlpath=lab/tree/fa22/proj/proj2b/proj2b.ipynb)'
+    ? '**Lecture 23**{: .label .label-lecture } PCA I'
     : ''
-- date: 2022-11-24
+- date: 2023-04-20
   events:
-    ? '**No Lecture**{: .label .label-lecture } THANKSGIVING'
+    ? '**Lecture 24**{: .label .label-lecture } PCA II'
+    ? '**Quick Check 13**{: .label .label-survey } Quick Check 13'
+    : ''
+- date: 2023-04-21
+  events:
+    ? '**Lab 12**{: .label .label-lab } PCA'
+    ? '**Project 2B**{: .label .label-hw } Spam & Ham II'
+    : ''
 ---

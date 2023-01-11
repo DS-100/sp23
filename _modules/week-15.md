@@ -1,15 +1,17 @@
 ---
-title: Week 15
-weekNumber: 15
+title: Week 14
+weekNumber: 14
 days:
-- date: 2022-11-29
+- date: 2023-04-25
   events:
-    ? '**Lecture 27**{: .label .label-lecture } [Clustering](lecture/lec27)'
-    : '[Ch. 24](https://www.textbook.ds100.org/ch/24/clustering_intro.html)'
-    ? '**Discussion 14**{: .label .label-disc } Removed due to strike.' 
-    ? '**Lab 15**{: .label .label-lab } Clustering'
+    ? '**Lecture 25**{: .label .label-lecture } KMeans Clustering'
     : ''
-- date: 2022-12-01
+- date: 2023-04-27
   events:
-    ? '**Lecture 28**{: .label .label-lecture } [Closing Lecture: end of course logistics](lecture/lec28)'
+    ? '**Lecture 26**{: .label .label-lecture } Guest + closing'
+    : ''
+- date: 2023-04-28
+  events:
+    ? '**Lab 14**{: .label .label-lab } Clustering'
+    : ''
 ---
