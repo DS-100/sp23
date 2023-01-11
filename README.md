@@ -1,21 +1,71 @@
 ## Data 100 Fall 2022 website
 
-Public facing repo for Data 100, Fall 2022
+This [video](https://www.youtube.com/watch?v=azPPK5aOcV0) walks you through how to make changes to the website (just replace all instances of `fa19` with `fa22`).
 
-Note to staff: **Always** pull changes before making any edits. Merge conflicts (even those resolved automatically) can break things on the Datahub side.
+To add Jupyter notebook links to the webpage, use `nbgitpuller`: https://jupyterhub.github.io/nbgitpuller/link
 
-The `main` branch is used for Datahub. To edit ds100.org github pages (Syllabus, etc.), switch to the `gh-pages` branch. Some common commands:
+The following text is taken from the standard GitHub Pages README.
 
+<br>
+
+You can use the [editor on GitHub](https://github.com/pmarsceill/test-jtd/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+### Markdown
+
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
+Syntax highlighted code block
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
 ```
-git branch -a         # see all local and remote branches
 
-git checkout gh-pages                # if branch exists locally, or
-git checkout --track origin/gh-pages # if branch exists remotely
-...                   # edit, commit
-git push              # pushes local branch to remote branch
-```
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
+### Jekyll Themes
 
-#### Note to future semesters:
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pmarsceill/test-jtd/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-When replicating this repo for future semesters, simply create a new repo in DS-100 and select `import`.  
+### Support or Contact
+
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+### Running Locally
+
+This website is written using Jekyll Bootstrap with some modifications to
+improve support for github pages.
+
+Install `rvm`: https://rvm.io/ or `rbenv`: https://github.com/rbenv/rbenv. `rbenv` might work better.
+
+Install Ruby 2.2.0:
+
+    rvm install 2.2.0
+
+Clone this repo:
+
+    git clone https://github.com/DS-100/DS-100.github.io
+
+In the repo directory, run:
+
+    gem install bundler
+    bundle install
+
+Finally, serve the project locally with:
+
+    jekyll serve
+
+This will start the local Jekyll server at http://localhost:4000.
