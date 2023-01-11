@@ -5,7 +5,9 @@ days:
 - date: 2023-03-07
   events:
     ? '**Lecture 15**{: .label .label-lecture } Cross-Validation / Regularization'
-    ? '**Quick Check 1**{: .label .label-survey } Quick Check 1'
+    ? '**Discussion 7**{: .label .label-disc } Gradient Descent, Feature Engineering, Housing I' 
+    : ''
+    ? '**Lecture Participation 8**{: .label .label-survey }'
     : ''
 - date: 2023-03-09
   events:

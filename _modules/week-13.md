@@ -5,11 +5,13 @@ days:
 - date: 2023-04-18
   events:
     ? '**Lecture 23**{: .label .label-lecture } Logistic regression I'
+    ? '**Discussion 11**{: .label .label-disc } SQL' 
+    : ''
+    ? '**Lecture Participation 12**{: .label .label-survey }'
     : ''
 - date: 2023-04-20
   events:
     ? '**Lecture 24**{: .label .label-lecture } Logistic regression II'
-    ? '**Quick Check 13**{: .label .label-survey } Quick Check 13~.'
     : ''
 - date: 2023-04-21
   events:

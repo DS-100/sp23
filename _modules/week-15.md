@@ -4,11 +4,14 @@ weekNumber: 14
 days:
 - date: 2023-04-25
   events:
-    ? '**Lecture 25**{: .label .label-lecture } KMeans Clustering'
+    ? '**Lecture 27**{: .label .label-lecture } KMeans Clustering'
+    ? '**Discussion 13**{: .label .label-disc } PCA' 
+    : ''
+    ? '**Lecture Participation 14**{: .label .label-survey }'
     : ''
 - date: 2023-04-27
   events:
-    ? '**Lecture 26**{: .label .label-lecture } Guest + closing'
+    ? '**Lecture 28**{: .label .label-lecture } Guest + Closing'
     : ''
 - date: 2023-04-28
   events:

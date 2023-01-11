@@ -5,7 +5,9 @@ days:
 - date: 2023-03-14
   events:
     ? '**Lecture 17**{: .label .label-lecture } Probability II'
-    ? '**Quick Check 1**{: .label .label-survey } Quick Check 1'
+    ? '**Discussion 8**{: .label .label-disc } Cross-Validation and Regularization' 
+    : ''
+    ? '**Lecture Participation 9**{: .label .label-survey }'
     : ''
 - date: 2023-03-16
   events:

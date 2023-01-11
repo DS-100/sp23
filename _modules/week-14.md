@@ -4,12 +4,14 @@ weekNumber: 13
 days:
 - date: 2023-04-18
   events:
-    ? '**Lecture 23**{: .label .label-lecture } PCA I'
+    ? '**Lecture 25**{: .label .label-lecture } PCA I'
+    ? '**Discussion 12**{: .label .label-disc } Logistic Regression' 
+    : ''
+    ? '**Lecture Participation 13**{: .label .label-survey }'
     : ''
 - date: 2023-04-20
   events:
-    ? '**Lecture 24**{: .label .label-lecture } PCA II'
-    ? '**Quick Check 13**{: .label .label-survey } Quick Check 13'
+    ? '**Lecture 26**{: .label .label-lecture } PCA II'
     : ''
 - date: 2023-04-21
   events:

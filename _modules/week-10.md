@@ -7,7 +7,7 @@ days:
     ? '**Lecture 19**{: .label .label-lecture } Case Study: Climate & Physical Data'
     ? '**Discussion 9**{: .label .label-disc } Housing II and Probability I' 
     : ''
-    ? '**Quick Check 1**{: .label .label-survey } Quick Check 1'
+    ? '**Lecture Participation 10**{: .label .label-survey }'
     : ''
 - date: 2023-02-16
   events:

@@ -5,7 +5,7 @@ days:
 - date: 2023-01-17
   events:
     ? '**Lecture 1**{: .label .label-lecture } Introduction'
-    ? '**Quick Check 1**{: .label .label-survey } Quick Check 1'
+    ? '**Lecture Participation 1**{: .label .label-survey }'
     : ''
 - date: 2023-01-19
   events:

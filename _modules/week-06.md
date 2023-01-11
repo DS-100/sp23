@@ -5,7 +5,9 @@ days:
 - date: 2023-02-21
   events:
     ? '**Lecture 11**{: .label .label-lecture } Constant model, loss, and transformations'
-    ? '**Quick Check 1**{: .label .label-survey } Quick Check 1'
+    ? '**Discussion 5**{: .label .label-disc } Probability, Sampling, and SLR' 
+    : ''
+    ? '**Lecture Participation 6**{: .label .label-survey }'
     : ''
 - date: 2023-02-23
   events:

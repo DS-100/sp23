@@ -5,7 +5,9 @@ days:
 - date: 2023-01-24
   events:
     ? '**Lecture 3**{: .label .label-lecture } Pandas II'
-    ? '**Quick Check 1**{: .label .label-survey } Quick Check 1'
+    ? '**Discussion 1**{: .label .label-disc } Prerequisites' 
+    : ''
+    ? '**Lecture Participation 2**{: .label .label-survey }'
     : ''
 - date: 2023-01-26
   events:

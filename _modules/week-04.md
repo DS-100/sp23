@@ -5,7 +5,9 @@ days:
 - date: 2023-02-07
   events:
     ? '**Lecture 7**{: .label .label-lecture } Visualization I'
-    ? '**Quick Check 1**{: .label .label-survey } Quick Check 1'
+    ? '**Discussion 3**{: .label .label-disc } EDA and Regex' 
+    : ''
+    ? '**Lecture Participation 4**{: .label .label-survey }'
     : ''
 - date: 2023-02-09
   events:

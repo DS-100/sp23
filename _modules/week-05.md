@@ -5,7 +5,9 @@ days:
 - date: 2023-02-14
   events:
     ? '**Lecture 9**{: .label .label-lecture } Sampling and probability II'
-    ? '**Quick Check 1**{: .label .label-survey } Quick Check 1'
+    ? '**Discussion 4**{: .label .label-disc } Visualization and Transformation' 
+    : ''
+    ? '**Lecture Participation 5**{: .label .label-survey }'
     : ''
 - date: 2023-02-16
   events:

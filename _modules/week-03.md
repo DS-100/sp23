@@ -5,7 +5,9 @@ days:
 - date: 2023-01-31
   events:
     ? '**Lecture 5**{: .label .label-lecture } Data Cleaning and EDA'
-    ? '**Quick Check 1**{: .label .label-survey } Quick Check 1'
+    ? '**Discussion 2**{: .label .label-disc } Pandas' 
+    : ''
+    ? '**Lecture Participation 3**{: .label .label-survey }'
     : ''
 - date: 2023-02-02
   events:
