@@ -2,3 +2,4 @@
 **/*.ipynb_checkpoints/
 _site/*
 _staffers/sheets_parser.json
+.DS_Store
