@@ -17,7 +17,7 @@ scopes = [
 ]
 credentials = ServiceAccountCredentials.from_json_keyfile_name("sheets_parser.json", scopes) #access the json key you downloaded earlier
 file = gspread.authorize(credentials) # authenticate the JSON key with gspread
-sheet = file.open("Data 100 Fa22 Staff Onboarding (Responses)")  #open sheet
+sheet = file.open("Data 100 Sp23 Staff Onboarding (Responses)")  #open sheet
 sheet = sheet.sheet1  #all desired info should be in the first sheet
 
 def attribute_parser(row):
@@ -25,12 +25,12 @@ def attribute_parser(row):
     attributes["email"] = row[1]
     last_name = re.search(r'\s([^\s]+)$', row[2])
     attributes["name"] = row[2].strip() if last_name == None else row[3].strip() + ' ' + re.search(r'\s([^\s]+)$', row[2]).group(0).strip()
-    attributes["pronouns"] = row[4].lower()
+    attributes["pronouns"] = row[4]
     attributes["role"] = assign_role(row[8])
     attributes["sid"] = row[9]
     attributes["photo_name"] = attributes['name'].replace(' ', '_')
-    attributes["bio"] = row[14].replace('\n', '').replace('’', "'")
-    attributes["website"] = row[15]
+    attributes["bio"] = row[13].replace('\n', '').replace('’', "'")
+    attributes["website"] = row[14]
     # if attributes["role"] == "Instructor":
     #     attributes["oh"] = row[40]
     return attributes
@@ -57,7 +57,7 @@ def get_photo_location(photos, attributes):
 
 def main():
     photos = os.listdir('../resources/assets/staff_pics')
-    for i in range(2, 37): #modify the second number depending on the number of rows in the sheet.
+    for i in range(2, 12): #modify the second number depending on the number of rows in the sheet.
         row = sheet.row_values(i)
         attributes = attribute_parser(row)
         # print(attributes)
@@ -69,7 +69,7 @@ def main():
                 + 'role: ' + attributes['role'] + '\n'
                 + 'email: ' + attributes['email'] + '\n'
                 + 'website: ' + attributes['website'] + '\n'
-                + 'photo: http://ds100.org/fa22/resources/assets/staff_pics/' + get_photo_location(photos, attributes) + '\n'
+                + 'photo: http://ds100.org/sp23-testing/resources/assets/staff_pics/' + get_photo_location(photos, attributes) + '\n'
                 + 'pronouns: ' + attributes['pronouns'] + '\n'
                 # + 'oh: ' + attributes['oh'] + '\n'
                 + '---\n'
@@ -80,7 +80,7 @@ def main():
                 + 'role: ' + attributes['role'] + '\n'
                 + 'email: ' + attributes['email'] + '\n'
                 + 'website: ' + attributes['website'] + '\n'
-                + 'photo: http://ds100.org/fa22/resources/assets/staff_pics/' + get_photo_location(photos, attributes) + '\n'
+                + 'photo: http://ds100.org/sp23-testing/resources/assets/staff_pics/' + get_photo_location(photos, attributes) + '\n'
                 + 'pronouns: ' + attributes['pronouns'] + '\n'
                 + '---\n'
                 + attributes['bio'] + '\n')

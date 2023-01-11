@@ -18,7 +18,7 @@ course:
     email: data100.instructors@berkeley.edu
 ---
 
-# Syllabus
+# Syllabus - To Be Updated
 {:.no_toc}
 
 Jump to:
@@ -247,66 +247,6 @@ Cheating on exams is a serious offense. We have methods of detecting cheating on
 If you are feeling overwhelmed, visit our office hours and talk with us. We know college can be stressful – and especially so during the COVID-19 pandemic – and we want to help you succeed.
 
 **Important Note**: We are committed to being a resource to you, but it is important to note that all members of the teaching staff for this course are [responsible employees](https://svsh.berkeley.edu/responsible-employee), meaning that **we must disclose any incidents of sexual harassment or violence to campus authorities**. If you would like to speak to a confidential advocate, please consider reaching out to the [Berkeley PATH to Care Center](https://care.berkeley.edu/).
-
-
-## Additional Resources
-Please see our [Resources](../resources/) page for course content resources, including the optional supplementary textbook.
-
-### COVID-19 Resources and Support
-{:.no_toc}
-You can find UC Berkeley’ COVID-19 resources and support [here](https://coronavirus.berkeley.edu/).
-
-### For academic performance, support, and technology
-{:.no_toc}
-The [Center for Access to Engineering Excellence](https://engineering.berkeley.edu/student-services/academic-support) (Bechtel Engineering Center 227) is an inclusive center that offers study spaces, nutritious snacks, and tutoring in >50 courses for Berkeley engineers and other majors across campus. The Center also offers a wide range of professional development, leadership, and wellness programs, and loans iclickers, laptops, and professional attire for interviews.
-
-As the primary academic support service for undergraduates at UC Berkeley, the [Student Learning Center](http://slc.berkeley.edu/) (510-642-7332) assists students in transitioning to Cal, navigating the academic terrain, creating networks of resources, and achieving academic, personal, and professional goals. Through various services including tutoring, study groups, workshops, and courses, SLC supports undergraduate students in Biological and Physical Sciences, Business Administration, Computer Science, Economics, Mathematics, Social Sciences, Statistics, Study Strategies, and Writing.
-
-The [Educational Opportunity Program](http://eop.berkeley.edu/) (EOP, Cesar Chavez Student Center 119; 510-642-7224) at Cal has provided first generation and low income college students with the guidance and resources necessary to succeed at the best public university in the world. EOP’s individualized academic counseling, support services, and extensive campus referral network help students develop the unique gifts and talents they each bring to the university while empowering them to achieve.
-
-The [Student Technology Equity Program](STEP, https://technology.berkeley.edu/STEP) connects laptops, Wi-Fi hotspots, and other required technology to students in need.
-
-### For mental well-being
-{:.no_toc}
-The staff of the [UHS Counseling and Psychological Services](https://uhs.berkeley.edu/caps) (Tang Center, 2222 Bancroft Way; 510-642-9494; for after-hours support, please call the 24/7 line at 855-817-5667) provides confidential, brief counseling and crisis intervention to students with personal, academic and career stress. Services are provided by a multicultural group of professional counselors including psychologists, social workers, and advanced level trainees. All undergraduate and graduate students are eligible for CAPS services, regardless of insurance coverage.
-
-To improve access for engineering students, a licensed psychologist from the Tang Center also holds walk-in appointments for confidential counseling in Bechtel Engineering Center 241 (check [here](https://engineering.berkeley.edu/student-services/advising-counseling) for schedule).
-
-### For disability accommodations
-{:.no_toc}
-The [Disabled Students’ Program](https://dsp.berkeley.edu/) (DSP, 260 César Chávez Student Center \#4250; 510-642-0518) serves students with disabilities of all kinds, including mobility impairments, blind or low vision, deaf or hard of hearing; chronic illnesses (chronic pain, repetitive strain injuries, brain injuries, AIDS/HIV, cancer, etc.) psychological disabilities (bipolar disorder, severe anxiety or depression, etc.), Attention Deficit Disorder/Attention Deficit Hyperactivity Disorder, and Learning Disabilities. Services are individually designed and based on the specific needs of each student as identified by DSP’s Specialists. The Program’s official website includes information on DSP staff, UCB’s disabilities policy, application procedures, campus access guides for most university buildings, and portals for students and faculty.
-
-### For solving a dispute
-{:.no_toc}
-The [Ombudsperson for Students](https://sa.berkeley.edu/Ombuds) (Sproul Hall 102; 510-642-5754) provides a confidential service for students involved in a University-related problem (academic or administrative), acting as a neutral complaint resolver and not as an advocate for any of the parties involved in a dispute. The Ombudsperson can provide information on policies and procedures affecting students, facilitate students’ contact with services able to assist in resolving the problem, and assist students in complaints concerning improper application of University policies or procedures. All matters referred to this office are held in strict confidence. The only exceptions, at the sole discretion of the Ombudsperson, are cases where there appears to be imminent threat of serious harm.
-
-The [Student Advocate’s Office](https://advocate.berkeley.edu/) (SAO) is an executive, non-partisan office of the ASUC. We offer free, confidential casework services and resources to any student(s) navigating issues with the University, including academic, conduct, financial aid, and grievance concerns. All support is centered around students and aims for an equity-based approach.
-
-### For recovery from sexual harassment or sexual assault
-{:.no_toc}
-The [Care Line](https://care.berkeley.edu/care-line/) (510-643-2005) is a 24/7, confidential, free, campus-based resource for urgent support around sexual assault, sexual harassment, interpersonal violence, stalking, and invasion of sexual privacy. The Care Line will connect you with a confidential advocate for trauma-informed crisis support including time-sensitive information, securing urgent safety resources, and accompaniment to medical care or reporting.
-
-### For social services
-{:.no_toc}
-[Social Services](http://uhs.berkeley.edu/students/counseling/socialservices.shtml) provides confidential services and counseling to help students with managing problems that can emerge from illness such as financial, academic, legal, family concerns, and more. They specialize in helping students with pregnancy resources and referrals; alcohol/drug problems related to one’s own or a family member’s use; sexual assault/rape; relationship or other violence; and support for health concerns-new diagnoses or ongoing conditions. Social Services staff will assess a student’s immediate needs, work with the student to develop a plan to meet those needs, and facilitate arrangements with academic departments and advocate for the student with other campus offices and community agencies, as well as coordinate services within UHS.
-
-
-### For finding community on campus
-{:.no_toc}
-
-The mission of the [Berkeley International Office](BIO, http://internationaloffice.berkeley.edu/) (2299 Piedmont Avenue, 510-642-2818) is to provide support with all the essential resources needed to not only survive, but thrive here at UC Berkeley. Their mission is to support you and work together towards justice and belonging for all. They define Basic Needs as the essential resources that impact your health, belonging, persistence, and overall well being. It is an ecosystem that includes: nutritious food, stable housing, hygiene, transportation, healthcare, mental wellness, financial sustainability, sleep, and emergency dependent services. They refuse to accept hunger, homelessness, and all other basic needs injustices as part of our university.
-
-The [Gender Equity Resource Center](https://cejce.berkeley.edu/geneq), fondly referred to as GenEq, is a UC Berkeley campus community center committed to fostering an inclusive Cal experience for all. GenEq is the campus location where students, faculty, staff and Alumni connect for resources, services, education and leadership programs related to gender and sexuality. The programs and services of the Gender Equity Resource Center are focused into four key areas: women; lesbian, gay, bisexual, and transgender (LGBT); sexual and dating violence; and hate crimes and bias driven incidents. GenEq strives to provide a space for respectful dialogue about sexuality and gender; illuminate the interrelationship of sexism, homophobia and gender bias and violence; create a campus free of violence and hate; provide leadership opportunities; advocate on behalf of survivors of sexual, hate, dating and gender violence; foster a community of women and LGBT leaders; and be a portal to campus and community resources on LGBT, Women, and the many intersections of identity (e.g., race, class, ability, etc.).
-
-The [Undocumented Students Program](https://undocu.berkeley.edu/) (119 Cesar Chavez Center; 642-7224) practices a holistic, multicultural and solution-focused approach that delivers individualized service for each student. The academic counseling, legal support, financial aid resources and extensive campus referral network provided by USP helps students develop the unique gifts and talents they each bring to the university, while empowering a sense of belonging. The program’s mission is to support the advancement of undocumented students within higher education and promote pathways for engaged scholarship.
-
-The [Multicultural Education Program](http://mep.berkeley.edu/) (MEP) is one of six initiatives funded by the Evelyn and Walter Haas, Jr. Fund to work towards institutional change and to create a positive campus climate for diversity. The MEP is a five-year initiative to establish a sustainable infrastructure for activities like educational consultation and diversity workshops for the campus that address both specific topics, and to cater to group needs across the campus.
-
-### For basic needs (food, shelter, etc.)
-{:.no_toc}
-The [Basic Needs Center](https://basicneeds.berkeley.edu/home) (lower level of MLK Student Union, Suite 72) provides support with all the essential resources needed to not only survive, but thrive here at UC Berkeley. Their mission is to support you and work together towards justice and belonging for all. They define Basic Needs as the essential resources that impact your health, belonging, persistence, and overall well being. It is an ecosystem that includes: nutritious food, stable housing, hygiene, transportation, healthcare, mental wellness, financial sustainability, sleep, and emergency dependent services. They refuse to accept hunger, homelessness, and all other basic needs injustices as part of our university.
-
-The [UC Berkeley Food Pantry](https://pantry.berkeley.edu/) (#68 Martin Luther King Student Union) aims to reduce food insecurity among students and staff at UC Berkeley, especially the lack of nutritious food. Students and staff can visit the pantry as many times as they need and take as much as they need while being mindful that it is a shared resource. The pantry operates on a self-assessed need basis; there are no eligibility requirements. The pantry is not for students and staff who need supplemental snacking food, but rather, core food support.
 
 ## Acknowledgments!
 {:.no_toc}

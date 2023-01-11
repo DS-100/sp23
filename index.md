@@ -33,7 +33,7 @@ UC Berkeley, Spring 2023
 
 Jump to current week: [here](#week-{{page.currWeekNumber}}).
 
-# **This site is currently being built**
+<span style="color:red" h1> **This site is currently being built** </span>
 + Frequently Asked Questions: Before posting on the [class Ed]({{page.course.edstem}}), please read the [class FAQ page]({{page.course.faq}}).
 + The [Syllabus]({{site.baseurl}}/syllabus) contains a detailed explanation of how each course component will work this Fall, please take time to take a look.
 + **Note:** The schedule of lectures and assignments is subject to change.

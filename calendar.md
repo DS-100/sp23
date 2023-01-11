@@ -19,6 +19,8 @@ In-person office hours are in <span style="color:blue">**blue**</span>, while vi
 
 **Note: If you are attending online office hour, note that there is limited staff online and the wait time is usually much longer than in-person options at the same time.**
 
+# Maybe more wording encouraging in-person OH?
+
 To access in-person office hours, go to the room in the location of the office hour slot you're planning on attending.
 
 To access virtual office hours, place your ticket on the [queue](http://oh.ds100.org/) and then join the call with the "Join Call" button when your name is pulled.
