@@ -9,7 +9,7 @@ description: A listing of all the course staff members.
 
 Jump to [Instructors](#inst), [Teaching Assistants](#tas), [Tutors](#tutors), or [Readers](#readers)
 
-**Note:** Consult the [calendar]({{ site.baseurl }}/calendar) for the most up-to-date office hours for each GSI.
+**Note:** Consult the [calendar]({{ site.baseurl }}/calendar) for the most up-to-date office hours for each GSI. Please remember you can email instructors and TAs at [data100.instructors@berkeley.edu](data100.instructors@berkeley.edu).
 
 <a name = 'inst'></a>
 
