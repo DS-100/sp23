@@ -44,19 +44,13 @@ Alongside each lecture are optional textbook readings to the Data 100 textbook, 
 <a name = 'course_website'></a>
 ## Course Website
 
-We will be posting all lecture materials on the course syllabus. In addition, they will also be listed in the following publicly visible [Github Repo](https://github.com/DS-100/sp22).
+We will be posting all lecture materials on the course syllabus. In addition, they will also be listed in the following publicly visible [Github Repo](https://github.com/DS-100/sp23).
 
 You can send us changes to the course website by
 [forking](https://help.github.com/articles/fork-a-repo/) and sending a [pull
 request](https://help.github.com/articles/about-pull-requests/) to the [course
-website github repository](https://github.com/DS-100/sp22). You will then
+website github repository](https://github.com/DS-100/sp23). You will then
 become part of the history of Data 100 at Berkeley.
-
-## Local Setup
-
-**NOTE:** This section is out of date and no longer supported by the course staff.
-
-Click [here]({{ site.baseurl }}/setup) to read our guide on how to set up our development environment locally (as an alternative to using DataHub). Please note that any autograder tests will only work on DataHub.
 
 ## Coding and Probability Resources
 
@@ -68,31 +62,31 @@ Click [here]({{ site.baseurl }}/setup) to read our guide on how to set up our de
   - [Learn Pandas](https://bitbucket.org/hrojas/learn-pandas) A set of lessons providing an overview of the Pandas library.
   - [Python for Data Science](http://wavedatalab.github.io/datawithpython/index.html) Another set of notebook demonstrating Pandas functionality.
 
-#### SQL Resources
+#### SQL
 + We've assembled some [SQL Review Slides](https://docs.google.com/presentation/d/1mLVkQxah9asdKhnTNpcUSYBOuKGSWE_d3MJ5nYuTw9U/edit?usp=sharing) to help you brush up on SQL.
 + We've also compiled a list of SQL practice problems, which can be found [here](assets/other/sqlReview.pdf), along with their [solutions](assets/other/sqlReviewSol.pdf).
 + This [SQL Cheat Sheet](https://websitesetup.org/sql-cheat-sheet/) is an awesome resource that was created by Luke Harrison, a former Data 100 student.
 
-#### Probability Practice
+#### Probability
 + We've compiled a few practice probability problems that we believe may help in understanding the ideas covered in the course. They can be found [here](assets/other/prob_practice.pdf), along with their [solutions](assets/other/prob_practice_solutions.pdf).
 + We'd also like to point you to the [textbook for Data C88S](http://stat88.org/textbook/content/intro.html), an introductory probability course geared towards data science students at Berkeley.
 
-#### Regex Practice
+#### Regex
++ [Regex101.com](https://regex101.com). Remember to select the Python flavour of Regex!
++ DS100 Reference [Sheet]({{site.baseurl}}/resources/assets/hw/regex_reference.pdf)
 + We've organized some regular expressions(regex) problems to help you get extra practice on regex in a notebook format. They can be found [here](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/su20&subPath=disc/disc05/extra/), along with their [solutions](assets/other/regex_practice_sol.pdf).
 + The official Python3 regex guide is good: [link](https://docs.python.org/3/howto/regex.html)
-+ DS100 Reference [Sheet]({{site.baseurl}}/resources/assets/hw/regex_reference.pdf)
 
-
-#### LaTeX Tips
+#### LaTeX
 + [Quick Guide to Overleaf and LaTeX]({{site.baseurl}}/latex_guide)
 
 #### Other Web References
 As a data scientist you will often need to search for information on various libraries and tools. In this class we will be using several key python libraries. Here are their documentation pages:
 
-- **The Bash Command Line:**
+<!-- - **The Bash Command Line:**
 
   - [Linux and Bash](https://drive.google.com/file/d/0B6nL03OcEignTGowRkNCZzN6T00/view): Intro to Linux, Cloud Computing (which you can skip for the purposes of this class), and the Bash command line. You can skip all portions that don't pertain to using the command line.
-  - [Bash Part 2](https://drive.google.com/file/d/0B6nL03OcEigncUxXNnNmV3VuN1U/view): Part 2 of the intro to command line.
+  - [Bash Part 2](https://drive.google.com/file/d/0B6nL03OcEigncUxXNnNmV3VuN1U/view): Part 2 of the intro to command line. -->
 
 - **Python:**
   - [DS100 Textbook scikit-learn Reference Table](https://www.textbook.ds100.org/ch/a04/ref_sklearn.html)
@@ -103,6 +97,8 @@ As a data scientist you will often need to search for information on various lib
 - **Data Visualization:**
   - [DS100 Textbook Seaborn Reference Table](https://www.textbook.ds100.org/ch/a04/ref_seaborn.html) and [Matplotlib Reference Table](https://www.textbook.ds100.org/ch/a04/ref_matplotlib.html)
   - [matplotlib.pyplot tutorial](http://matplotlib.org/users/pyplot_tutorial.html#pyplot-tutorial): This short tutorial provides an overview of the basic plotting utilities we will be using.
+  - [Panda's Tutor](https://pandastutor.com).
+  - [Kernel Density Visualization](https://mathisonian.github.io/kde/).
   - [Altair Documentation](https://altair-viz.github.io/): Altair(Vega-Lite) is a new and powerful visualization library.  We might not get to teach it this semester, but you should check it out if you are interested in pursuing visualization deeper. In particular, you should find the [example gallery](https://altair-viz.github.io/gallery/index.html) helpful.
   - [Prof. Jeff Heer's Visualization Curriculum](https://github.com/uwdata/visualization-curriculum): This repository contains a series of Python-based Jupyter notebooks that teaches data visualization using Vega-Lite and Altair.
   - If you are interested in learning more about data visualization, you can find more materials in:
@@ -151,7 +147,7 @@ As the primary academic support service for undergraduates at UC Berkeley, the [
 
 The [Educational Opportunity Program](http://eop.berkeley.edu/) (EOP, Cesar Chavez Student Center 119; 510-642-7224) at Cal has provided first generation and low income college students with the guidance and resources necessary to succeed at the best public university in the world. EOP’s individualized academic counseling, support services, and extensive campus referral network help students develop the unique gifts and talents they each bring to the university while empowering them to achieve.
 
-The [Student Technology Equity Program](STEP, https://technology.berkeley.edu/STEP) connects laptops, Wi-Fi hotspots, and other required technology to students in need.
+The [Student Technology Equity Program](STEP, https://studenttech.berkeley.edu/step) connects laptops, Wi-Fi hotspots, and other required technology to students in need.
 
 ### For mental well-being
 {:.no_toc}
@@ -199,3 +195,9 @@ The [UC Berkeley Food Pantry](https://pantry.berkeley.edu/) (#68 Martin Luther K
 ## Data Science Education
 
 Interested in bringing the Data Science major or curriculum to your academic institution?  Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSfw6iN-V58Urvg7RRfbjNQceisLULBizg0qku1_2qV8cvOtvA/viewform) if you would like support from Berkeley in offering some variant of our Data Science courses at your institution (or just to let us know that you're interested). Information about the courses appear at [data8.org](http://data8.org) and [ds100.org](http://ds100.org). Please note that this form is only for instructors. If you are only interested in learning Python or data science, please look at our Data 8 or Data 100 websites mentioned above.
+
+## Local Setup (Old)
+
+**NOTE:** This section is out of date and no longer supported by the course staff.
+
+Click [here]({{ site.baseurl }}/setup) to read our guide on how to set up our development environment locally (as an alternative to using DataHub). Please note that any autograder tests will only work on DataHub.
