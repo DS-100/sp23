@@ -36,7 +36,9 @@ def attribute_parser(row):
     return attributes
 
 def assign_role(job):
-    if "GSI" in job:
+    if "20" in job:
+        return "Lead Teaching Assistant"
+    elif "8" in job:
         return "Teaching Assistant"
     elif "Tutor" in job:
         return "Tutor"

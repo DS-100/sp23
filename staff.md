@@ -22,6 +22,17 @@ Jump to [Instructors](#inst), [Teaching Assistants](#tas), [Tutors](#tutors), or
   {% endfor %}
 </div>
 
+<a name = 'lead-tas'></a>
+
+## Lead Teaching Assistants
+
+<div class="role">
+  {% assign lead_teaching_assistants = site.staffers | where: 'role', 'Lead Teaching Assistant' %}
+  {% for staffer in lead_teaching_assistants %}
+  {{ staffer }}
+  {% endfor %}
+</div>
+
 <a name = 'tas'></a>
 
 ## Teaching Assistants

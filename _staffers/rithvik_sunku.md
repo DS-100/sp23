@@ -1,6 +1,6 @@
 ---
 name: Rithvik Sunku
-role: Teaching Assistant
+role: Lead Teaching Assistant
 email: rithviksunku@berkeley.edu
 website: 
 photo: http://ds100.org/sp23-testing/resources/assets/staff_pics/Rithvik_Sunku.jpg

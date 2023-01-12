@@ -1,6 +1,6 @@
 ---
 name: Minh Phan
-role: Teaching Assistant
+role: Lead Teaching Assistant
 email: phanminh6139@berkeley.edu
 website: https://tinyurl.com/D100minhphan
 photo: http://ds100.org/sp23-testing/resources/assets/staff_pics/Minh_Phan.JPG

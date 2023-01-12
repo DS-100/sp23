@@ -1,6 +1,6 @@
 ---
 name: Liang Zhang
-role: Teaching Assistant
+role: Lead Teaching Assistant
 email: angelikazhang@berkeley.edu
 website: 
 photo: http://ds100.org/sp23-testing/resources/assets/staff_pics/Liang_Zhang.jpg

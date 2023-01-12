@@ -1,6 +1,6 @@
 ---
 name: Kanu Grover
-role: Teaching Assistant
+role: Lead Teaching Assistant
 email: grover.kanu@berkeley.edu
 website: 
 team: Head TA
