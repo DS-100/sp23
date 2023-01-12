@@ -64,3 +64,4 @@ Jump to current week: [here](#week-{{page.currWeekNumber}}).
 <a name="week-{{module.weekNumber}}"></a>
 {{ module }}
 {% endfor %}
+
