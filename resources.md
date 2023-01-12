@@ -132,9 +132,6 @@ However, we have listed a few optional books that will provide additional contex
 
 - **[Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)** ([Available as eBook for Berkeley students](https://www.oreilly.com/library/view/python-for-data/9781491957653/?ar)). This book provides a good reference for the Pandas library.
 
-## Additional Resources
-Please see our [Resources](../resources/) page for course content resources, including the optional supplementary textbook.
-
 ### COVID-19 Resources and Support
 {:.no_toc}
 You can find UC Berkeley’ COVID-19 resources and support [here](https://coronavirus.berkeley.edu/).
