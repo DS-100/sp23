@@ -11,10 +11,10 @@ course:
     bcourses: ""
     head_ta_1: Kanu Grover 
     head_1_email: grover.kanu@berkeley.edu
-    head_ta_2: Dominic Liu
-    head_2_email: hangxingliu@berkeley.edu
-    comms_ta: Samantha Hing
-    comms_email: snhing@berkeley.edu
+    head_ta_2: Bella Crouch
+    head_2_email: isabella.crouch@berkeley.edu
+    comms_ta: Samantha Wray
+    comms_email: samanthawray@berkeley.edu
     email: data100.instructors@berkeley.edu
 ---
 
@@ -95,7 +95,7 @@ Below is a high-level “typical week in the course” for Fall 2022.
 | --- | --- | --- | --- | --- | --- |
 | Office Hours | Office Hours | Office Hours | Office Hours | Office Hours | 
 | | <span style="color:Green">Live Lecture</span> |  | <span style="color:Green">Live Lecture</span> | |
-| | <span style="color:Blue">Discussion Section</span>| | | | 
+| | <span style="color:Blue">Discussion Section</span>| <span style="color:Blue">Discussion Section</span>| | | 
 | | | |<span style="color:Red">**Homework N-1 due**</span> | <span style="color:Red">Homework N released</span> | 
 | |<span style="color:Red">**Lab N-1 due**</span>| | | <span style="color:Red">Lab N released</span>|
 
@@ -132,9 +132,6 @@ Labs are shorter programming assignments designed to give students familiarity w
 - All labs are intended to take about an hour. 
 - Lab walkthroughs will be released following the lab due date. These will primarily help to build our staff intuition for solving lab problems and how they can be applied to more difficult homework questions.
 
-### Quick Checks
-
-Quick checks are weekly short assignments to check that you are keeping up with lectures. They should take around 10 minutes to complete. They will be assigned on Gradescope and mainly consist of multiple choice questions. Your three lowest scores will be dropped.
 
 ### Office Hours and Communication
 
@@ -147,16 +144,16 @@ Office hour queues are managed through [oh.ds100.org](https://oh.ds100.org/), wh
 **EdStem**, or **Ed** for short, is our course forum this summer. The course is [here]({{page.course.edstem}}). Please check out EdStem or the [FAQ]({{page.course.faq}}) page first before emailing instructors. 
 
 **Staff email**:
-You can email [{{page.course.email}}](mailto:{{page.course.email}}) and one of the TAs will get back to you. Note that to ensure more timely responses, this address is monitored by a team of two instructors (Fernando and Will), Head TA's (Kanu Grover and Dominic Liu), as well as several lead GSIs, to ensure more timely responses. 
+You can email [{{page.course.email}}](mailto:{{page.course.email}}) and one of the TAs will get back to you. Note that to ensure more timely responses, this address is monitored by a team of two instructors (Lisa and Narges), Head TA's (Kanu Grover and Bella Crouch), as well as several lead GSIs, to ensure more timely responses. 
 
-For sensitive matters, you should directly contact the Head TA's [{{page.course.head_ta_1}}](mailto:{{page.course.head_1_email}}) and [{{page.course.head_ta_2}}](mailto:{{page.course.head_2_email}}). You should only contact Fernando and Will directly for matters that require strict privacy and their direct attention.
+For sensitive matters, you should directly contact the Head TA's [{{page.course.head_ta_1}}](mailto:{{page.course.head_1_email}}) and [{{page.course.head_ta_2}}](mailto:{{page.course.head_2_email}}). You should only contact Lisa and Narges directly for matters that require strict privacy and their direct attention.
 
 
 ### Exams
 
 There will be two exams in this course:
-* Midterm on **Wednesday, October 19** 7-9PM PT.
-* Final on **Tuesday, December 13** 3-6PM PT (exam group 7).
+* Midterm on **Thursday, March 9** 7-9PM PT.
+* Final on **Thursday, May 11** 8-11AM PT.
 
 Alternate exam policies:
 - **Midterm**: We will not offer alternate exams except for students with DSP, student atheletes.
