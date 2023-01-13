@@ -192,7 +192,8 @@ All assignments are due at 11:59 PM Pacific Time on the due date specified on th
 
 #### Grace Period
 
-You have a **two-day** grace period to submit your assignment after the meain deadline. To use grace day on an assignment, you can simply submit your assignment any time during the next two days following the main deadline. If you are in the Disabled Students' Program and you are offered an extension, your grace period is added on top of your normal accommodation. Please note that your extension plus the grace period combined, cannot exceed **more than 7 days**.
+You have a **two-day** grace period to submit your assignment after the main deadline. To use grace day on an assignment, you can submit your assignment any time during the next two days following the main deadline. If you are in the Disabled Students' Program and are offered an extension, your grace period is added to your standard accommodation. Please note that your extension, plus the grace period combined, can be at most **7 days**.
+
 
 - **Extension beyond grace period**: You must use your grace days first before you can request any extension. At that point, we will require supporting documentation and extensions will only be granted for exceptional situations (doctor-documented illness, major family emergency, etc.)
 
