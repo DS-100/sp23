@@ -98,7 +98,6 @@ Below is a high-level “typical week in the course” for Fall 2022.
 | | <span style="color:Blue">Discussion Section</span>| | | | 
 | | | |<span style="color:Red">**Homework N-1 due**</span> | <span style="color:Red">Homework N released</span> | 
 | |<span style="color:Red">**Lab N-1 due**</span>| | | <span style="color:Red">Lab N released</span>|
-| <span style="color:Red">**Quick check N-1 due**</span> | | |<span style="color:Red">Quick check N released</span>| | 
 
 * **All deadlines are subject to change.**
 * Office Hours are scheduled on the [Calendar page](../calendar). 
