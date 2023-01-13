@@ -27,9 +27,15 @@ Jump to [Instructors](#inst), [Lead Teaching Assistants](#lead-tas), [Teaching A
 ## Lead Teaching Assistants
 
 <div class="role">
+  {% assign head_teaching_assistants = site.staffers | where: 'team', 'Head TA' %}
+  {% for staffer in head_teaching_assistants %}
+    {{ staffer }}
+  {% endfor %}
   {% assign lead_teaching_assistants = site.staffers | where: 'role', 'Lead Teaching Assistant' %}
   {% for staffer in lead_teaching_assistants %}
-  {{ staffer }}
+    {% if staffer.team != 'Head TA' %}
+      {{ staffer }}
+    {% endif %}
   {% endfor %}
 </div>
 
