@@ -109,10 +109,10 @@ Below is a high-level “typical week in the course” for Fall 2022.
 There are 2 live lectures per week. Lectures will be in Wheeler 150 and broadcasted live on Zoom. All lecture recordings will also be published within 24 hours of the live recording.
 
 ### Discussion
-Live discussion sections are on Tuesdays, lasting for one hour. The goal of these sessions is to work through problems, hone your skills, and flesh out your understanding as part of a team. The problems that you solve and present as part of discussion are important in understanding this material. 
+Live discussion sections are on Tuesdays and Wednesdays, lasting for one hour. The goal of these sessions is to work through problems, hone your skills, and flesh out your understanding as part of a team. The problems that you solve and present as part of discussion are important in understanding this material. 
 - You need to be assigned to a discussion section. Sign-ups will be posted on Ed.
 - Discussion attendance is mandatory for students enrolled in Data 100. Discussion attendance is not mandatory for students enrolled in Data 200.
-- Each discussion will be graded on a 0/1 basis. As of now, that one point will be based on attendance to only the section you signed up for at the beginning of the semester. Please attend the discussion section you signed up for on Sign Up Genius. If you are unable to attend your section or were unable to sign up for a section, feel free to attend one of the 4 online discussions ([#42](https://edstem.org/us/courses/25695/discussion/1702379)). For the first three weeks, you will be able to attend any online section and receive credit. We are working to allow for more section availability in the coming days.
+- Each discussion will be graded on a 0/1 basis. As of now, that one point will be based on attendance to only the section you signed up for at the beginning of the semester. Please attend the discussion section you signed up for on Sign Up Genius. For the first three weeks, you will be able to attend any online section and receive credit. We are working to allow for more section availability in the coming days.
 
 ### Homework and Projects
 
@@ -128,16 +128,15 @@ Projects: Projects are week-long assignments that synthesize multiple topics.
 
 Labs are shorter programming assignments designed to give students familiarity with new ideas.
 - All lab autograder tests are visible.
-- We will not be having Lab sections this semester. Rather, we'll provide extensive lab support on Ed.
+- We will not be having Lab sections this semester. Rather, we'll provide extensive lab support on Ed and an accompanying video-walkthorugh.
 - All labs are intended to take about an hour. 
-- Lab walkthroughs will be released following the lab due date. These will primarily help to build our staff intuition for solving lab problems and how they can be applied to more difficult homework questions.
 
 
 ### Office Hours and Communication
 
 The office hours and locations (mainly in [Warren 101](https://dac.berkeley.edu/warren-hall-2195-hearst-ave)) are listed on the [Calendar](../calendar); office hours will mainly be held in-person, with some virtual options available. Instructor office hours are also listed on the calendar.
 
-In general, students can come to office hours for any questions on course assignments or material. We will also have Homework/Project parties Wednesday 5-8 PM, where you can come work with your peers and ask questions.
+In general, students can come to office hours for any questions on course assignments or material. We will also have Homework/Project parties Wednesday 5-8 PM (Warren Hall 101B), where you can come work with your peers and ask questions.
 
 Office hour queues are managed through [oh.ds100.org](https://oh.ds100.org/), where students add themselves to the “queue” and specify the assignment they need help on.
 
@@ -157,7 +156,7 @@ There will be two exams in this course:
 
 Alternate exam policies:
 - **Midterm**: We will not offer alternate exams except for students with DSP, student atheletes.
-- **Final**: The course only allows for time conflicts for specifc courses that have been pre-approved for conflicts, after planning with course instructors of those courses and the Division. If, at the time of the final, you are enrolled in a course approved for finals conflicts, you will be allowed to take an alternate exam that will be offered only once after the Data 100 final. Currently the ONLY course approved for final exam time conflicts is: CS 70.
+- **Final**: We will not offer alternate exams except for students with DSP, student atheletes.
 
 <!--
 Two time options will be offered to cover various timezones. No further alternates will be offered.
@@ -176,14 +175,14 @@ All students enrolled in the graduate version of the course (CS C200 or Stat C20
 | --- | --- | --- | --- |
 | Homeworks | 25% | 25%| No drop|
 | Projects | 15% | 15%| No drop|
-| Labs | 10% |  - | Drop 2 lowest scores|
+| Labs | 10% |  - | No drop|
 | Discussion | 5% | - | Drop 3 lowest scores|
-| Quick Checks | 5% | 5% | Drop 3 lowest scores|
+| Lecture Participation | 5% | 5% | Drop 3 lowest scores|
 | Midterm Exam | 15% | 15%| |
 | Final Exam | 25% | 25% | |
 |Graduate Final Project| - | 15% | |
 
-**Note**: Unlike previous semesters, we will not offer homework drops, instead, we will offer 5 slip days that you can use across homeworks, labs, and projects. See the next section for more details.
+**Note**: Unlike previous semesters, we will not offer assignment drops, instead, we will offer a 2-day grace period submission for Homeworks, Projects, and Labs. If submissions were made on-time students will receive a 3% bonus. See the next section for more details.
 <br>
 
 
@@ -191,13 +190,11 @@ All students enrolled in the graduate version of the course (CS C200 or Stat C20
 
 All assignments are due at 11:59 PM Pacific Time on the due date specified on the syllabus. 
 
-#### Slip Days
+#### Grace Period
 
-You have a **total** of **5** slip days that you can apply to your semester's assignments (Homeworks, Projects, and Labs). To use your slip days on an assignment, you need to fill out the Slip Day Request Google Form released on Ed and [here](https://tinyurl.com/data100slipdayfa22). We will not award points for any late assignment you submit that would bring your total slip days over **5**. If you are in the Disabled Students' Program and you are offered an extension, even with your extension plus slip days combined, **no single assignment can be extended more than 5 days**.
+You have a **two-day** grace period to submit your assignment after the meain deadline. To use grace day on an assignment, you can simply submit your assignment any time during the next two days following the main deadline. If you are in the Disabled Students' Program and you are offered an extension, your grace period is added on top of your normal accommodation. Please note that your extension plus the grace period combined, cannot exceed **more than 7 days**.
 
-- **Do not plan to use your slip days**: we’re providing them for unforeseen circumstances. They are a budget for you to handle, on your own, issues that arise and make you late with an assignment. They are not a "rainy day fund" to stash away for when you're pressed for time, requesting extensions elsewhere.
-- **Slip days are full days, not hours**. If you are 1 hour late, you need to use 1 slip day. (Why? We’d rather you get some sleep and make an attempt to finish the assignment the next day instead of staying up to micromanage hours.)
-- **Extension beyond slip days**: You must use your slip days first before you can request any extension. Only once you have zero slip days left can you request an extension. At that point, we will require supporting documentation and extensions will only be granted for exceptional situations (doctor-documented illness, major family emergency, etc.)
+- **Extension beyond grace period**: You must use your grace days first before you can request any extension. At that point, we will require supporting documentation and extensions will only be granted for exceptional situations (doctor-documented illness, major family emergency, etc.)
 
 
 **Extensions** are provided to students with DSP accommodations, or in the case of exceptional circumstances. If you have DSP accommodations, you should expect to receive an email from us. Otherwise, email our Communications TA [{{page.course.comms_ta}}](mailto: {{page.course.comms_email}}) to request an extension. If you make a request close to the deadline, we can not guarantee that you will receive a response before the deadline. Additionally, simply submitting a request does not guarantee you will receive an extension. Even if your work is incomplete, please submit before the deadline so you can receive credit for the work you did complete.
