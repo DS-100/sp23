@@ -1,6 +1,6 @@
-## Data 100 Fall 2022 website
+## Data 100 Spring 2023 website
 
-Public facing repo for Data 100, Fall 2022
+Public facing repo for Data 100, Spring 2023
 
 Note to staff: **Always** pull changes before making any edits. Merge conflicts (even those resolved automatically) can break things on the Datahub side.
 
