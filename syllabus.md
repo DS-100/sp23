@@ -106,7 +106,11 @@ Below is a high-level “typical week in the course” for Fall 2022.
 <br>
 
 ### Lecture
-There are 2 live lectures per week. Lectures will be in Wheeler 150 and broadcasted live on Zoom. All lecture recordings will also be published within 24 hours of the live recording.
+There are 2 live lectures per week. Lectures will be in Wheeler 150 and broadcasted live on Zoom. All lecture recordings will also be published within 24 hours of the live recording. Lecture attendance (in-person or through Zoom) is not mandatory. However, all students are required to respond to lecture poll questions in one of two ways: 
+- Synchronously during the lecture once poll questions are launched.
+- Asynchronously using a provided link for each lecture. 
+
+Students have one week to submit poll responses in one of the two ways. Lecture participation is graded using poll responses on a 0/1 basis. 
 
 ### Discussion
 Live discussion sections are on Tuesdays and Wednesdays, lasting for one hour. The goal of these sessions is to work through problems, hone your skills, and flesh out your understanding as part of a team. The problems that you solve and present as part of discussion are important in understanding this material. 
