@@ -6,9 +6,11 @@ description: >-
     Principles and Techniques of Data Science
 markdown: kramdown
 course:
-    edstem: https://edstem.org/us/courses/25695/
-    faq: https://ds100.org/fa22faq
+    semester: Spring 2023
+    edstem: https://edstem.org/us/courses/33744/
+    faq: https://ds100.org/sp23faq
     bcourses: ""
+    instructors: Lisa and Narges
     head_ta_1: Kanu Grover 
     head_1_email: grover.kanu@berkeley.edu
     head_ta_2: Bella Crouch
@@ -43,11 +45,15 @@ Combining data, computation, and inferential thinking, data science is redefinin
 <a name = 'prerequisites'></a>
 ### Prerequisites
 
-While we are working to make this class widely accessible, we currently require the following (or equivalent) prerequisites. **Prerequisites will be enforced in this class. It is your responsibility to know the material in the prerequisites.** The instructors do not have the authority to waive these requirements. You should fill out the [Enrollment Exception Form](https://data.berkeley.edu/academics/undergraduate-programs/courses/fall-2022-classes-enrollment-info) managed by CDSS to request an exception.
+While we are working to make this class widely accessible, we currently require the following (or equivalent) prerequisites. **Prerequisites will be enforced in Data 100. It is your responsibility to know the material in the prerequisites.** The instructors do not have the authority to waive these requirements. Undergraduates should fill out the [Enrollment Exception Form](https://data.berkeley.edu/academics/undergraduate-programs/courses/fall-2022-classes-enrollment-info) managed by CDSS to request an exception.
 
 - **Foundations of Data Science**: [Data 8](http://data8.org) covers much of the material in Data 100 but at an introductory level. Data8 provides basic exposure to python programming and working with tabular data as well as visualization, statistics, and machine learning.
 - **Computing**: _The Structure and Interpretation of Computer Programs_ ([CS 61A](http://cs61a.org)) or _Computational Structures in Data Science_ ([CS 88](https://cs88-website.github.io)). These courses provide additional background in python programming (e.g., for loops, lambdas, debugging, and complexity) that will enable Data 100 to focus more on the concepts in Data Science and less on the details of programming in python.
 - **Math**: _Linear Algebra_ (Math 54, [EE 16A](https://eecs16a.org/), or Stat 89A): We will need some basic concepts like linear operators, eigenvectors, derivatives, and integrals to enable statistical inference and derive new prediction algorithms. <b>This may be satisfied concurrently to Data 100.</b>
+
+Please consult the [Resources](../resources) page for additional resources for reviewing prerequisite material.
+
+**Textbook**: There is no official textbook for Data 100 this semester; in its stead, we will provide course notes that will be released with the respective lectures.
 
 <br>
 
@@ -57,7 +63,7 @@ Students taking Data C100 come from a wide range of backgrounds. We hope to fost
 
 ### Be Aware of Your Actions
 
-Sometimes, the little things add up to creating an unwelcoming culture to some students. For example, you and a friend may think you are sharing in a private joke about other races, majors, genders, abilities, cultures, etc. but this can have adverse effects on classmates who overhear it. There is a great deal of research on something called “stereotype threat,” which finds simply reminding someone that they belong to a particular culture or share a particular identity (on whatever dimension) can interfere with their course performance.
+Sometimes, the little things add up to creating an unwelcoming culture to some students. For example, you and a friend may think you are sharing in a private joke about other races, majors, genders, abilities, cultures, etc. but this can have adverse effects on classmates who overhear it. There is a great deal of research on something called “stereotype threat": research finds that simply reminding someone that they belong to a particular culture or share a particular identity (on whatever dimension) can interfere with their course performance.
 
 Stereotype threat works both ways: you can assume that a student will struggle based on who they appear to be, or you can assume that a student is doing great based on who they appear to be. Both are potentially harmful.
 
@@ -73,7 +79,8 @@ Your reaction to this topic might be to laugh it off, or to make or think snide 
 
 ### Communicate Issues with Course Staff
 
-Professionalism and respect for diversity are not just matters between students; they also apply to how the course staff treat the students. The staff of this course will treat you in a way that respects our differences. However, despite our best efforts, we might slip up, hopefully inadvertently. If you are concerned about classroom environment issues created by the staff or overall class dynamic, please feel free to talk to us about it. The instructors in particular welcome any comments or concerns regarding conduct of the course and the staff.
+**We take all complaints about unprofessional or discriminatory behavior seriously.**
+Professionalism and respect for diversity are not just matters between students; they also apply to how the course staff treat the students. The staff of this course will treat you in a way that respects our differences. However, despite our best efforts, we might slip up, hopefully inadvertently. If you are concerned about classroom environment issues created by the staff or overall class dynamic, please feel free to talk to us about it. The instructors in particular welcome any comments or concerns regarding conduct of the course and the staff. See [below](#office-hours-and-communication) for how to best reach us.
 
 We are committed to creating a learning environment welcoming of all students that supports a diversity of thoughts, perspectives and experiences and respects your identities and backgrounds (including race, ethnicity, nationality, gender identity, socioeconomic class, sexual orientation, language, religion, ability, and more.) To help accomplish this:
 
@@ -85,11 +92,9 @@ We are committed to creating a learning environment welcoming of all students th
   - There’s also a great set of resources available at [https://eecs.berkeley.edu/resources/students/grievances](https://eecs.berkeley.edu/resources/students/grievances).
 - If there are other resources you think we should list here, let us know!
 
-**We take all complaints about unprofessional or discriminatory behavior seriously.**
-
 ## Course Components
 
-Below is a high-level “typical week in the course” for Fall 2022.
+Below is a high-level “typical week in the course” for {{page.course.semester}}.
 
 |  Mo | Tu | We | Th | Fr |
 | --- | --- | --- | --- | --- | --- |
@@ -106,70 +111,75 @@ Below is a high-level “typical week in the course” for Fall 2022.
 <br>
 
 ### Lecture
-There are 2 live lectures per week. Lectures will be in Wheeler 150 and broadcasted live on Zoom. All lecture recordings will also be published within 24 hours of the live recording. Lecture attendance (in-person or through Zoom) is not mandatory. However, all students are required to respond to lecture poll questions in one of two ways: 
-- Synchronously during the lecture once poll questions are launched.
-- Asynchronously using a provided link for each lecture. 
+There are 2 live **lectures** held on Tuesdays and Thursdays, 11:00am-12:30pm, hybrid: in-person in Wheeler 150 and broadcasted live on Zoom. All session recordings, slides, activities, and examples will be provided to the course website within 24 hours of the lecture. 
 
-Students have one week to submit poll responses in one of the two ways. Lecture participation is graded using poll responses on a 0/1 basis. 
+**Lecture participation**: While synchronous lecture attendance (in-person or through Zoom) is not mandatory, we expect you to "participate" in lecture by answering lecture poll questions in one of two ways: (1) synchronously during the lecture as poll questions are launched; or (2) asynchronously using a link provided after lecture.
+- Students have one week to submit poll responses in either of the two ways.
+- Lecture participation is graded using poll responses on a 0/1 basis.
+- We may offer a small bonus for synchronous attendance (TBD in first week).
+- See the [Grading Scheme](#grading-scheme) section for lecture participation drops.
 
 ### Discussion
-Live discussion sections are on Tuesdays and Wednesdays, lasting for one hour. The goal of these sessions is to work through problems, hone your skills, and flesh out your understanding as part of a team. The problems that you solve and present as part of discussion are important in understanding this material. 
-- You need to be assigned to a discussion section. Sign-ups will be posted on Ed.
+Live **discussion sections** are one hour long, held on Tuesdays or Wednesdays. The goal of these GSI-led sessions is to work through problems, hone your skills, and flesh out your understanding as part of a team. The problems that you solve and present as part of discussion are important in understanding course material. 
 - Discussion attendance is mandatory for students enrolled in Data 100. Discussion attendance is not mandatory for students enrolled in Data 200.
-- Each discussion will be graded on a 0/1 basis. As of now, that one point will be based on attendance to only the section you signed up for at the beginning of the semester. Please attend the discussion section you signed up for on Sign Up Genius. For the first three weeks, you will be able to attend any online section and receive credit. We are working to allow for more section availability in the coming days.
+- Each weekly discussion will be graded on a 0/1 basis. You will only get credit for attending the discussion section that you are signed up for.
+- Discussion sections start in the second week of class.
+- You will need to be assigned to a discussion section. Discussion times and your sign-up preferences will be collected in a Welcome Form distributed in the first week of class, and section assignments will occur over the weekend. Discussion switches will then be available on a first-come, first-serve basis.
+- Online sections are reserved for students with specific needs, e.g., DSP, Data 200S, etc.; these can be requested through the Welcome Form.
+- See the [Policies](#policies) section for discussion drops. There are no discussion make-ups.
 
 ### Homework and Projects
 
-Homeworks are half-week-long assignments that are designed to help students develop an in-depth understanding of both the theoretical and practical aspects of ideas presented in lecture.
+**Homeworks** are week-long assignments that are designed to help students develop an in-depth understanding of both the theoretical and practical aspects of ideas presented in lecture. **Projects** are 2-week assignments (with a weekly checkpoint) that synthesize multiple topics.
 
-Projects: Projects are week-long assignments that synthesize multiple topics.
-
+- All homeworks and projects must be submitted to Gradescope by their posted deadlines. There may be separate coding and written Gradescope portals for the same assignment; please check that you are submitting the right part.
 - Homeworks and projects have both visible and hidden autograder tests. The visible tests are mainly sanity checks. For example, a sanity check might verify that the answer you entered is a number as expected, and not a word. The hidden tests generally check for correctness, and are invisible to students while they are doing the assignment.
-- The primary form of support students will have for homeworks and projects are the **office hours** we’ll host, and **Ed**.
+- The primary form of support students will have for homeworks and projects are **office hours** and **Ed**.
 - Homeworks and projects must be completed individually. See the [Collaboration Policy](#collaboration-policy-and-academic-dishonesty) for more details.
+- See the [Policies](#policies) section for the submission grace period.
 
 ### Lab
 
-Labs are shorter programming assignments designed to give students familiarity with new ideas.
+**Labs** are shorter, weekly programming assignments designed to give students familiarity with new ideas. They are meant to be completed prior to homework.
+- All lab assignments must be submitted to Gradescope by their posted deadlines.
 - All lab autograder tests are visible.
-- We will not be having Lab sections this semester. Rather, we'll provide extensive lab support on Ed and an accompanying video-walkthorugh.
-- All labs are intended to take about an hour. 
-
-
-### Office Hours and Communication
-
-The office hours and locations (mainly in [Warren 101](https://dac.berkeley.edu/warren-hall-2195-hearst-ave)) are listed on the [Calendar](../calendar); office hours will mainly be held in-person, with some virtual options available. Instructor office hours are also listed on the calendar.
-
-In general, students can come to office hours for any questions on course assignments or material. We will also have Homework/Project parties Wednesday 5-8 PM (Warren Hall 101B), where you can come work with your peers and ask questions.
-
-Office hour queues are managed through [oh.ds100.org](https://oh.ds100.org/), where students add themselves to the “queue” and specify the assignment they need help on.
-
-**EdStem**, or **Ed** for short, is our course forum this summer. The course is [here]({{page.course.edstem}}). Please check out EdStem or the [FAQ]({{page.course.faq}}) page first before emailing instructors. 
-
-**Staff email**:
-You can email [{{page.course.email}}](mailto:{{page.course.email}}) and one of the TAs will get back to you. Note that to ensure more timely responses, this address is monitored by a team of two instructors (Lisa and Narges), Head TA's (Kanu Grover and Bella Crouch), as well as several lead GSIs, to ensure more timely responses. 
-
-For sensitive matters, you should directly contact the Head TA's [{{page.course.head_ta_1}}](mailto:{{page.course.head_1_email}}) and [{{page.course.head_ta_2}}](mailto:{{page.course.head_2_email}}). You should only contact Lisa and Narges directly for matters that require strict privacy and their direct attention.
-
+- We will not be having Lab sections this semester. Rather, we'll provide extensive lab support on Ed and an accompanying video walkthroughs. For Data 200S students, please contact us.
+- All labs are intended to take about an hour.
+- Lab submissions are mandatory for students enrolled in Data 100. Lab submissions are not mandatory for students enrolled in Data 200. See the [Policies](#policies) section for the submission grace period.
 
 ### Exams
 
 There will be two exams in this course:
-* Midterm on **Thursday, March 9** 7-9PM PT.
-* Final on **Thursday, May 11** 8-11AM PT.
+* **Midterm** on **Thursday, March 9** 7-9PM PT.
+* **Final** on **Thursday, May 11** 8-11AM PT.
 
-Alternate exam policies:
-- **Midterm**: We will not offer alternate exams except for students with DSP, student atheletes.
-- **Final**: We will not offer alternate exams except for students with DSP, student atheletes.
-
-<!--
-Two time options will be offered to cover various timezones. No further alternates will be offered.
+All exams are in-person (not online) for Data 100 and Data 200 and are subject to standard proctoring procedures. Data 200S students will receive separate instructions for exam scheduling.
+- **Midterm alternate exam**: In addition to offering alternate exams for students with DSP or student athletics accommodations, we will offer one alternate exam slot for the midterm exam, time TBD (but likely same day). All alternate exam requests must be pre-approved.
+- **No Final alternate exam**: We will not offer alternate exams for the final exam except for students with DSP or student athletics accommodations.
+<!-- - We will not offer alternate midterm nor final exams except for students with appropriate accommodations, such as DSP and student athletics.
 -->
 
 ### Graduate Final Project
-All students enrolled in the graduate version of the course (CS C200 or Stat C200C, i.e. Data 200) will be graded according to the Graduate grading scheme, which includes a graduate final project. More details to follow.
+All students enrolled in the graduate version of the course (CS C200 or Stat C200C, i.e. Data 200; Data 200S) will be graded according to the Graduate grading scheme, which includes a team-based **graduate project** distributed in the second half of the semester. More details to follow.
 
+## Office Hours and Communication
 
+We want to enable everyone to succeed in this course. We encourage you to discuss course content with your friends, classmates, and course staff throughout the semester, particularly during **office hours**. 
+- All office hours are listed on the [Calendar](../calendar).
+- Almost all office hours will be held in [Warren Hall 101B](https://dac.berkeley.edu/warren-hall-2195-hearst-ave)). A small, limited portion of office hours are listed as online, primarily to accommodate online/remote students (e.g., Data 200S). 
+- In general, students can come to office hours for any questions on course assignments or material.
+- We manage office hours through an **Office Hour Queue** on [oh.ds100.org](https://oh.ds100.org/). Students attending non-instructor OH should add themselves to the “queue” and specify the assignment they need help on.
+- We will also hold **Homework/Project parties** on Wednesday evenings (Warren Hall 101B), where you can come work with your peers and ask questions.
+- Instructor office hours are generally reserved for conceptual questions, course review, or course logistics.
+
+Course Communication:
+
+- **EdStem**, or **Ed** for short, is our course forum this semester. The course is [here]({{page.course.edstem}}). <i>**All course announcements will be through Ed.**</i> We are not using bCourses this semester. Please check out EdStem or the [FAQ]({{page.course.faq}}) page first before emailing course staff directly.
+
+- **Staff email**:
+Our course staff email is [{{page.course.email}}](mailto:{{page.course.email}}). Note that to ensure more timely responses, this address is monitored by a team of instructors ({{page.course.instructors}}), Head TAs (Kanu Grover and Bella Crouch), as well as several lead GSIs, to ensure more timely responses. 
+
+- **Extenuating Circumstances Form, Head TA emails, and Instructor emails**: For sensitive matters, you should fill out the [Extenuating Circumstances Form](#extenuating-circumstances) or directly contact the Head TAs [{{page.course.head_ta_1}}](mailto:{{page.course.head_1_email}}) and [{{page.course.head_ta_2}}](mailto:{{page.course.head_2_email}}). You should only contact {{page.course.instructors}} directly for matters that require strict privacy and their direct attention.
 
 ## Policies
 
@@ -184,31 +194,46 @@ All students enrolled in the graduate version of the course (CS C200 or Stat C20
 | Lecture Participation | 5% | 5% | Drop 3 lowest scores|
 | Midterm Exam | 15% | 15%| |
 | Final Exam | 25% | 25% | |
-|Graduate Final Project| - | 15% | |
+| Graduate Final Project| - | 15% | |
 
-**Note**: Unlike previous semesters, we will not offer assignment drops, instead, we will offer a 2-day grace period submission for Homeworks, Projects, and Labs. If submissions were made on-time students will receive a 3% bonus. See the next section for more details.
+Data 200S students will receive separate communication about course grading in the first week of class.
+
+**Note**: Unlike previous semesters, we will not offer assignment drops. Instead, in Spring 2023 we will offer a grace period for some types of assignments, as well as an Extenuating Circumstances Form. See the next sections for more details.
 <br>
 
 
-### Late Policy
+### On-Time Submission
 
-All assignments are due at 11:59 PM Pacific Time on the due date specified on the syllabus. 
+All assignments are due at <i>**11:59 PM Pacific Time**</i> on the due date specified on the [Home / Schedule](../) page. The date and time of this deadline are firm. Submitting even a minute past is considered late.
 
-#### Grace Period
+<i>**Submitting by this "on-time" deadline earns an extra-credit on-time bonus, typically a ~3% perk.**</i> This is available for homeworks, projects, and labs. Graduate Project on-time grading policies are forthcoming and will be announced soon.
 
-You have a **two-day** grace period to submit your assignment after the main deadline. To use grace day on an assignment, you can submit your assignment any time during the next two days following the main deadline. If you are in the Disabled Students' Program and are offered an extension, your grace period is added to your standard accommodation. Please note that your extension, plus the grace period combined, can be at most **7 days**.
+### Grace Period
 
+If you miss the deadline for homeworks, projects, and labs, we will offer a 2-day (48-hour) **grace period** for late submissions. You can make a late submission after the on-time deadline and up to the end of the grace period. <i>**These late submissions are not penalized, but do not earn the on-time bonus.**</i> You do not need to explicitly contact staff about late submissions; just submit directly to Gradescope within the listed grace period.
 
-- **Extension beyond grace period**: You must use your grace days first before you can request any extension. At that point, we will require supporting documentation and extensions will only be granted for exceptional situations (doctor-documented illness, major family emergency, etc.)
+<u><i>**Submissions are not accepted beyond the grace period. The grace period is strictly enforced.**</i></u> We recommend thinking of the grace period as a backup, in case something unexpected comes up when aiming for the on-time deadline. As a result, getting an extension beyond the grace period will generally not be granted, except in emergencies (see the [Extenuating Circumstances](#extenuating-circumstances) section). 
 
+All official communication will refer to the on-time deadline as the expected dates that you will submit assignments. Graduate Project grace period policies are forthcoming and will be announced soon.
 
-**Extensions** are provided to students with DSP accommodations, or in the case of exceptional circumstances. If you have DSP accommodations, you should expect to receive an email from us. Otherwise, email our Communications TA [{{page.course.comms_ta}}](mailto: {{page.course.comms_email}}) to request an extension. If you make a request close to the deadline, we can not guarantee that you will receive a response before the deadline. Additionally, simply submitting a request does not guarantee you will receive an extension. Even if your work is incomplete, please submit before the deadline so you can receive credit for the work you did complete.
+### Extenuating Circumstances
 
-<!--
-{{page.course.comms_ta}} at [{{page.course.comms_email}}]({{page.course.comms_email}}) 
--->
+We recognize that our students come from varied backgrounds and have widely-varying experiences. If you encounter extenuating circumstances at anytime in the semester, please do not hesitate to let us know. The sooner we are made aware, the more options we have available to us to help you. 
 
-Note that extension requests will *not* be granted in cases where a student’s local (DataHub) tests are not passing. It is the student’s responsibility to solve such problems in advance of the deadline.
+The **Extenuating Circumstances Form** (link TBD) is for any circumstances that cannot be resolved via the grace period policy above. Within two business days of filling out the form, a course staff will reach out to you and provide a space for conversation, as well as to arrange course/grading accommodations as necessary. For more information, please email our Communications TA [{{page.course.comms_ta}}](mailto: {{page.course.comms_email}}).
+
+We recognize that at times, it can be difficult to manage your course performance---particularly in such a huge course, and particularly at Berkeley's high standards.
+Sometimes emergencies just come up (personal health emergency, family emergency, etc.).
+For those of you in Data 100, this could be your first upper-division course. For those of you in Data 200, this could be your first time simultaneously exploring computing, statistics, and data.
+<i>**Our Grace Period Policy combined with the Extenuating Circumstances Form is meant to lower the barrier to reaching out to us, as well as build your independence in managing your academic career long-term.**</i> So please do not hesitate to reach out.
+
+Note that extenuating circumstances do not cover cases where a student’s local (DataHub) or Gradescope tests are not passing. It is the student’s responsibility to solve such problems in advance of the deadline.
+
+### DSP Accommodations
+
+If you are registered with the Disabled Students' Program (DSP) and have accommodations, you should expect to receive an email from us. Otherwise, email our Communications TA [{{page.course.comms_ta}}](mailto: {{page.course.comms_email}}). DSP students who receive approved assignment accommodations will have the 2-day grace period added to the approved extension to the on-time deadline. Please note that any extension, plus the grace period combined, cannot exceed **7 days**.
+
+You are responsible for reasonable communication with course staff. If you make a request close to the deadline, we can not guarantee that you will receive a response before the deadline. Additionally, simply submitting a request does not guarantee you will receive an extension. Even if your work is incomplete, please submit before the deadline so you can receive credit for the work you did complete.
 
 ### Regrade Requests
 
@@ -224,29 +249,36 @@ Regrade requests will **not** be considered in cases in which:
 - a situation arises in which the course staff cannot ensure that the student's work was done before the assignment deadline.
 <!--- a students submits without following the steps outlined in [@13](https://piazza.com/class/kqsiwfz12g0482?cid=13)-->
 
-### Collaboration Policy and Academic Dishonesty
+### Collaboration Policy and Academic Honesty
 
-We will be following the [EECS departmental policy on Academic Honesty](https://eecs.berkeley.edu/resources/students/academic-dishonesty), which states that using work or resources that are not your own or not permitted by the course may lead to disciplinary actions, up to and including a failing grade in the course.
+We will be following the [EECS departmental policy on Academic Honesty](https://eecs.berkeley.edu/resources/students/academic-dishonesty), which states that using work or resources that are not your own or not permitted by the course may lead to disciplinary actions, including a failing grade in the course.
 
 **Assignments.**
-Data science is a collaborative activity. While you may talk with others about the homework and projects, we ask that you write your solutions individually in your own words. If you do discuss the assignments with others please include their names at the top of your notebook. Keep in mind that content from assignments will likely be covered on both the midterm and final.
-
-If we suspect that you have submitted plagiarized work, we will call you in for a meeting. If we then determine that plagiarism has occurred, we reserve the right to give you a negative full score (-100%) or lower on the assignments in question, along with reporting your offense to the Center of Student Conduct.
-
-Rather than copying someone else's work, ask for help. You are not alone in this course! The entire staff is here to help you succeed. If you invest the time to learn the material and complete the assignments, you won't need to copy any answers. (taken from [CS61A](https://cs61a.org/articles/about/#academic-honesty))
-
-We also ask that you **do not post your assignment solutions publicly**.
+Data science is a collaborative activity. While you may talk with others about the homework and projects, we ask that you write your solutions individually in your own words. **If you do discuss the assignments with others please include their names at the top of your notebook.** Restated, you and your friends are encouraged to discuss course content and approaches to problem-solving, but you are not allowed to share your code nor answers with other students, nor are you allowed to post your assignment solutions publicly. Doing so is considered academic misconduct. We will be running advanced plagiarism detection programs on all assignments.
 
 **Exams.**
 Cheating on exams is a serious offense. We have methods of detecting cheating on exams – so don't do it! Students caught cheating on any exam will fail this course.
 
+<br/>
+Plagiarism on any assignment, as well as other violations to Berkeley's [Code of Conduct](https://sa.berkeley.edu/code-of-conduct), will be reported to the Center for Student Conduct. The CSC treats most first-time offenses as a [Non-Reportable Warning](https://sa.berkeley.edu/student-code-of-conduct-section6). Additionally we reserve the right to give you a negative full score (-100%) or lower on the assignments in question, an F in the course, or even dismissal from the university. It's just not worth it!
+
+Rather than copying someone else's work, ask for help. You are not alone in Data 100! The entire staff is here to help you succeed. We expect that you will work with integrity and with respect for other members of the class, just as the course staff will work with integrity and with respect for you.
+
+Finally, know that it’s normal to struggle. Berkeley has high standards, which is one of the reasons its degrees are valued. Everyone struggles, even though many try not to show it. Even if you don’t learn everything that’s being covered, you’ll be able to build on what you do learn, whereas if you cheat you’ll have nothing to build on. You aren’t expected to be perfect; it’s ok not to get an A.
+
+## Academic and Wellness Resources
+
+Our [Resources](../resources) page lists not only course-specific academic resources such as course notes, past exams, study guides, and prerequisite review links, but also campus wellness resources on COVID-19, academic support, technology support, mental well-being, DSP accommodations, dispute resolution, social services, campus community, nad basic needs. Our staff will also refer to this page when supporting you through this course.
+
 ## We want you to succeed!
 
-If you are feeling overwhelmed, visit our office hours and talk with us. We know college can be stressful – and especially so during the COVID-19 pandemic – and we want to help you succeed.
+If you are feeling overwhelmed, visit our office hours and talk with us, or fill out the Extenuating Circumstances Form. We know college and graduate school can be stressful – especially so during the COVID-19 pandemic – and we want to help you succeed.
 
 **Important Note**: We are committed to being a resource to you, but it is important to note that all members of the teaching staff for this course are [responsible employees](https://svsh.berkeley.edu/responsible-employee), meaning that **we must disclose any incidents of sexual harassment or violence to campus authorities**. If you would like to speak to a confidential advocate, please consider reaching out to the [Berkeley PATH to Care Center](https://care.berkeley.edu/).
 
-## Acknowledgments!
+Finally, the main goal of this course is that you should learn, and have a fantastic experience doing so. Please keep that goal in mind throughout the semester. Welcome to Data 100!
+
+## Acknowledgments
 {:.no_toc}
 
-Course Culture and Additional Resources inspired and adapted with permission from Dr. Sarah Chasins' [Fall 2021 CS 164 Syllabus](https://inst.eecs.berkeley.edu/~cs164/fa21/syllabus.html) and Grace O'Connell, the Asssociate Dean for Inclusive Excellence.
+Academic Honesty policy and closing words adapted from [Data 8](https://data8.org). Course Culture inspired and adapted with permission from Dr. Sarah Chasins' [Fall 2021 CS 164 Syllabus](https://inst.eecs.berkeley.edu/~cs164/fa21/syllabus.html) and Grace O'Connell, the Asssociate Dean for Inclusive Excellence.
