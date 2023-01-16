@@ -7,11 +7,12 @@ days:
     ? '**Lecture 21**{: .label .label-lecture } SQL I'
     ? '**Discussion 10**{: .label .label-disc } Bias and Variance' 
     : ''
-    ? '**Lecture Participation 11**{: .label .label-survey }'
+    ? '**Lecture Participation 21**{: .label .label-survey }'
     : ''
 - date: 2023-04-06
   events:
     ? '**Lecture 22**{: .label .label-lecture } SQL II / Cloud Data'
+    ? '**Lecture Participation 22**{: .label .label-survey }'
     : ''
 - date: 2023-04-07
   events:

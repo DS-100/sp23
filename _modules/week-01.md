@@ -5,14 +5,15 @@ days:
 - date: 2023-01-17
   events:
     ? '**Lecture 1**{: .label .label-lecture } Introduction'
-    ? '**Lecture Participation 1**{: .label .label-survey }'
+    ? '**Lecture Participation 1**{: .label .label-survey } [Lecture Participation 1](https://app.sli.do/event/dkf81ojXdToAXJBzQsrMm2/embed/polls/9dd4dd70-7a4d-4182-81e2-f3214568f2e4)'
     : ''
 - date: 2023-01-19
   events:
     ? '**Lecture 2**{: .label .label-lecture } Pandas I'
+    ? '**Lecture Participation 2**{: .label .label-survey }'
     : ''
 - date: 2023-01-20
   events:
-      ? '**Lab 1**{: .label .label-lab } Prerequisite Coding'
-      ? '**Homework 1**{: .label .label-hw } Prerequisite Math'
+      ? '**Lab 1**{: .label .label-lab } Prerequisite Refresher'
+      ? '**Homework 1**{: .label .label-hw } Jupyter Refresher'
 ---

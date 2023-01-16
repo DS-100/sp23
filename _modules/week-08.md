@@ -7,11 +7,12 @@ days:
     ? '**Lecture 15**{: .label .label-lecture } Cross-Validation / Regularization'
     ? '**Discussion 7**{: .label .label-disc } Gradient Descent, Feature Engineering, Housing I' 
     : ''
-    ? '**Lecture Participation 8**{: .label .label-survey }'
+    ? '**Lecture Participation 15**{: .label .label-survey }'
     : ''
 - date: 2023-03-09
   events:
     ? '**Lecture 16**{: .label .label-lecture } Probability I'
+    ? '**Lecture Participation 16**{: .label .label-survey }'
     : ''
     ? '**midterm**{: .label .label-exam } Midterm Exam (7-9 PM)'
     : ''

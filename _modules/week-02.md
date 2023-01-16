@@ -7,11 +7,12 @@ days:
     ? '**Lecture 3**{: .label .label-lecture } Pandas II'
     ? '**Discussion 1**{: .label .label-disc } Prerequisites' 
     : ''
-    ? '**Lecture Participation 2**{: .label .label-survey }'
+    ? '**Lecture Participation 3**{: .label .label-survey }'
     : ''
 - date: 2023-01-26
   events:
     ? '**Lecture 4**{: .label .label-lecture } Pandas III & Data Cleaning'
+    ? '**Lecture Participation 4**{: .label .label-survey }'
     : ''
 - date: 2023-01-20
   events:

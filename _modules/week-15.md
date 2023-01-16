@@ -7,11 +7,12 @@ days:
     ? '**Lecture 27**{: .label .label-lecture } KMeans Clustering'
     ? '**Discussion 13**{: .label .label-disc } PCA' 
     : ''
-    ? '**Lecture Participation 14**{: .label .label-survey }'
+    ? '**Lecture Participation 27**{: .label .label-survey }'
     : ''
 - date: 2023-04-27
   events:
     ? '**Lecture 28**{: .label .label-lecture } Guest + Closing'
+    ? '**Lecture Participation 28**{: .label .label-survey }'
     : ''
 - date: 2023-04-28
   events:

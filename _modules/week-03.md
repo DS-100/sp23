@@ -7,11 +7,12 @@ days:
     ? '**Lecture 5**{: .label .label-lecture } Data Cleaning and EDA'
     ? '**Discussion 2**{: .label .label-disc } Pandas' 
     : ''
-    ? '**Lecture Participation 3**{: .label .label-survey }'
+    ? '**Lecture Participation 5**{: .label .label-survey }'
     : ''
 - date: 2023-02-02
   events:
     ? '**Lecture 6**{: .label .label-lecture } Regex'
+    ? '**Lecture Participation 6**{: .label .label-survey }'
     : ''
 - date: 2023-02-03
   events:

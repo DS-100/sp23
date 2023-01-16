@@ -7,11 +7,12 @@ days:
     ? '**Lecture 23**{: .label .label-lecture } Logistic regression I'
     ? '**Discussion 11**{: .label .label-disc } SQL' 
     : ''
-    ? '**Lecture Participation 12**{: .label .label-survey }'
+    ? '**Lecture Participation 23**{: .label .label-survey }'
     : ''
 - date: 2023-04-13
   events:
     ? '**Lecture 24**{: .label .label-lecture } Logistic regression II'
+    ? '**Lecture Participation 24**{: .label .label-survey }'
     : ''
 - date: 2023-04-14
   events:

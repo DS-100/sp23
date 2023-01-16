@@ -7,11 +7,12 @@ days:
     ? '**Lecture 11**{: .label .label-lecture } Constant model, loss, and transformations'
     ? '**Discussion 5**{: .label .label-disc } Probability, Sampling, and SLR' 
     : ''
-    ? '**Lecture Participation 6**{: .label .label-survey }'
+    ? '**Lecture Participation 11**{: .label .label-survey }'
     : ''
 - date: 2023-02-23
   events:
     ? '**Lecture 12**{: .label .label-lecture } OLS (multiple regression)'
+    ? '**Lecture Participation 12**{: .label .label-survey }'
     : ''
 - date: 2023-02-24
   events:
