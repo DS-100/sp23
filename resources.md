@@ -132,7 +132,9 @@ However, we have listed a few optional books that will provide additional contex
 
 - **[Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)** ([Available as eBook for Berkeley students](https://www.oreilly.com/library/view/python-for-data/9781491957653/?ar)). This book provides a good reference for the Pandas library.
 
-## Additional Resources
+## Wellness Resources
+
+Your well-being matters, and we hope that Data 100 is *never* a barrier to taking care of your mental and physical health. Below are some campus resources that may be helpful.
 
 ### COVID-19 Resources and Support
 {:.no_toc}

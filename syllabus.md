@@ -117,7 +117,7 @@ There are 2 live **lectures** held on Tuesdays and Thursdays, 11:00am-12:30pm, h
 - Students have one week to submit poll responses in either of the two ways.
 - Lecture participation is graded using poll responses on a 0/1 basis.
 - We may offer a small bonus for synchronous attendance (TBD in first week).
-- See the [Grading Scheme](#grading-scheme) section for lecture participation drops.
+- See the [Policies](#policies) section for lecture participation drops.
 
 ### Discussion
 Live **discussion sections** are one hour long, held on Tuesdays or Wednesdays. The goal of these GSI-led sessions is to work through problems, hone your skills, and flesh out your understanding as part of a team. The problems that you solve and present as part of discussion are important in understanding course material. 
