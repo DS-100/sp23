@@ -4,7 +4,7 @@ weekNumber: 1
 days:
 - date: 2023-01-17
   events:
-    ? '**Lecture 1**{: .label .label-lecture } Introduction'
+    ? '**Lecture 1**{: .label .label-lecture } [Introduction](lecture/lec01)'
     ? '**Lecture Participation 1**{: .label .label-survey } [Lecture Participation 1](https://app.sli.do/event/dkf81ojXdToAXJBzQsrMm2/embed/polls/9dd4dd70-7a4d-4182-81e2-f3214568f2e4)'
     : ''
 - date: 2023-01-19
