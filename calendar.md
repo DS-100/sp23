@@ -17,9 +17,7 @@ description: Calendars with times for all course events.
 
 In-person office hours are in <span style="color:blue">**blue**</span>, while virtual office hours are in <span style="color:brown">**brown**</span>. Click on each event to see which GSI and/or reader is running each office hour time. You should come to these with questions about anything – labs, homeworks, discussions, concepts, etc. 
 
-**Note: If you are attending online office hour, note that there is limited staff online and the wait time is usually much longer than in-person options at the same time.**
-
-# Maybe more wording encouraging in-person OH?
+**Note: Almost all office hours will be held in-person in Warren Hall 101B. A small, limited portion of office hours are listed as online, primarily to accommodate online/remote students. From our experience in previous semesters, the office hour experience in-person is much better (and much, much faster) than online.**
 
 To access in-person office hours, go to the room in the location of the office hour slot you're planning on attending.
 
