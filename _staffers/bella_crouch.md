@@ -3,6 +3,7 @@ name: Bella Crouch
 role: Lead Teaching Assistant
 email: isabella.crouch@berkeley.edu
 website: 
+team: Head TA
 photo: http://ds100.org/sp23-testing/resources/assets/staff_pics/Bella_Crouch.jpeg
 pronouns: She/Her/Hers
 ---

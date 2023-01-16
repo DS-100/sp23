@@ -23,7 +23,7 @@ To access in-person office hours, go to the room in the location of the office h
 
 To access virtual office hours, place your ticket on the [queue](http://oh.ds100.org/) and then join the call with the "Join Call" button when your name is pulled.
 
-Instructor office hours with Fernando and Will appear in <span style="color:red">**red**</span>. You should come to these with questions about concepts.
+Instructor office hours with Lisa and Narges appear in <span style="color:red">**red**</span>. You should come to these with questions about concepts.
 
 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&showTitle=0&mode=WEEK&src=Y190OGE0MzY1cGhmY20wMGUyOW1oMXVha3Fuc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19wZjBhcmZlYnBndGtiNTJlb25jbzNxMmVwMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19hZWNnMGE0djVlYmdjbDh0amo3cTcyNm9wNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19pZmlxOTA3MGI5OGprMDJoYnI4cDM3djNlc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237CB342&color=%23795548&color=%233F51B5&color=%23D50000" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
