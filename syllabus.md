@@ -160,7 +160,7 @@ All exams are in-person (not online) for Data 100 and Data 200 and are subject t
 -->
 
 ### Graduate Final Project
-All students enrolled in the graduate version of the course (CS C200 or Stat C200C, i.e. Data 200; Data 200S) will be graded according to the Graduate grading scheme, which includes a team-based **graduate project** distributed in the second half of the semester. More details to follow.
+All students enrolled in the graduate version of the course (CS C200A or Stat C200C, i.e. Data 200; Data 200S) will be graded according to the Graduate grading scheme, which includes a team-based **Graduate Final Project** distributed in the second half of the semester. More details to be released soon.
 
 ## Office Hours and Communication
 
@@ -198,7 +198,7 @@ Our course staff email is [{{page.course.email}}](mailto:{{page.course.email}}).
 
 Data 200S students will receive separate communication about course grading in the first week of class.
 
-**Note**: Unlike previous semesters, we will not offer assignment drops. Instead, in Spring 2023 we will offer a grace period for some types of assignments, as well as an Extenuating Circumstances Form. See the next sections for more details.
+**Note**: Unlike previous semesters, in Spring 2023 we are only offering drops for lecture participation and discussion. We will not offer drops for any other assignments. Instead, for homeworks, projects, and labs we will offer a grace period for some types of assignments, as well as an Extenuating Circumstances Form. See the next sections for more details.
 <br>
 
 
@@ -206,7 +206,7 @@ Data 200S students will receive separate communication about course grading in t
 
 All assignments are due at <i>**11:59 PM Pacific Time**</i> on the due date specified on the [Home / Schedule](../) page. The date and time of this deadline are firm. Submitting even a minute past is considered late.
 
-<i>**Submitting by this "on-time" deadline earns an extra-credit on-time bonus, typically a ~3% perk.**</i> This is available for homeworks, projects, and labs. Graduate Project on-time grading policies are forthcoming and will be announced soon.
+<i>**Submitting by this "on-time" deadline earns an extra-credit on-time bonus, typically a ~3% perk.**</i> This is available for homeworks, projects, and labs. Graduate Final Project on-time grading policies are forthcoming and will be announced soon.
 
 ### Grace Period
 
@@ -214,7 +214,7 @@ If you miss the deadline for homeworks, projects, and labs, we will offer a 2-da
 
 <u><i>**Submissions are not accepted beyond the grace period. The grace period is strictly enforced.**</i></u> We recommend thinking of the grace period as a backup, in case something unexpected comes up when aiming for the on-time deadline. As a result, getting an extension beyond the grace period will generally not be granted, except in emergencies (see the [Extenuating Circumstances](#extenuating-circumstances) section). 
 
-All official communication will refer to the on-time deadline as the expected dates that you will submit assignments. Graduate Project grace period policies are forthcoming and will be announced soon.
+All official communication will refer to the on-time deadline as the expected dates that you will submit assignments. Graduate Final Project grace period policies are forthcoming and will be announced soon.
 
 ### Extenuating Circumstances
 
