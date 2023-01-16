@@ -8,5 +8,5 @@ nav_exclude: true
 
 Presented by Lisa Yan and Narges Norouzi
 
-Content by Fernando Pérez, Will Fithian, Alvin Wan, Suraj Rampure, Allen Shen, Joseph Gonzalez, Andrew Bray, Josh Hug, Lisa Yan, Ani Adhikari, and Sam Lau
+Content by Fernando Pérez, Alvin Wan, Suraj Rampure, Allen Shen, Joseph Gonzalez, Andrew Bray, Josh Hug, Lisa Yan, Ani Adhikari, and Sam Lau
 
