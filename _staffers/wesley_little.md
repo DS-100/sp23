@@ -1,5 +1,5 @@
 ---
-name: Wesley/Wes Little
+name: Wesley Little
 role: Teaching Assistant
 email: weslittle@berkeley.edu
 website: https://www.linkedin.com/in/wesley-l-0a614b186/
