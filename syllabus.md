@@ -20,7 +20,7 @@ course:
     email: data100.instructors@berkeley.edu
 ---
 
-# Syllabus - To Be Updated
+# Syllabus
 {:.no_toc}
 
 Jump to:
