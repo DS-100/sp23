@@ -16,8 +16,8 @@ UC Berkeley, Spring 2023
 {: .mb-0 .fs-6 .text-grey-dk-000 }
 
 <p>
-<a href="https://berkeley.zoom.us/j/93160108652?pwd=dHlJcDlBSml4RGZ5NGhBTzFaS1dTZz09" class="btn btn-blue">Lecture Zoom</a>
-<!-- <a href="https://edstem.org/us/courses/25695/discussion/1699429" class="btn btn-purple">Discussion Sign-Up</a> 
+<!-- <a href="https://berkeley.zoom.us/j/93160108652?pwd=dHlJcDlBSml4RGZ5NGhBTzFaS1dTZz09" class="btn btn-blue">Lecture Zoom</a>
+ <a href="https://edstem.org/us/courses/25695/discussion/1699429" class="btn btn-purple">Discussion Sign-Up</a> 
 <a href="{{site.baseurl}}/calendar" class="btn btn-green">Office Hour/Lab Help</a> -->
 </p>
 
