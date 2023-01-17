@@ -15,8 +15,13 @@ Jump to:
 * TOC
 {:toc}
 
+## Supplementary Course Notes
+Alongside each lecture are supplementary [Course Notes](https://ds100.org/course-notes/). These are in development for the Spring 2023 Edition of the UC Berkeley course Data 100: Principles and Techniques of Data Science.
+
+Lecture notes will be updated on a weekly basis, prior to the lecture. If you spot any errors or would like to suggest any changes, please email us at data100.instructors@berkeley.edu.
+
 ## Optional Supplementary Textbook
-Alongside each lecture are optional textbook readings to the Data 100 textbook, [Principles and Techniques of Data Science](https://www.textbook.ds100.org/). Textbook readings are purely supplementary, and may contain material that is not in scope (and may also not be comprehensive). The textbook is *actively in development* during Spring 2022! Some readings may become out-of-date or reordered as the semester progresses. If you see a reading on our schedule that no longer exists, don't hesitate to send a pull request to our course GitHub (see [below](#course_website)).
+Alongside each lecture are optional textbook readings to the Data 100 textbook, [Principles and Techniques of Data Science](https://www.textbook.ds100.org/). Textbook readings are purely supplementary, and may contain material that is not in scope (and may also not be comprehensive). The textbook is *actively in development* during Spring 2023! Some readings may become out-of-date or reordered as the semester progresses. If you see a reading on our schedule that no longer exists, don't hesitate to send a pull request to our course GitHub (see [below](#course_website)).
 
 
 ## Exam Resources
