@@ -62,7 +62,7 @@ def get_photo_location(photos, attributes):
 
 def main():
     photos = os.listdir('../resources/assets/staff_pics')
-    for i in range(2, 40): #modify the second number depending on the number of rows in the sheet.
+    for i in range(2, 41): #modify the second number depending on the number of rows in the sheet.
         row = sheet.row_values(i)
         attributes = attribute_parser(row)
         # print(attributes)
@@ -74,7 +74,7 @@ def main():
                 + 'role: ' + attributes['role'] + '\n'
                 + 'email: ' + attributes['email'] + '\n'
                 + 'website: ' + attributes['website'] + '\n'
-                + 'photo: http://ds100.org/sp23-testing/resources/assets/staff_pics/' + get_photo_location(photos, attributes) + '\n'
+                + 'photo: http://ds100.org/sp23/resources/assets/staff_pics/' + get_photo_location(photos, attributes) + '\n'
                 + 'pronouns: ' + attributes['pronouns'] + '\n'
                 # + 'oh: ' + attributes['oh'] + '\n'
                 + '---\n'
@@ -85,7 +85,7 @@ def main():
                 + 'role: ' + attributes['role'] + '\n'
                 + 'email: ' + attributes['email'] + '\n'
                 + 'website: ' + attributes['website'] + '\n'
-                + 'photo: http://ds100.org/sp23-testing/resources/assets/staff_pics/' + get_photo_location(photos, attributes) + '\n'
+                + 'photo: http://ds100.org/sp23/resources/assets/staff_pics/' + get_photo_location(photos, attributes) + '\n'
                 + 'pronouns: ' + attributes['pronouns'] + '\n'
                 + '---\n'
                 + attributes['bio'] + '\n')
