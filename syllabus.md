@@ -23,6 +23,10 @@ course:
 # Syllabus
 {:.no_toc}
 
+<p>
+<a href="https://www.youtube.com/watch?v=wiP7Tvc2jZs" class="btn btn-blue" target="_blank">Syllabus Walkthrough</a>
+</p>
+
 Jump to:
 * TOC
 {:toc}
