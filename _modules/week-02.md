@@ -14,7 +14,7 @@ days:
     ? '**Lecture 4**{: .label .label-lecture } Pandas III & Data Cleaning'
     ? '**Lecture Participation 4**{: .label .label-survey }'
     : ''
-- date: 2023-01-20
+- date: 2023-01-27
   events:
       ? '**Lab 2**{: .label .label-lab } Pandas'
       ? '**Homework 2**{: .label .label-hw } Food Safety'
