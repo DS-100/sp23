@@ -13,7 +13,7 @@ days:
   events:
     ? '**Lecture 2**{: .label .label-lecture } [Pandas I](lecture/lec02)'
     : '[Note 2](https://ds100.org/course-notes/pandas_1/pandas_1.html)'
-    ? '**Lecture Participation 2**{: .label .label-survey } <base target="_blank"> [Lecture Participation 2 ](https://app.sli.do/event/bAdFQfFVvdGZTe2c7xFqat)'
+    ? '**Lecture Participation 2**{: .label .label-survey }'
     : ''
 - date: 2023-01-20
   events:
