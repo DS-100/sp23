@@ -14,4 +14,4 @@ Content by Narges Norouzi, Fernando Pérez, Will Fithian, Alvin Wan, Suraj Rampu
 - [slides](https://docs.google.com/presentation/d/1SAbDTM2aaIjA2Hsupd_uCXV2mpFX5oBYvmRqpLgFJYk/edit?usp=sharing){:target="_blank"}
 - [code](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flecture%2Flec02%2Flec02.ipynb){:target="_blank"}
 - [demo code](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flecture%2Flec02%2Flec02-demo.ipynb){:target="_blank"}
-<!-- - [recording] -->
+- [recording](https://youtu.be/jSVz3Rg0fbw){:target="_blank"}
