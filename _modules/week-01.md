@@ -11,7 +11,7 @@ days:
     : ''
 - date: 2023-01-19
   events:
-    ? '**Lecture 2**{: .label .label-lecture } Pandas I'
+    ? '**Lecture 2**{: .label .label-lecture } [Pandas I](lecture/lec02)'
     : '[Note 2](https://ds100.org/course-notes/pandas_1/pandas_1.html)'
     ? '**Lecture Participation 2**{: .label .label-survey }'
     : ''
