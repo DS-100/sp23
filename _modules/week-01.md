@@ -17,6 +17,6 @@ days:
     : ''
 - date: 2023-01-20
   events:
-      ? '**Lab 1**{: .label .label-lab } Prerequisite Refresher'
-      ? '**Homework 1**{: .label .label-hw } Jupyter Refresher'
+      ? '**Lab 1**{: .label .label-lab } <base target="_blank"> [Prerequisite Refresher](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab01%2Flab01.ipynb) (due Jan 24)'
+      ? '**Homework 1A**{: .label .label-hw } [Plotting and the Permutation Test](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fhw%2Fhw01%2Fhw01.ipynb) (due Jan 26)'
 ---
