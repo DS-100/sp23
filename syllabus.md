@@ -131,6 +131,7 @@ Live **discussion sections** are one hour long, held on Tuesdays or Wednesdays. 
 - You will need to be assigned to a discussion section. Discussion times and your sign-up preferences will be collected in a Welcome Form distributed in the first week of class, and section assignments will occur over the weekend. Discussion switches will then be available on a first-come, first-serve basis.
 - Online sections are reserved for students with specific needs, e.g., DSP, Data 200S, etc.; these can be requested through the Welcome Form.
 - See the [Policies](#policies) section for discussion drops. There are no discussion make-ups.
+- For the first three weeks, you may swap your section and still receive attendance credit. After these three weeks, sections will be locked in for the remainder of the semester. To request a swap, please follow the instructions on [Ed](https://edstem.org/us/courses/33744/discussion/2431514).
 
 ### Homework and Projects
 
@@ -224,7 +225,7 @@ All official communication will refer to the on-time deadline as the expected da
 
 We recognize that our students come from varied backgrounds and have widely-varying experiences. If you encounter extenuating circumstances at anytime in the semester, please do not hesitate to let us know. The sooner we are made aware, the more options we have available to us to help you. 
 
-The **Extenuating Circumstances Form** (link TBD) is for any circumstances that cannot be resolved via the grace period policy above. Within two business days of filling out the form, a course staff will reach out to you and provide a space for conversation, as well as to arrange course/grading accommodations as necessary. For more information, please email our Communications TA [{{page.course.comms_ta}}](mailto: {{page.course.comms_email}}).
+The [**Extenuating Circumstances Form**](https://docs.google.com/forms/d/e/1FAIpQLSf39rTqkAmLRDg9n0uf-1DD7UfhkBDrWR2wNzgYo9avIyCK8w/viewform?usp=sf_link){:target="_blank"} is for any circumstances that cannot be resolved via the grace period policy above. Within two business days of filling out the form, a course staff will reach out to you and provide a space for conversation, as well as to arrange course/grading accommodations as necessary. For more information, please email our Communications TA [{{page.course.comms_ta}}](mailto: {{page.course.comms_email}}).
 
 We recognize that at times, it can be difficult to manage your course performance---particularly in such a huge course, and particularly at Berkeley's high standards.
 Sometimes emergencies just come up (personal health emergency, family emergency, etc.).
