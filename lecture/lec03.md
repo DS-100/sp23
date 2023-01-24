@@ -6,7 +6,10 @@ nav_exclude: true
 
 # Lecture 3 – Pandas II
 
-Presented by Fernando Pérez
+Presented by Narges Norouzi
 
-Content by Fernando Pérez, Will Fithian, Alvin Wan, Suraj Rampure, Allen Shen, Joseph Gonzalez, Andrew Bray, Josh Hug, Lisa Yan, Ani Adhikari, and Sam Lau
+Content by Narges Norouzi, Fernando Pérez, Will Fithian, Alvin Wan, Suraj Rampure, Allen Shen, Joseph Gonzalez, Andrew Bray, Josh Hug, Lisa Yan, Ani Adhikari, and Sam Lau
+
+- [slides](https://docs.google.com/presentation/d/1kHsp7lVCQsAlf-gVL8SySrkp9g7lIITXE-CvSs2Ww8o/edit?usp=sharing){:target="_blank"}
+- [code](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flecture%2Flec03%2F03-pandas-ii.ipynb){:target="_blank"}
 

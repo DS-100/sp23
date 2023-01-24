@@ -4,7 +4,7 @@ weekNumber: 2
 days:
 - date: 2023-01-24
   events:
-    ? '**Lecture 3**{: .label .label-lecture } Pandas II'
+    ? '**Lecture 3**{: .label .label-lecture } [Pandas II](lecture/lec03)'
     ? '**Discussion 1**{: .label .label-disc } Prerequisites' 
     : ''
     ? '**Lecture Participation 3**{: .label .label-survey }'
