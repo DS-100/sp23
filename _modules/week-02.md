@@ -5,6 +5,7 @@ days:
 - date: 2023-01-24
   events:
     ? '**Lecture 3**{: .label .label-lecture } [Pandas II](lecture/lec03)'
+    : '[Note 3](https://ds100.org/course-notes/pandas_2/pandas_2.html)'
     ? '**Discussion 1**{: .label .label-disc } [Prerequisites](https://drive.google.com/file/d/1714JJm4pn4_x6hMyHkoXOFCoo6E7c0ge/view?usp=sharing)' 
     : ''
     ? '**Lecture Participation 3**{: .label .label-survey }'
