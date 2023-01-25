@@ -57,7 +57,7 @@ request](https://help.github.com/articles/about-pull-requests/) to the [course
 website github repository](https://github.com/DS-100/sp23). You will then
 become part of the history of Data 100 at Berkeley.
 
-## Coding and Probability Resources
+## Coding and Mathematics Resources
 
 #### Pandas
 
@@ -71,10 +71,6 @@ become part of the history of Data 100 at Berkeley.
 + We've assembled some [SQL Review Slides](https://docs.google.com/presentation/d/1mLVkQxah9asdKhnTNpcUSYBOuKGSWE_d3MJ5nYuTw9U/edit?usp=sharing) to help you brush up on SQL.
 + We've also compiled a list of SQL practice problems, which can be found [here](assets/other/sqlReview.pdf), along with their [solutions](assets/other/sqlReviewSol.pdf).
 + This [SQL Cheat Sheet](https://websitesetup.org/sql-cheat-sheet/) is an awesome resource that was created by Luke Harrison, a former Data 100 student.
-
-#### Probability
-+ We've compiled a few practice probability problems that we believe may help in understanding the ideas covered in the course. They can be found [here](assets/other/prob_practice.pdf), along with their [solutions](assets/other/prob_practice_solutions.pdf).
-+ We'd also like to point you to the [textbook for Data C88S](http://stat88.org/textbook/content/intro.html), an introductory probability course geared towards data science students at Berkeley.
 
 #### Regex
 + [Regex101.com](https://regex101.com). Remember to select the Python flavour of Regex!
@@ -110,6 +106,49 @@ As a data scientist you will often need to search for information on various lib
     - [Edward Tufte's book sequences](https://www.edwardtufte.com/tufte/books_vdqi) -- a classic!
     - Prof. Heer's [class](https://courses.cs.washington.edu/courses/cse512/19sp/).
 
+#### Calculus and Linear Algebra
+**Note**: None of these resources are meant to be a substitute for the appropriate requirement / co-requisite (Math 54, etc.). If you have no familiarity whatsoever with either of these topics, these may not be adequate and we strongly recommend spending time covering the prerequisite material yourself. We will assume that you have prior knowledge of these requirements and that these resources are simply to refresh your memory of concepts that you have previously learned. Please reach out to staff if you have any questions or concerns about this.
+
+**Calculus**:
+In terms of calculus, you will need to know a few things, most of which are covered within the space of the first homework and lab. Specifically, you will need to know univariate calculus rules like: Taking derivatives of a univariate function (i.e. f(x), where x is the only variable); Derivative power rule; Knowing derivatives of mathematical functions like: sinx,cosx,logx,ex; Chain rule; Product rule (rarely); Derivatives of sums. We will expect some multivariate fluency like: Taking partial derivatives of a multivariate function (i.e. f(x,y,z), where x,y,z are all variables); Gradients (the concept).
+
+- Khan Academy: 
+[Derivatives, Definitions, and Basic Rules](https://www.khanacademy.org/math/calculus-1/cs1-derivatives-definition-and-basic-rules);
+[Multivariable Derivatives](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives)
+
+- Math 53: [Derivatives of Vector Functions](https://www.youtube.com/watch?v=GUrHFmPn-W4&ab_channel=PeterKoroteev)
+
+**Linear Algebra**:
+
+Concepts roughly in order of importance:
+vectors, matrices; rank/nullity;
+inner products, orthogonality, norms;
+linear independence;
+orthonormal matrices;
+vector spaces;
+projections;
+invertibility.
+
+- EE16A notes/assignments:
+Vector and Matrix Operations
+([Note 2A](https://inst.eecs.berkeley.edu/~ee16a/fa19/lecture/Note2A.pdf), 
+[Note 2B](https://inst.eecs.berkeley.edu/~ee16a/fa19/lecture/Note2B.pdf)); 
+Span, Linear Dependence/Independence ([Note 3](https://inst.eecs.berkeley.edu/~ee16a/fa19/lecture/Note3.pdf));
+Linear Transformations ([Note 5](https://inst.eecs.berkeley.edu/~ee16a/fa19/lecture/Note5.pdf));
+Matrix Inversion ([Note 6](https://inst.eecs.berkeley.edu/~ee16a/fa19/lecture/Note6.pdf));
+Vector Subspaces ([Note 6](https://inst.eecs.berkeley.edu/~ee16a/fa19/lecture/Note7.pdf));
+Inner Products ([Note 21](https://inst.eecs.berkeley.edu/~ee16a/fa19/lecture/Note21.pdf));
+Least Squares ([Note 23](https://inst.eecs.berkeley.edu/~ee16a/fa19/lecture/Note23.pdf));
+- Math 54: Prof. Alex Paulin [Video Lectures](https://math.berkeley.edu/~apaulin/54_002(Spring2018).html)
+- Data 100 textbook: Geometric Perspective of Linear Projection ([Chapter 15](https://www.textbook.ds100.org/ch/15/linear_multi_fit.html)); Vector Spaces ([Appendix 2](https://www.textbook.ds100.org/ch/a02/vector_space_review.html))
+- 3blue1brown: [Essence of Linear Algebra](https://www.3blue1brown.com/essence-of-linear-algebra-page)
+- Khan Academy: [Linear Algebra](https://www.khanacademy.org/math/linear-algebra)
+- MIT OpenCourseware: [Linear Algebra Video Lectures](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/)
+
+
+#### Probability
++ We've compiled a few practice probability problems that we believe may help in understanding the ideas covered in the course. They can be found [here](assets/other/prob_practice.pdf), along with their [solutions](assets/other/prob_practice_solutions.pdf).
++ We'd also like to point you to the [textbook for Data C88S](http://stat88.org/textbook/content/intro.html), an introductory probability course geared towards data science students at Berkeley.
 
 
 <!-- * **Git:**
