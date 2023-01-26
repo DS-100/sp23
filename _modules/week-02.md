@@ -12,7 +12,7 @@ days:
     : ''
 - date: 2023-01-26
   events:
-    ? '**Lecture 4**{: .label .label-lecture } Pandas III & Data Cleaning'
+    ? '**Lecture 4**{: .label .label-lecture } [Pandas III & Data Cleaning](lecture/lec04)'
     ? '**Lecture Participation 4**{: .label .label-survey }'
     : ''
 - date: 2023-01-27
