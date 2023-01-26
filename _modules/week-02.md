@@ -13,6 +13,7 @@ days:
 - date: 2023-01-26
   events:
     ? '**Lecture 4**{: .label .label-lecture } [Pandas III & Data Cleaning](lecture/lec04)'
+    : '[Note 4](https://ds100.org/course-notes/pandas_3/pandas_3.html)'
     ? '**Lecture Participation 4**{: .label .label-survey }'
     : ''
 - date: 2023-01-27
