@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Lecture 4 – Data Cleaning, EDA
-nav_exclude: false
+nav_exclude: true
 ---
 
 # Lecture 4 - Data Cleaning, EDA
