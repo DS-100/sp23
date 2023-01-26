@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>02-pandas-basics</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>lec02-demo</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14579,2016 +14579,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Pandas-Basics">Pandas Basics<a class="anchor-link" href="#Pandas-Basics">&#182;</a></h1><p>A high-level overview of the <a href="https://pandas.pydata.org">Pandas</a> library. This is not a standalone notebook. Please see the slides or video for a narrative explanation of what is going on.</p>
-<p>Alternately, lab 2 provides a narrative explanation of much of the content of this notebook.</p>
+<h1 id="Pandas,-Part-I,-Demo">Pandas, Part I, Demo<a class="anchor-link" href="#Pandas,-Part-I,-Demo">&#182;</a></h1><p>By Narges Norouzi</p>
+<p>In this notebook we practice with what we learned about <code>Pandas</code> in the lecture. The dataset we use the Diversity Index of US counties dataset obtained (and cleaned and modified slightly) from kaggle (<a href="https://www.kaggle.com/datasets/mikejohnsonjr/us-counties-diversity-index?resource=download">link</a>). The dataset includes information about counties in the USA and associated diversity index. The diversity index is defined as $D = 1 - \sum(\frac{n}{N})^2$ (where $n$ = number of people of a given race and $N$ is the total number of people of all races, to get the probability of randomly selecting two people and getting two people of different races (ecological entropy)).</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'fivethirtyeight'</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">"notebook"</span><span class="p">)</span>
-
-<span class="c1"># Let's keep error messages very short</span>
-<span class="o">%</span><span class="k">xmode</span> minimal
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Exception reporting mode: Minimal
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Reading-in-DataFrames-from-Files">Reading in DataFrames from Files<a class="anchor-link" href="#Reading-in-DataFrames-from-Files">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Pandas has a number of very useful file reading tools. You can see them enumerated by typing "pd.re" and pressing tab. We'll be using read_csv today.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"elections.csv"</span><span class="p">)</span>
-<span class="n">elections</span> <span class="c1"># if we end a cell with an expression or variable name, the result will print</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1824</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic-Republican</td>
-      <td>151271</td>
-      <td>loss</td>
-      <td>57.210122</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1824</td>
-      <td>John Quincy Adams</td>
-      <td>Democratic-Republican</td>
-      <td>113142</td>
-      <td>win</td>
-      <td>42.789878</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1828</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-      <td>642806</td>
-      <td>win</td>
-      <td>56.203927</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1828</td>
-      <td>John Quincy Adams</td>
-      <td>National Republican</td>
-      <td>500897</td>
-      <td>loss</td>
-      <td>43.796073</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1832</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-      <td>702735</td>
-      <td>win</td>
-      <td>54.574789</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>177</th>
-      <td>2016</td>
-      <td>Jill Stein</td>
-      <td>Green</td>
-      <td>1457226</td>
-      <td>loss</td>
-      <td>1.073699</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>2020</td>
-      <td>Joseph Biden</td>
-      <td>Democratic</td>
-      <td>81268924</td>
-      <td>win</td>
-      <td>51.311515</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>2020</td>
-      <td>Donald Trump</td>
-      <td>Republican</td>
-      <td>74216154</td>
-      <td>loss</td>
-      <td>46.858542</td>
-    </tr>
-    <tr>
-      <th>180</th>
-      <td>2020</td>
-      <td>Jo Jorgensen</td>
-      <td>Libertarian</td>
-      <td>1865724</td>
-      <td>loss</td>
-      <td>1.177979</td>
-    </tr>
-    <tr>
-      <th>181</th>
-      <td>2020</td>
-      <td>Howard Hawkins</td>
-      <td>Green</td>
-      <td>405035</td>
-      <td>loss</td>
-      <td>0.255731</td>
-    </tr>
-  </tbody>
-</table>
-<p>182 rows × 6 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Indexing">Indexing<a class="anchor-link" href="#Indexing">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>As a simple indexing example, consider the code below, which returns the first 5 rows of the DataFrame.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1824</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic-Republican</td>
-      <td>151271</td>
-      <td>loss</td>
-      <td>57.210122</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1824</td>
-      <td>John Quincy Adams</td>
-      <td>Democratic-Republican</td>
-      <td>113142</td>
-      <td>win</td>
-      <td>42.789878</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1828</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-      <td>642806</td>
-      <td>win</td>
-      <td>56.203927</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1828</td>
-      <td>John Quincy Adams</td>
-      <td>National Republican</td>
-      <td>500897</td>
-      <td>loss</td>
-      <td>43.796073</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1832</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-      <td>702735</td>
-      <td>win</td>
-      <td>54.574789</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We can also use the head command to return only a few rows of a dataframe.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-    <tr>
-      <th>Year</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1824</th>
-      <td>Andrew Jackson</td>
-      <td>Democratic-Republican</td>
-      <td>151271</td>
-      <td>loss</td>
-      <td>57.210122</td>
-    </tr>
-    <tr>
-      <th>1824</th>
-      <td>John Quincy Adams</td>
-      <td>Democratic-Republican</td>
-      <td>113142</td>
-      <td>win</td>
-      <td>42.789878</td>
-    </tr>
-    <tr>
-      <th>1828</th>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-      <td>642806</td>
-      <td>win</td>
-      <td>56.203927</td>
-    </tr>
-    <tr>
-      <th>1828</th>
-      <td>John Quincy Adams</td>
-      <td>National Republican</td>
-      <td>500897</td>
-      <td>loss</td>
-      <td>43.796073</td>
-    </tr>
-    <tr>
-      <th>1832</th>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-      <td>702735</td>
-      <td>win</td>
-      <td>54.574789</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>2016</th>
-      <td>Jill Stein</td>
-      <td>Green</td>
-      <td>1457226</td>
-      <td>loss</td>
-      <td>1.073699</td>
-    </tr>
-    <tr>
-      <th>2020</th>
-      <td>Joseph Biden</td>
-      <td>Democratic</td>
-      <td>81268924</td>
-      <td>win</td>
-      <td>51.311515</td>
-    </tr>
-    <tr>
-      <th>2020</th>
-      <td>Donald Trump</td>
-      <td>Republican</td>
-      <td>74216154</td>
-      <td>loss</td>
-      <td>46.858542</td>
-    </tr>
-    <tr>
-      <th>2020</th>
-      <td>Jo Jorgensen</td>
-      <td>Libertarian</td>
-      <td>1865724</td>
-      <td>loss</td>
-      <td>1.177979</td>
-    </tr>
-    <tr>
-      <th>2020</th>
-      <td>Howard Hawkins</td>
-      <td>Green</td>
-      <td>405035</td>
-      <td>loss</td>
-      <td>0.255731</td>
-    </tr>
-  </tbody>
-</table>
-<p>182 rows × 5 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Or the tail command to get the last so many rows.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>177</th>
-      <td>2016</td>
-      <td>Jill Stein</td>
-      <td>Green</td>
-      <td>1457226</td>
-      <td>loss</td>
-      <td>1.073699</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>2020</td>
-      <td>Joseph Biden</td>
-      <td>Democratic</td>
-      <td>81268924</td>
-      <td>win</td>
-      <td>51.311515</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>2020</td>
-      <td>Donald Trump</td>
-      <td>Republican</td>
-      <td>74216154</td>
-      <td>loss</td>
-      <td>46.858542</td>
-    </tr>
-    <tr>
-      <th>180</th>
-      <td>2020</td>
-      <td>Jo Jorgensen</td>
-      <td>Libertarian</td>
-      <td>1865724</td>
-      <td>loss</td>
-      <td>1.177979</td>
-    </tr>
-    <tr>
-      <th>181</th>
-      <td>2020</td>
-      <td>Howard Hawkins</td>
-      <td>Green</td>
-      <td>405035</td>
-      <td>loss</td>
-      <td>0.255731</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If we want a subset of the columns, we can also use loc just to ask for those.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s2">"Year"</span><span class="p">:</span><span class="s2">"Party"</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1824</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic-Republican</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1824</td>
-      <td>John Quincy Adams</td>
-      <td>Democratic-Republican</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1828</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1828</td>
-      <td>John Quincy Adams</td>
-      <td>National Republican</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1832</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">KeyError</span><span class="ansi-red-fg">:</span> 1
-
-
-The above exception was the direct cause of the following exception:
-
-<span class="ansi-red-fg">KeyError</span><span class="ansi-red-fg">:</span> 1
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="loc">loc<a class="anchor-link" href="#loc">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>loc selects items by row and column label.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">87</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">179</span><span class="p">],</span> <span class="p">[</span><span class="s2">"Year"</span><span class="p">,</span> <span class="s2">"Candidate"</span><span class="p">,</span> <span class="s2">"Result"</span><span class="p">]]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>87</th>
-      <td>1932</td>
-      <td>Herbert Hoover</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>1860</td>
-      <td>John C. Breckinridge</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>2020</td>
-      <td>Donald Trump</td>
-      <td>loss</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">87</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">179</span><span class="p">],</span> <span class="s2">"Popular vote"</span><span class="p">:</span><span class="s2">"%"</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>87</th>
-      <td>15761254</td>
-      <td>loss</td>
-      <td>39.830594</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>848019</td>
-      <td>loss</td>
-      <td>18.138998</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>74216154</td>
-      <td>loss</td>
-      <td>46.858542</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">87</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">179</span><span class="p">],</span> <span class="s2">"Popular vote"</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>87     15761254
-25       848019
-179    74216154
-Name: Popular vote, dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s2">"Year"</span><span class="p">,</span> <span class="s2">"Candidate"</span><span class="p">,</span> <span class="s2">"Result"</span><span class="p">]]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1824</td>
-      <td>Andrew Jackson</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1824</td>
-      <td>John Quincy Adams</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1828</td>
-      <td>Andrew Jackson</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1828</td>
-      <td>John Quincy Adams</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1832</td>
-      <td>Andrew Jackson</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>177</th>
-      <td>2016</td>
-      <td>Jill Stein</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>2020</td>
-      <td>Joseph Biden</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>2020</td>
-      <td>Donald Trump</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>180</th>
-      <td>2020</td>
-      <td>Jo Jorgensen</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>181</th>
-      <td>2020</td>
-      <td>Howard Hawkins</td>
-      <td>loss</td>
-    </tr>
-  </tbody>
-</table>
-<p>182 rows × 3 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="iloc">iloc<a class="anchor-link" href="#iloc">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>iloc selects items by row and column number.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>1824</td>
-      <td>John Quincy Adams</td>
-      <td>Democratic-Republican</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1828</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1828</td>
-      <td>John Quincy Adams</td>
-      <td>National Republican</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>1824</td>
-      <td>John Quincy Adams</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1828</td>
-      <td>Andrew Jackson</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1828</td>
-      <td>John Quincy Adams</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">1</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1    John Quincy Adams
-2       Andrew Jackson
-3    John Quincy Adams
-Name: Candidate, dtype: object</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1824</td>
-      <td>Andrew Jackson</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1824</td>
-      <td>John Quincy Adams</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1828</td>
-      <td>Andrew Jackson</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1828</td>
-      <td>John Quincy Adams</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1832</td>
-      <td>Andrew Jackson</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>177</th>
-      <td>2016</td>
-      <td>Jill Stein</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>2020</td>
-      <td>Joseph Biden</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>2020</td>
-      <td>Donald Trump</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>180</th>
-      <td>2020</td>
-      <td>Jo Jorgensen</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>181</th>
-      <td>2020</td>
-      <td>Howard Hawkins</td>
-      <td>loss</td>
-    </tr>
-  </tbody>
-</table>
-<p>182 rows × 3 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%5B%5D">[]<a class="anchor-link" href="#%5B%5D">&#182;</a></h3>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We could technically do anything we want using <code>loc</code> or <code>iloc</code>. However, in practice, the <code>[]</code> operator is often used instead to yield more concise code.</p>
-<p><code>[]</code> is a bit trickier to understand than <code>loc</code> or <code>iloc</code>, but it does essentially the same thing.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If we provide a slice of row numbers, we get the numbered rows.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>3</th>
-      <td>1828</td>
-      <td>John Quincy Adams</td>
-      <td>National Republican</td>
-      <td>500897</td>
-      <td>loss</td>
-      <td>43.796073</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1832</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-      <td>702735</td>
-      <td>win</td>
-      <td>54.574789</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1832</td>
-      <td>Henry Clay</td>
-      <td>National Republican</td>
-      <td>484205</td>
-      <td>loss</td>
-      <td>37.603628</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>1832</td>
-      <td>William Wirt</td>
-      <td>Anti-Masonic</td>
-      <td>100715</td>
-      <td>loss</td>
-      <td>7.821583</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If we provide a list of column names, we get the listed columns.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[[</span><span class="s2">"Year"</span><span class="p">,</span> <span class="s2">"Candidate"</span><span class="p">,</span> <span class="s2">"Result"</span><span class="p">]]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>177</th>
-      <td>2016</td>
-      <td>Jill Stein</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>2020</td>
-      <td>Joseph Biden</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>2020</td>
-      <td>Donald Trump</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>180</th>
-      <td>2020</td>
-      <td>Jo Jorgensen</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>181</th>
-      <td>2020</td>
-      <td>Howard Hawkins</td>
-      <td>loss</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>And if we provide a single column name we get back just that column.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[</span><span class="s2">"Candidate"</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>177        Jill Stein
-178      Joseph Biden
-179      Donald Trump
-180      Jo Jorgensen
-181    Howard Hawkins
-Name: Candidate, dtype: object</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="A-little-annoying-puzzle">A little annoying puzzle<a class="anchor-link" href="#A-little-annoying-puzzle">&#182;</a></h4>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weird</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="mi">1</span><span class="p">:[</span><span class="s2">"topdog"</span><span class="p">,</span><span class="s2">"botdog"</span><span class="p">],</span> 
-    <span class="s2">"1"</span><span class="p">:[</span><span class="s2">"topcat"</span><span class="p">,</span><span class="s2">"botcat"</span><span class="p">]</span>
-<span class="p">})</span>
-<span class="n">weird</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>1</th>
-      <th>1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>topdog</td>
-      <td>topcat</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>botdog</td>
-      <td>botcat</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#weird[1] #try to predict the output</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#weird["1"] #try to predict the output</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#weird[1:] #try to predict the output</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 
      </div>
@@ -16603,7 +14608,34 @@ Name: Candidate, dtype: object</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Pandas-Datastructures:-DataFrames,-Series,-and-Indices">Pandas Datastructures: DataFrames, Series, and Indices<a class="anchor-link" href="#Pandas-Datastructures:-DataFrames,-Series,-and-Indices">&#182;</a></h2>
+<h2 id="Reading-the-data">Reading the data<a class="anchor-link" href="#Reading-the-data">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/diversityindex.csv"</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Looking-at-the-head-and-tail-of-the-data">Looking at the <code>head</code> and <code>tail</code> of the data<a class="anchor-link" href="#Looking-at-the-head-and-tail-of-the-data">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -16612,10 +14644,10 @@ Name: Candidate, dtype: object</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">elections</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -16633,90 +14665,7 @@ Name: Candidate, dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>pandas.core.frame.DataFrame</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Candidate"</span><span class="p">])</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>pandas.core.series.Series</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mottos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"mottos.csv"</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="s2">"State"</span><span class="p">)</span>
-<span class="n">mottos</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">"Alabama"</span><span class="p">:</span><span class="s2">"California"</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[58]:</div>
 
 
 
@@ -16739,776 +14688,335 @@ Name: Candidate, dtype: object</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Motto</th>
-      <th>Translation</th>
-      <th>Language</th>
-      <th>Date Adopted</th>
-    </tr>
-    <tr>
+      <th>Location</th>
       <th>State</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>County</th>
+      <th>Diversity-Index</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>Alabama</th>
-      <td>Audemus jura nostra defendere</td>
-      <td>We dare defend our rights!</td>
-      <td>Latin</td>
-      <td>1923</td>
+      <th>0</th>
+      <td>Aleutians West Census Area, AK</td>
+      <td>AK</td>
+      <td>Aleutians West Census Area</td>
+      <td>0.769346</td>
     </tr>
-    <tr>
-      <th>Alaska</th>
-      <td>North to the future</td>
-      <td>—</td>
-      <td>English</td>
-      <td>1967</td>
-    </tr>
-    <tr>
-      <th>Arizona</th>
-      <td>Ditat Deus</td>
-      <td>God enriches</td>
-      <td>Latin</td>
-      <td>1863</td>
-    </tr>
-    <tr>
-      <th>Arkansas</th>
-      <td>Regnat populus</td>
-      <td>The people rule</td>
-      <td>Latin</td>
-      <td>1907</td>
-    </tr>
-    <tr>
-      <th>California</th>
-      <td>Eureka (Εὕρηκα)</td>
-      <td>I have found it</td>
-      <td>Greek</td>
-      <td>1849</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[</span><span class="s2">"Candidate"</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Candidate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>177</th>
-      <td>Jill Stein</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>Joseph Biden</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>Donald Trump</td>
-    </tr>
-    <tr>
-      <th>180</th>
-      <td>Jo Jorgensen</td>
-    </tr>
-    <tr>
-      <th>181</th>
-      <td>Howard Hawkins</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[[</span><span class="s2">"Candidate"</span><span class="p">]]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Candidate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>177</th>
-      <td>Jill Stein</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>Joseph Biden</td>
-    </tr>
-    <tr>
-      <th>179</th>
-      <td>Donald Trump</td>
-    </tr>
-    <tr>
-      <th>180</th>
-      <td>Jo Jorgensen</td>
-    </tr>
-    <tr>
-      <th>181</th>
-      <td>Howard Hawkins</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mottos</span><span class="o">.</span><span class="n">index</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Index([&#39;Alabama&#39;, &#39;Alaska&#39;, &#39;Arizona&#39;, &#39;Arkansas&#39;, &#39;California&#39;, &#39;Colorado&#39;,
-       &#39;Connecticut&#39;, &#39;Delaware&#39;, &#39;Florida&#39;, &#39;Georgia&#39;, &#39;Hawaii&#39;, &#39;Idaho&#39;,
-       &#39;Illinois&#39;, &#39;Indiana&#39;, &#39;Iowa&#39;, &#39;Kansas&#39;, &#39;Kentucky&#39;, &#39;Louisiana&#39;,
-       &#39;Maine&#39;, &#39;Maryland&#39;, &#39;Massachusetts&#39;, &#39;Michigan&#39;, &#39;Minnesota&#39;,
-       &#39;Mississippi&#39;, &#39;Missouri&#39;, &#39;Montana&#39;, &#39;Nebraska&#39;, &#39;Nevada&#39;,
-       &#39;New Hampshire&#39;, &#39;New Jersey&#39;, &#39;New Mexico&#39;, &#39;New York&#39;,
-       &#39;North Carolina&#39;, &#39;North Dakota&#39;, &#39;Ohio&#39;, &#39;Oklahoma&#39;, &#39;Oregon&#39;,
-       &#39;Pennsylvania&#39;, &#39;Rhode Island&#39;, &#39;South Carolina&#39;, &#39;South Dakota&#39;,
-       &#39;Tennessee&#39;, &#39;Texas&#39;, &#39;Utah&#39;, &#39;Vermont&#39;, &#39;Virginia&#39;, &#39;Washington&#39;,
-       &#39;West Virginia&#39;, &#39;Wisconsin&#39;, &#39;Wyoming&#39;],
-      dtype=&#39;object&#39;, name=&#39;State&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mottos</span><span class="o">.</span><span class="n">columns</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Index([&#39;Motto&#39;, &#39;Translation&#39;, &#39;Language&#39;, &#39;Date Adopted&#39;], dtype=&#39;object&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Conditional-Selection">Conditional Selection<a class="anchor-link" href="#Conditional-Selection">&#182;</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Party"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Independent"</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>121</th>
-      <td>1976</td>
-      <td>Eugene McCarthy</td>
-      <td>Independent</td>
-      <td>740460</td>
-      <td>loss</td>
-      <td>0.911649</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>1980</td>
-      <td>John B. Anderson</td>
-      <td>Independent</td>
-      <td>5719850</td>
-      <td>loss</td>
-      <td>6.631143</td>
-    </tr>
-    <tr>
-      <th>143</th>
-      <td>1992</td>
-      <td>Ross Perot</td>
-      <td>Independent</td>
-      <td>19743821</td>
-      <td>loss</td>
-      <td>18.956298</td>
-    </tr>
-    <tr>
-      <th>161</th>
-      <td>2004</td>
-      <td>Ralph Nader</td>
-      <td>Independent</td>
-      <td>465151</td>
-      <td>loss</td>
-      <td>0.380663</td>
-    </tr>
-    <tr>
-      <th>167</th>
-      <td>2008</td>
-      <td>Ralph Nader</td>
-      <td>Independent</td>
-      <td>739034</td>
-      <td>loss</td>
-      <td>0.563842</td>
-    </tr>
-    <tr>
-      <th>174</th>
-      <td>2016</td>
-      <td>Evan McMullin</td>
-      <td>Independent</td>
-      <td>732273</td>
-      <td>loss</td>
-      <td>0.539546</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[</span><span class="s2">"Party"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Independent"</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0      False
-1      False
-2      False
-3      False
-4      False
-       ...  
-177    False
-178    False
-179    False
-180    False
-181    False
-Name: Party, Length: 182, dtype: bool</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Boolean array selection also works with <code>loc</code>!</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Party"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Independent"</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>121</th>
-      <td>1976</td>
-      <td>Eugene McCarthy</td>
-      <td>Independent</td>
-      <td>740460</td>
-      <td>loss</td>
-      <td>0.911649</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>1980</td>
-      <td>John B. Anderson</td>
-      <td>Independent</td>
-      <td>5719850</td>
-      <td>loss</td>
-      <td>6.631143</td>
-    </tr>
-    <tr>
-      <th>143</th>
-      <td>1992</td>
-      <td>Ross Perot</td>
-      <td>Independent</td>
-      <td>19743821</td>
-      <td>loss</td>
-      <td>18.956298</td>
-    </tr>
-    <tr>
-      <th>161</th>
-      <td>2004</td>
-      <td>Ralph Nader</td>
-      <td>Independent</td>
-      <td>465151</td>
-      <td>loss</td>
-      <td>0.380663</td>
-    </tr>
-    <tr>
-      <th>167</th>
-      <td>2008</td>
-      <td>Ralph Nader</td>
-      <td>Independent</td>
-      <td>739034</td>
-      <td>loss</td>
-      <td>0.563842</td>
-    </tr>
-    <tr>
-      <th>174</th>
-      <td>2016</td>
-      <td>Evan McMullin</td>
-      <td>Independent</td>
-      <td>732273</td>
-      <td>loss</td>
-      <td>0.539546</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[(</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Result"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"win"</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">elections</span><span class="p">[</span><span class="s2">"%"</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">47</span><span class="p">)]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
       <th>1</th>
-      <td>1824</td>
-      <td>John Quincy Adams</td>
-      <td>Democratic-Republican</td>
-      <td>113142</td>
-      <td>win</td>
-      <td>42.789878</td>
+      <td>Queens County, NY</td>
+      <td>NY</td>
+      <td>Queens County</td>
+      <td>0.742224</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Maui County, HI</td>
+      <td>HI</td>
+      <td>Maui County</td>
+      <td>0.740757</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Alameda County, CA</td>
+      <td>CA</td>
+      <td>Alameda County</td>
+      <td>0.740399</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Aleutians East Borough, AK</td>
+      <td>AK</td>
+      <td>Aleutians East Borough</td>
+      <td>0.738867</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[59]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Location</th>
+      <th>State</th>
+      <th>County</th>
+      <th>Diversity-Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3138</th>
+      <td>Osage County, MO</td>
+      <td>MO</td>
+      <td>Osage County</td>
+      <td>0.037540</td>
+    </tr>
+    <tr>
+      <th>3139</th>
+      <td>Lincoln County, WV</td>
+      <td>WV</td>
+      <td>Lincoln County</td>
+      <td>0.035585</td>
+    </tr>
+    <tr>
+      <th>3140</th>
+      <td>Leslie County, KY</td>
+      <td>KY</td>
+      <td>Leslie County</td>
+      <td>0.035581</td>
+    </tr>
+    <tr>
+      <th>3141</th>
+      <td>Blaine County, NE</td>
+      <td>NE</td>
+      <td>Blaine County</td>
+      <td>0.023784</td>
+    </tr>
+    <tr>
+      <th>3142</th>
+      <td>Keya Paha County, NE</td>
+      <td>NE</td>
+      <td>Keya Paha County</td>
+      <td>0.021816</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Using-loc-to-slice-the-DataFrame">Using <code>loc</code> to slice the DataFrame<a class="anchor-link" href="#Using-loc-to-slice-the-DataFrame">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"Diversity-Index"</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.740399</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">:,</span> <span class="s2">"Location"</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>1570     Cleveland County, AR
+1571    Lauderdale County, AL
+1572      Hamilton County, IN
+Name: Location, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span> <span class="s2">"State"</span><span class="p">:</span><span class="s2">"Diversity-Index"</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>County</th>
+      <th>Diversity-Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AK</td>
+      <td>Aleutians West Census Area</td>
+      <td>0.769346</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>NC</td>
+      <td>Robeson County</td>
+      <td>0.704067</td>
     </tr>
     <tr>
       <th>20</th>
-      <td>1856</td>
-      <td>James Buchanan</td>
-      <td>Democratic</td>
-      <td>1835140</td>
-      <td>win</td>
-      <td>45.306080</td>
+      <td>CA</td>
+      <td>Contra Costa County</td>
+      <td>0.686497</td>
     </tr>
     <tr>
-      <th>23</th>
-      <td>1860</td>
-      <td>Abraham Lincoln</td>
-      <td>Republican</td>
-      <td>1855993</td>
-      <td>win</td>
-      <td>39.699408</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>1892</td>
-      <td>Grover Cleveland</td>
-      <td>Democratic</td>
-      <td>5553898</td>
-      <td>win</td>
-      <td>46.121393</td>
-    </tr>
-    <tr>
-      <th>70</th>
-      <td>1912</td>
-      <td>Woodrow Wilson</td>
-      <td>Democratic</td>
-      <td>6296284</td>
-      <td>win</td>
-      <td>41.933422</td>
-    </tr>
-    <tr>
-      <th>117</th>
-      <td>1968</td>
-      <td>Richard Nixon</td>
-      <td>Republican</td>
-      <td>31783783</td>
-      <td>win</td>
-      <td>43.565246</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>1992</td>
-      <td>Bill Clinton</td>
-      <td>Democratic</td>
-      <td>44909806</td>
-      <td>win</td>
-      <td>43.118485</td>
-    </tr>
-    <tr>
-      <th>173</th>
-      <td>2016</td>
-      <td>Donald Trump</td>
-      <td>Republican</td>
-      <td>62984828</td>
-      <td>win</td>
-      <td>46.407862</td>
+      <th>50</th>
+      <td>CA</td>
+      <td>Sutter County</td>
+      <td>0.647059</td>
     </tr>
   </tbody>
 </table>
@@ -17526,10 +15034,10 @@ Name: Party, Length: 182, dtype: bool</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">elections</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 
      </div>
@@ -17547,14 +15055,349 @@ Name: Party, Length: 182, dtype: bool</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[63]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">KeyError</span><span class="ansi-red-fg">:</span> &#34;None of [Int64Index([1, 1, 1, 1, 1, 1, 1, 1, 1, 1,\n            ...\n            1, 1, 1, 1, 1, 1, 1, 1, 1, 1],\n           dtype=&#39;int64&#39;, length=182)] are in the [columns]&#34;
-</pre>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Location           Queens County, NY
+State                             NY
+County                 Queens County
+Diversity-Index             0.742224
+Name: 1, dtype: object</pre>
 </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"County"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Location</th>
+      <th>State</th>
+      <th>Diversity-Index</th>
+    </tr>
+    <tr>
+      <th>County</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Aleutians West Census Area</th>
+      <td>Aleutians West Census Area, AK</td>
+      <td>AK</td>
+      <td>0.769346</td>
+    </tr>
+    <tr>
+      <th>Queens County</th>
+      <td>Queens County, NY</td>
+      <td>NY</td>
+      <td>0.742224</td>
+    </tr>
+    <tr>
+      <th>Maui County</th>
+      <td>Maui County, HI</td>
+      <td>HI</td>
+      <td>0.740757</td>
+    </tr>
+    <tr>
+      <th>Alameda County</th>
+      <td>Alameda County, CA</td>
+      <td>CA</td>
+      <td>0.740399</td>
+    </tr>
+    <tr>
+      <th>Aleutians East Borough</th>
+      <td>Aleutians East Borough, AK</td>
+      <td>AK</td>
+      <td>0.738867</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Osage County</th>
+      <td>Osage County, MO</td>
+      <td>MO</td>
+      <td>0.037540</td>
+    </tr>
+    <tr>
+      <th>Lincoln County</th>
+      <td>Lincoln County, WV</td>
+      <td>WV</td>
+      <td>0.035585</td>
+    </tr>
+    <tr>
+      <th>Leslie County</th>
+      <td>Leslie County, KY</td>
+      <td>KY</td>
+      <td>0.035581</td>
+    </tr>
+    <tr>
+      <th>Blaine County</th>
+      <td>Blaine County, NE</td>
+      <td>NE</td>
+      <td>0.023784</td>
+    </tr>
+    <tr>
+      <th>Keya Paha County</th>
+      <td>Keya Paha County, NE</td>
+      <td>NE</td>
+      <td>0.021816</td>
+    </tr>
+  </tbody>
+</table>
+<p>3143 rows × 3 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">"Los Angeles County"</span><span class="p">,</span> <span class="p">:]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Location           Los Angeles County, CA
+State                                  CA
+Diversity-Index                  0.661865
+Name: Los Angeles County, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>County</th>
+      <th>Location</th>
+      <th>State</th>
+      <th>Diversity-Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Aleutians West Census Area</td>
+      <td>Aleutians West Census Area, AK</td>
+      <td>AK</td>
+      <td>0.769346</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Queens County</td>
+      <td>Queens County, NY</td>
+      <td>NY</td>
+      <td>0.742224</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Maui County</td>
+      <td>Maui County, HI</td>
+      <td>HI</td>
+      <td>0.740757</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Alameda County</td>
+      <td>Alameda County, CA</td>
+      <td>CA</td>
+      <td>0.740399</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Aleutians East Borough</td>
+      <td>Aleutians East Borough, AK</td>
+      <td>AK</td>
+      <td>0.738867</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>3138</th>
+      <td>Osage County</td>
+      <td>Osage County, MO</td>
+      <td>MO</td>
+      <td>0.037540</td>
+    </tr>
+    <tr>
+      <th>3139</th>
+      <td>Lincoln County</td>
+      <td>Lincoln County, WV</td>
+      <td>WV</td>
+      <td>0.035585</td>
+    </tr>
+    <tr>
+      <th>3140</th>
+      <td>Leslie County</td>
+      <td>Leslie County, KY</td>
+      <td>KY</td>
+      <td>0.035581</td>
+    </tr>
+    <tr>
+      <th>3141</th>
+      <td>Blaine County</td>
+      <td>Blaine County, NE</td>
+      <td>NE</td>
+      <td>0.023784</td>
+    </tr>
+    <tr>
+      <th>3142</th>
+      <td>Keya Paha County</td>
+      <td>Keya Paha County, NE</td>
+      <td>NE</td>
+      <td>0.021816</td>
+    </tr>
+  </tbody>
+</table>
+<p>3143 rows × 4 columns</p>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -17568,7 +15411,7 @@ Name: Party, Length: 182, dtype: bool</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Another-annoying-puzzle">Another annoying puzzle<a class="anchor-link" href="#Another-annoying-puzzle">&#182;</a></h3>
+<h2 id="Using-iloc-to-slice-the-DataFrame">Using <code>iloc</code> to slice the DataFrame<a class="anchor-link" href="#Using-iloc-to-slice-the-DataFrame">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -17577,11 +15420,10 @@ Name: Party, Length: 182, dtype: bool</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"annoying_puzzle2.csv"</span><span class="p">)</span>
-<span class="n">elections2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -17599,7 +15441,49 @@ Name: Party, Length: 182, dtype: bool</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>County    Queens County
+Name: 1, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="p">:]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
 
 
 
@@ -17622,899 +15506,160 @@ Name: Party, Length: 182, dtype: bool</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>%</th>
-      <th>Year</th>
-      <th>Result</th>
+      <th>County</th>
+      <th>Location</th>
+      <th>State</th>
+      <th>Diversity-Index</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>Reagan</td>
-      <td>Republican</td>
-      <td>50.897944</td>
-      <td>1980</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Carter</td>
-      <td>Democratic</td>
-      <td>41.132848</td>
-      <td>1980</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Anderson</td>
-      <td>Independent</td>
-      <td>6.631143</td>
-      <td>1980</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Reagan</td>
-      <td>Republican</td>
-      <td>59.023326</td>
-      <td>1984</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Mondale</td>
-      <td>Democratic</td>
-      <td>40.729429</td>
-      <td>1984</td>
-      <td>loss</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Bush</td>
-      <td>Republican</td>
-      <td>53.518845</td>
-      <td>1988</td>
-      <td>win</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Dukakis</td>
-      <td>Democratic</td>
-      <td>45.770691</td>
-      <td>1988</td>
-      <td>loss</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Which of the following yield the desired answer on the slides?</span>
-<span class="c1">#elections2.iloc[[0, 3, 5], [0, 3]]</span>
-<span class="c1">#elections2.loc[[0, 3, 5], "Candidate":"Year"]</span>
-<span class="c1">#elections2.loc[elections2["%"] &gt; 50, ["Candidate", "Year"]].head(3)</span>
-<span class="c1">#elections2.loc[elections2["%"] &gt; 50, ["Candidate", "Year"]].iloc[0:2, :]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections2</span> <span class="o">=</span> <span class="n">elections</span><span class="p">[(</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1980</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1984</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1988</span><span class="p">)]</span>
-<span class="n">elections2</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>127</th>
-      <td>1980</td>
-      <td>Barry Commoner</td>
-      <td>Citizens</td>
-      <td>233052</td>
-      <td>loss</td>
-      <td>0.270182</td>
-    </tr>
-    <tr>
-      <th>128</th>
-      <td>1980</td>
-      <td>Ed Clark</td>
-      <td>Libertarian</td>
-      <td>921128</td>
-      <td>loss</td>
-      <td>1.067883</td>
-    </tr>
-    <tr>
-      <th>129</th>
-      <td>1980</td>
-      <td>Jimmy Carter</td>
-      <td>Democratic</td>
-      <td>35480115</td>
-      <td>loss</td>
-      <td>41.132848</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>1980</td>
-      <td>John B. Anderson</td>
-      <td>Independent</td>
-      <td>5719850</td>
-      <td>loss</td>
-      <td>6.631143</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>1980</td>
-      <td>Ronald Reagan</td>
-      <td>Republican</td>
-      <td>43903230</td>
-      <td>win</td>
-      <td>50.897944</td>
-    </tr>
-    <tr>
-      <th>132</th>
-      <td>1984</td>
-      <td>David Bergland</td>
-      <td>Libertarian</td>
-      <td>228111</td>
-      <td>loss</td>
-      <td>0.247245</td>
-    </tr>
-    <tr>
-      <th>133</th>
-      <td>1984</td>
-      <td>Ronald Reagan</td>
-      <td>Republican</td>
-      <td>54455472</td>
-      <td>win</td>
-      <td>59.023326</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>1984</td>
-      <td>Walter Mondale</td>
-      <td>Democratic</td>
-      <td>37577352</td>
-      <td>loss</td>
-      <td>40.729429</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>1988</td>
-      <td>George H. W. Bush</td>
-      <td>Republican</td>
-      <td>48886597</td>
-      <td>win</td>
-      <td>53.518845</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>1988</td>
-      <td>Lenora Fulani</td>
-      <td>New Alliance</td>
-      <td>217221</td>
-      <td>loss</td>
-      <td>0.237804</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>1988</td>
-      <td>Michael Dukakis</td>
-      <td>Democratic</td>
-      <td>41809074</td>
-      <td>loss</td>
-      <td>45.770691</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>1988</td>
-      <td>Ron Paul</td>
-      <td>Libertarian</td>
-      <td>431750</td>
-      <td>loss</td>
-      <td>0.472660</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span>
-    <span class="n">elections</span><span class="p">[(</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Party"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Anti-Masonic"</span><span class="p">)</span>  <span class="o">|</span> 
-              <span class="p">(</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Party"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"American"</span><span class="p">)</span>      <span class="o">|</span>
-              <span class="p">(</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Party"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Anti-Monopoly"</span><span class="p">)</span> <span class="o">|</span>
-              <span class="p">(</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Party"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"American Independent"</span><span class="p">)]</span>
-<span class="p">)</span>
-<span class="c1">#Note: The parentheses surrounding the code make it possible to break the code on to multiple lines for readability</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>6</th>
-      <td>1832</td>
-      <td>William Wirt</td>
-      <td>Anti-Masonic</td>
-      <td>100715</td>
-      <td>loss</td>
-      <td>7.821583</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>1856</td>
-      <td>Millard Fillmore</td>
-      <td>American</td>
-      <td>873053</td>
-      <td>loss</td>
-      <td>21.554001</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>1884</td>
-      <td>Benjamin Butler</td>
-      <td>Anti-Monopoly</td>
-      <td>134294</td>
-      <td>loss</td>
-      <td>1.335838</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>1968</td>
-      <td>George Wallace</td>
-      <td>American Independent</td>
-      <td>9901118</td>
-      <td>loss</td>
-      <td>13.571218</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>1972</td>
-      <td>John G. Schmitz</td>
-      <td>American Independent</td>
-      <td>1100868</td>
-      <td>loss</td>
-      <td>1.421524</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>1976</td>
-      <td>Lester Maddox</td>
-      <td>American Independent</td>
-      <td>170274</td>
-      <td>loss</td>
-      <td>0.209640</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>1976</td>
-      <td>Thomas J. Anderson</td>
-      <td>American</td>
-      <td>158271</td>
-      <td>loss</td>
-      <td>0.194862</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a_parties</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Anti-Masonic"</span><span class="p">,</span> <span class="s2">"American"</span><span class="p">,</span> <span class="s2">"Anti-Monopoly"</span><span class="p">,</span> <span class="s2">"American Independent"</span><span class="p">]</span>
-<span class="n">elections</span><span class="p">[</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Party"</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">a_parties</span><span class="p">)]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>6</th>
-      <td>1832</td>
-      <td>William Wirt</td>
-      <td>Anti-Masonic</td>
-      <td>100715</td>
-      <td>loss</td>
-      <td>7.821583</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>1856</td>
-      <td>Millard Fillmore</td>
-      <td>American</td>
-      <td>873053</td>
-      <td>loss</td>
-      <td>21.554001</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>1884</td>
-      <td>Benjamin Butler</td>
-      <td>Anti-Monopoly</td>
-      <td>134294</td>
-      <td>loss</td>
-      <td>1.335838</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>1968</td>
-      <td>George Wallace</td>
-      <td>American Independent</td>
-      <td>9901118</td>
-      <td>loss</td>
-      <td>13.571218</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>1972</td>
-      <td>John G. Schmitz</td>
-      <td>American Independent</td>
-      <td>1100868</td>
-      <td>loss</td>
-      <td>1.421524</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>1976</td>
-      <td>Lester Maddox</td>
-      <td>American Independent</td>
-      <td>170274</td>
-      <td>loss</td>
-      <td>0.209640</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>1976</td>
-      <td>Thomas J. Anderson</td>
-      <td>American</td>
-      <td>158271</td>
-      <td>loss</td>
-      <td>0.194862</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[</span><span class="n">elections</span><span class="p">[</span><span class="s2">"Party"</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"A"</span><span class="p">)]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>6</th>
-      <td>1832</td>
-      <td>William Wirt</td>
-      <td>Anti-Masonic</td>
-      <td>100715</td>
-      <td>loss</td>
-      <td>7.821583</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>1856</td>
-      <td>Millard Fillmore</td>
-      <td>American</td>
-      <td>873053</td>
-      <td>loss</td>
-      <td>21.554001</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>1884</td>
-      <td>Benjamin Butler</td>
-      <td>Anti-Monopoly</td>
-      <td>134294</td>
-      <td>loss</td>
-      <td>1.335838</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>1968</td>
-      <td>George Wallace</td>
-      <td>American Independent</td>
-      <td>9901118</td>
-      <td>loss</td>
-      <td>13.571218</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>1972</td>
-      <td>John G. Schmitz</td>
-      <td>American Independent</td>
-      <td>1100868</td>
-      <td>loss</td>
-      <td>1.421524</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>1976</td>
-      <td>Lester Maddox</td>
-      <td>American Independent</td>
-      <td>170274</td>
-      <td>loss</td>
-      <td>0.209640</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>1976</td>
-      <td>Thomas J. Anderson</td>
-      <td>American</td>
-      <td>158271</td>
-      <td>loss</td>
-      <td>0.194862</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Year &gt;= 2000 and Result == "win"'</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>152</th>
-      <td>2000</td>
-      <td>George W. Bush</td>
-      <td>Republican</td>
-      <td>50456002</td>
-      <td>win</td>
-      <td>47.974666</td>
-    </tr>
-    <tr>
-      <th>157</th>
-      <td>2004</td>
-      <td>George W. Bush</td>
-      <td>Republican</td>
-      <td>62040610</td>
-      <td>win</td>
-      <td>50.771824</td>
-    </tr>
-    <tr>
-      <th>162</th>
-      <td>2008</td>
-      <td>Barack Obama</td>
-      <td>Democratic</td>
-      <td>69498516</td>
-      <td>win</td>
-      <td>53.023510</td>
-    </tr>
-    <tr>
-      <th>168</th>
-      <td>2012</td>
-      <td>Barack Obama</td>
-      <td>Democratic</td>
-      <td>65915795</td>
-      <td>win</td>
-      <td>51.258484</td>
-    </tr>
-    <tr>
-      <th>173</th>
-      <td>2016</td>
-      <td>Donald Trump</td>
-      <td>Republican</td>
-      <td>62984828</td>
-      <td>win</td>
-      <td>46.407862</td>
-    </tr>
-    <tr>
-      <th>178</th>
-      <td>2020</td>
-      <td>Joseph Biden</td>
-      <td>Democratic</td>
-      <td>81268924</td>
-      <td>win</td>
-      <td>51.311515</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">parties</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Republican"</span><span class="p">,</span> <span class="s2">"Democratic"</span><span class="p">]</span>
-<span class="n">elections</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Result == "win" and Party not in @parties'</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>1824</td>
-      <td>John Quincy Adams</td>
-      <td>Democratic-Republican</td>
-      <td>113142</td>
-      <td>win</td>
-      <td>42.789878</td>
+      <th>10</th>
+      <td>Robeson County</td>
+      <td>Robeson County, NC</td>
+      <td>NC</td>
+      <td>0.704067</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>1840</td>
-      <td>William Henry Harrison</td>
-      <td>Whig</td>
-      <td>1275583</td>
-      <td>win</td>
-      <td>53.051213</td>
+      <td>Gwinnett County</td>
+      <td>Gwinnett County, GA</td>
+      <td>GA</td>
+      <td>0.702974</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Yakutat City and Borough</td>
+      <td>Yakutat City and Borough, AK</td>
+      <td>AK</td>
+      <td>0.698748</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Santa Clara County</td>
+      <td>Santa Clara County, CA</td>
+      <td>CA</td>
+      <td>0.694312</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Kings County</td>
+      <td>Kings County, NY</td>
+      <td>NY</td>
+      <td>0.692349</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>San Mateo County</td>
+      <td>San Mateo County, CA</td>
+      <td>CA</td>
+      <td>0.691029</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>1848</td>
-      <td>Zachary Taylor</td>
-      <td>Whig</td>
-      <td>1360235</td>
-      <td>win</td>
-      <td>47.309296</td>
+      <td>Manassas Park city</td>
+      <td>Manassas Park city, VA</td>
+      <td>VA</td>
+      <td>0.690899</td>
     </tr>
     <tr>
-      <th>27</th>
-      <td>1864</td>
-      <td>Abraham Lincoln</td>
-      <td>National Union</td>
-      <td>2211317</td>
-      <td>win</td>
-      <td>54.951512</td>
+      <th>17</th>
+      <td>Dallas County</td>
+      <td>Dallas County, TX</td>
+      <td>TX</td>
+      <td>0.690390</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Montgomery County</td>
+      <td>Montgomery County, MD</td>
+      <td>MD</td>
+      <td>0.687803</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Sacramento County</td>
+      <td>Sacramento County, CA</td>
+      <td>CA</td>
+      <td>0.687281</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[69]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>County</th>
+      <th>State</th>
+      <th>Diversity-Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>13</th>
+      <td>Santa Clara County</td>
+      <td>CA</td>
+      <td>0.694312</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Dallas County</td>
+      <td>TX</td>
+      <td>0.690390</td>
     </tr>
   </tbody>
 </table>
@@ -18534,7 +15679,7 @@ Name: Party, Length: 182, dtype: bool</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Built-In-Functions">Built In Functions<a class="anchor-link" href="#Built-In-Functions">&#182;</a></h2>
+<h2 id="Using-%5B%5D-to-slice-the-DataFrame">Using <code>[]</code> to slice the DataFrame<a class="anchor-link" href="#Using-%5B%5D-to-slice-the-DataFrame">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -18543,11 +15688,10 @@ Name: Party, Length: 182, dtype: bool</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">winners</span> <span class="o">=</span> <span class="n">elections</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Result == "win"'</span><span class="p">)[</span><span class="s2">"%"</span><span class="p">]</span>
-<span class="n">winners</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]</span>
 </pre></div>
 
      </div>
@@ -18565,135 +15709,7 @@ Name: Party, Length: 182, dtype: bool</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1     42.789878
-2     56.203927
-4     54.574789
-8     52.272472
-11    53.051213
-Name: %, dtype: float64</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">winners</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>51.711492943</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">winners</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>61.34470329</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
 
 
 
@@ -18716,811 +15732,235 @@ Name: %, dtype: float64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
+      <th>County</th>
+      <th>Location</th>
+      <th>State</th>
+      <th>Diversity-Index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3138</th>
+      <td>Osage County</td>
+      <td>Osage County, MO</td>
+      <td>MO</td>
+      <td>0.037540</td>
+    </tr>
+    <tr>
+      <th>3139</th>
+      <td>Lincoln County</td>
+      <td>Lincoln County, WV</td>
+      <td>WV</td>
+      <td>0.035585</td>
+    </tr>
+    <tr>
+      <th>3140</th>
+      <td>Leslie County</td>
+      <td>Leslie County, KY</td>
+      <td>KY</td>
+      <td>0.035581</td>
+    </tr>
+    <tr>
+      <th>3141</th>
+      <td>Blaine County</td>
+      <td>Blaine County, NE</td>
+      <td>NE</td>
+      <td>0.023784</td>
+    </tr>
+    <tr>
+      <th>3142</th>
+      <td>Keya Paha County</td>
+      <td>Keya Paha County, NE</td>
+      <td>NE</td>
+      <td>0.021816</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">"Diversity-Index"</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0       0.769346
+1       0.742224
+2       0.740757
+3       0.740399
+4       0.738867
+          ...   
+3138    0.037540
+3139    0.035585
+3140    0.035581
+3141    0.023784
+3142    0.021816
+Name: Diversity-Index, Length: 3143, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">"County"</span><span class="p">,</span> <span class="s2">"State"</span><span class="p">,</span> <span class="s2">"Location"</span><span class="p">]]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>County</th>
+      <th>State</th>
+      <th>Location</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1824</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic-Republican</td>
-      <td>151271</td>
-      <td>loss</td>
-      <td>57.210122</td>
+      <td>Aleutians West Census Area</td>
+      <td>AK</td>
+      <td>Aleutians West Census Area, AK</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1824</td>
-      <td>John Quincy Adams</td>
-      <td>Democratic-Republican</td>
-      <td>113142</td>
-      <td>win</td>
-      <td>42.789878</td>
+      <td>Queens County</td>
+      <td>NY</td>
+      <td>Queens County, NY</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1828</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-      <td>642806</td>
-      <td>win</td>
-      <td>56.203927</td>
+      <td>Maui County</td>
+      <td>HI</td>
+      <td>Maui County, HI</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1828</td>
-      <td>John Quincy Adams</td>
-      <td>National Republican</td>
-      <td>500897</td>
-      <td>loss</td>
-      <td>43.796073</td>
+      <td>Alameda County</td>
+      <td>CA</td>
+      <td>Alameda County, CA</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1832</td>
-      <td>Andrew Jackson</td>
-      <td>Democratic</td>
-      <td>702735</td>
-      <td>win</td>
-      <td>54.574789</td>
+      <td>Aleutians East Borough</td>
+      <td>AK</td>
+      <td>Aleutians East Borough, AK</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th>177</th>
-      <td>2016</td>
-      <td>Jill Stein</td>
-      <td>Green</td>
-      <td>1457226</td>
-      <td>loss</td>
-      <td>1.073699</td>
+      <th>3138</th>
+      <td>Osage County</td>
+      <td>MO</td>
+      <td>Osage County, MO</td>
     </tr>
     <tr>
-      <th>178</th>
-      <td>2020</td>
-      <td>Joseph Biden</td>
-      <td>Democratic</td>
-      <td>81268924</td>
-      <td>win</td>
-      <td>51.311515</td>
+      <th>3139</th>
+      <td>Lincoln County</td>
+      <td>WV</td>
+      <td>Lincoln County, WV</td>
     </tr>
     <tr>
-      <th>179</th>
-      <td>2020</td>
-      <td>Donald Trump</td>
-      <td>Republican</td>
-      <td>74216154</td>
-      <td>loss</td>
-      <td>46.858542</td>
+      <th>3140</th>
+      <td>Leslie County</td>
+      <td>KY</td>
+      <td>Leslie County, KY</td>
     </tr>
     <tr>
-      <th>180</th>
-      <td>2020</td>
-      <td>Jo Jorgensen</td>
-      <td>Libertarian</td>
-      <td>1865724</td>
-      <td>loss</td>
-      <td>1.177979</td>
+      <th>3141</th>
+      <td>Blaine County</td>
+      <td>NE</td>
+      <td>Blaine County, NE</td>
     </tr>
     <tr>
-      <th>181</th>
-      <td>2020</td>
-      <td>Howard Hawkins</td>
-      <td>Green</td>
-      <td>405035</td>
-      <td>loss</td>
-      <td>0.255731</td>
+      <th>3142</th>
+      <td>Keya Paha County</td>
+      <td>NE</td>
+      <td>Keya Paha County, NE</td>
     </tr>
   </tbody>
 </table>
-<p>182 rows × 6 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">size</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1092</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(182, 6)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Popular vote</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>182.000000</td>
-      <td>1.820000e+02</td>
-      <td>182.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>1934.087912</td>
-      <td>1.235364e+07</td>
-      <td>27.470350</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>57.048908</td>
-      <td>1.907715e+07</td>
-      <td>22.968034</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1824.000000</td>
-      <td>1.007150e+05</td>
-      <td>0.098088</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>1889.000000</td>
-      <td>3.876395e+05</td>
-      <td>1.219996</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>1936.000000</td>
-      <td>1.709375e+06</td>
-      <td>37.677893</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>1988.000000</td>
-      <td>1.897775e+07</td>
-      <td>48.354977</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>2020.000000</td>
-      <td>8.126892e+07</td>
-      <td>61.344703</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>60</th>
-      <td>1904</td>
-      <td>Theodore Roosevelt</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1828</td>
-      <td>Andrew Jackson</td>
-    </tr>
-    <tr>
-      <th>151</th>
-      <td>2000</td>
-      <td>Al Gore</td>
-    </tr>
-    <tr>
-      <th>161</th>
-      <td>2004</td>
-      <td>Ralph Nader</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>1876</td>
-      <td>Samuel J. Tilden</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Year == 2000'</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>152</th>
-      <td>2000</td>
-      <td>George W. Bush</td>
-    </tr>
-    <tr>
-      <th>151</th>
-      <td>2000</td>
-      <td>Al Gore</td>
-    </tr>
-    <tr>
-      <th>152</th>
-      <td>2000</td>
-      <td>George W. Bush</td>
-    </tr>
-    <tr>
-      <th>151</th>
-      <td>2000</td>
-      <td>Al Gore</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[</span><span class="s2">"Candidate"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Norman Thomas         5
-Ralph Nader           4
-Franklin Roosevelt    4
-Eugene V. Debs        4
-Andrew Jackson        3
-                     ..
-Silas C. Swallow      1
-Alton B. Parker       1
-John G. Woolley       1
-Joshua Levering       1
-Howard Hawkins        1
-Name: Candidate, Length: 132, dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[</span><span class="s2">"Party"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([&#39;Democratic-Republican&#39;, &#39;Democratic&#39;, &#39;National Republican&#39;,
-       &#39;Anti-Masonic&#39;, &#39;Whig&#39;, &#39;Free Soil&#39;, &#39;Republican&#39;, &#39;American&#39;,
-       &#39;Constitutional Union&#39;, &#39;Southern Democratic&#39;,
-       &#39;Northern Democratic&#39;, &#39;National Union&#39;, &#39;Liberal Republican&#39;,
-       &#39;Greenback&#39;, &#39;Anti-Monopoly&#39;, &#39;Prohibition&#39;, &#39;Union Labor&#39;,
-       &#39;Populist&#39;, &#39;National Democratic&#39;, &#39;Socialist&#39;, &#39;Progressive&#39;,
-       &#39;Farmer–Labor&#39;, &#39;Communist&#39;, &#39;Union&#39;, &#39;Dixiecrat&#39;,
-       &#34;States&#39; Rights&#34;, &#39;American Independent&#39;, &#39;Independent&#39;,
-       &#39;Libertarian&#39;, &#39;Citizens&#39;, &#39;New Alliance&#39;, &#39;Taxpayers&#39;,
-       &#39;Natural Law&#39;, &#39;Green&#39;, &#39;Reform&#39;, &#39;Constitution&#39;], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="p">[</span><span class="s2">"Candidate"</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>75           Aaron S. Watkins
-27            Abraham Lincoln
-23            Abraham Lincoln
-108           Adlai Stevenson
-105           Adlai Stevenson
-                ...          
-19             Winfield Scott
-37     Winfield Scott Hancock
-74             Woodrow Wilson
-70             Woodrow Wilson
-16             Zachary Taylor
-Name: Candidate, Length: 182, dtype: object</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">elections</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"%"</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Candidate</th>
-      <th>Party</th>
-      <th>Popular vote</th>
-      <th>Result</th>
-      <th>%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>114</th>
-      <td>1964</td>
-      <td>Lyndon Johnson</td>
-      <td>Democratic</td>
-      <td>43127041</td>
-      <td>win</td>
-      <td>61.344703</td>
-    </tr>
-    <tr>
-      <th>91</th>
-      <td>1936</td>
-      <td>Franklin Roosevelt</td>
-      <td>Democratic</td>
-      <td>27752648</td>
-      <td>win</td>
-      <td>60.978107</td>
-    </tr>
-    <tr>
-      <th>120</th>
-      <td>1972</td>
-      <td>Richard Nixon</td>
-      <td>Republican</td>
-      <td>47168710</td>
-      <td>win</td>
-      <td>60.907806</td>
-    </tr>
-    <tr>
-      <th>79</th>
-      <td>1920</td>
-      <td>Warren Harding</td>
-      <td>Republican</td>
-      <td>16144093</td>
-      <td>win</td>
-      <td>60.574501</td>
-    </tr>
-    <tr>
-      <th>133</th>
-      <td>1984</td>
-      <td>Ronald Reagan</td>
-      <td>Republican</td>
-      <td>54455472</td>
-      <td>win</td>
-      <td>59.023326</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>165</th>
-      <td>2008</td>
-      <td>Cynthia McKinney</td>
-      <td>Green</td>
-      <td>161797</td>
-      <td>loss</td>
-      <td>0.123442</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>1996</td>
-      <td>John Hagelin</td>
-      <td>Natural Law</td>
-      <td>113670</td>
-      <td>loss</td>
-      <td>0.118219</td>
-    </tr>
-    <tr>
-      <th>160</th>
-      <td>2004</td>
-      <td>Michael Peroutka</td>
-      <td>Constitution</td>
-      <td>143630</td>
-      <td>loss</td>
-      <td>0.117542</td>
-    </tr>
-    <tr>
-      <th>141</th>
-      <td>1992</td>
-      <td>Bo Gritz</td>
-      <td>Populist</td>
-      <td>106152</td>
-      <td>loss</td>
-      <td>0.101918</td>
-    </tr>
-    <tr>
-      <th>156</th>
-      <td>2004</td>
-      <td>David Cobb</td>
-      <td>Green</td>
-      <td>119859</td>
-      <td>loss</td>
-      <td>0.098088</td>
-    </tr>
-  </tbody>
-</table>
-<p>182 rows × 6 columns</p>
+<p>3143 rows × 3 columns</p>
 </div>
 </div>
 
