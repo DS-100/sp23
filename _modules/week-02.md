@@ -7,7 +7,7 @@ days:
     ? '**Lecture 3**{: .label .label-lecture } [Pandas II](lecture/lec03)'
     : '[Note 3](https://ds100.org/course-notes/pandas_2/pandas_2.html)'
     ? '**Discussion 1**{: .label .label-disc } [Prerequisites](https://drive.google.com/file/d/1714JJm4pn4_x6hMyHkoXOFCoo6E7c0ge/view?usp=sharing)' 
-    : ''
+    : '[Solution](https://drive.google.com/file/d/1oJZEzM9meCS60caM2y57fLPJb8blxSze/view?usp=sharing)'
     ? '**Lecture Participation 3**{: .label .label-survey } <base target="_blank"> [Lecture Participation 3](https://app.sli.do/event/4FZhp2UeWxkEcZxhds62tS/embed/polls/c84e1607-960f-4c04-9ddc-7ebdc10317c2)'
     : ''
 - date: 2023-01-26
