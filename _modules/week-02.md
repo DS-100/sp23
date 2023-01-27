@@ -19,5 +19,5 @@ days:
 - date: 2023-01-27
   events:
       ? '**Lab 2**{: .label .label-lab } [Pandas](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab02%2Flab02.ipynb) (due Jan 31)'
-      ? '**Homework 2**{: .label .label-hw } Food Safety'
+      ? '**Homework 2**{: .label .label-hw } [Food Safety](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fhw%2Fhw02%2Fhw02.ipynb) (due Feb 2)'
 ---
