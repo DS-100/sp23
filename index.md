@@ -17,7 +17,7 @@ UC Berkeley, Spring 2023
 
 <p>
 <a href="https://edstem.org/us/courses/33744/discussion/2396700" class="btn btn-blue">Lecture Zoom</a>
-<a href="https://edstem.org/us/courses/33744/discussion/2430902" class="btn btn-purple">Discussion Sign-Up</a> 
+<a href="https://sections.ds100.org" class="btn btn-purple">Discussions</a> 
 <a href="{{site.baseurl}}/calendar" class="btn btn-green">Office Hour/Lab Help</a>
 </p>
 
