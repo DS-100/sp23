@@ -1,4 +1,6 @@
 **/.DS_Store
-**/*.ipynb_checkpoints/
+*.ipynb_checkpoints/
 _site/*
+__pycache__/
 _staffers/sheets_parser.json
+*.py[cod]
