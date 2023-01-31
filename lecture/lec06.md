@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Lecture 6 – Visualization I
+title: Lecture 6 – Text Wrangling and Regex
 nav_exclude: true
 ---
 
-# Lecture 6 - Visualization I
+# Lecture 6 - Text Wrangling and Regex
 
 Presented by Andrew Bray
 

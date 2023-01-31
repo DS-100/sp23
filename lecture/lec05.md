@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Lecture 5 – Text Wrangling and Regex
+title: Lecture 5 – Data Cleaning and EDA, Part 2
 nav_exclude: true
 ---
 
-# Lecture 5 - Regex
+# Lecture 5 - Data Cleaning and EDA, Part 2
 
 Presented by Lisa Yan
 

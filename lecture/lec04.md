@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Lecture 4 – Data Cleaning, EDA
+title: Lecture 4 – Pandas III; EDA and Data Cleaning, Part 1
 nav_exclude: true
 ---
 
-# Lecture 4 - Data Cleaning, EDA
+# Lecture 4 - Pandas III; EDA and Data Cleaning, Part 1
 
 Presented by Narges Norouzi and Lisa Yan
 
