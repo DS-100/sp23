@@ -30,7 +30,7 @@ UC Berkeley, Spring 2023
   </div>
 </div>
 
-Jump to current week: [here](#week-{{page.currWeekNumber}}).
+Jump to current week: [here](#week-{{page.currWeekNumber}}){:target="_self"}.
 
 <!-- <span style="color:red" h1> **This site is currently being built** </span> -->
 + Frequently Asked Questions: Before posting on the [class Ed]({{page.course.edstem}}), please read the [class FAQ page]({{page.course.faq}}).
