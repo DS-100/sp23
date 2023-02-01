@@ -15,8 +15,8 @@ course:
     head_1_email: grover.kanu@berkeley.edu
     head_ta_2: Bella Crouch
     head_2_email: isabella.crouch@berkeley.edu
-    comms_ta: Samantha Wray
-    comms_email: samanthawray@berkeley.edu
+    comms_ta: support email
+    comms_email: data100.support@berkeley.edu
     email: data100.instructors@berkeley.edu
 ---
 
@@ -226,7 +226,7 @@ All official communication will refer to the on-time deadline as the expected da
 
 We recognize that our students come from varied backgrounds and have widely-varying experiences. If you encounter extenuating circumstances at anytime in the semester, please do not hesitate to let us know. The sooner we are made aware, the more options we have available to us to help you. 
 
-The [**Extenuating Circumstances Form**](https://docs.google.com/forms/d/e/1FAIpQLSf39rTqkAmLRDg9n0uf-1DD7UfhkBDrWR2wNzgYo9avIyCK8w/viewform?usp=sf_link){:target="_blank"} is for any circumstances that cannot be resolved via the grace period policy above. Within two business days of filling out the form, a course staff will reach out to you and provide a space for conversation, as well as to arrange course/grading accommodations as necessary. For more information, please email our Communications TA [{{page.course.comms_ta}}](mailto: {{page.course.comms_email}}).
+The [**Extenuating Circumstances Form**](https://docs.google.com/forms/d/e/1FAIpQLSf39rTqkAmLRDg9n0uf-1DD7UfhkBDrWR2wNzgYo9avIyCK8w/viewform?usp=sf_link){:target="_blank"} is for any circumstances that cannot be resolved via the grace period policy above. Within two business days of filling out the form, a course staff will reach out to you and provide a space for conversation, as well as to arrange course/grading accommodations as necessary. For more information, please email our [{{page.course.comms_ta}}](mailto: {{page.course.comms_email}}).
 
 We recognize that at times, it can be difficult to manage your course performance---particularly in such a huge course, and particularly at Berkeley's high standards.
 Sometimes emergencies just come up (personal health emergency, family emergency, etc.).
@@ -237,7 +237,7 @@ Note that extenuating circumstances do not cover cases where a student’s local
 
 ### DSP Accommodations
 
-If you are registered with the Disabled Students' Program (DSP) and have accommodations, you should expect to receive an email from us. Otherwise, email our Communications TA [{{page.course.comms_ta}}](mailto: {{page.course.comms_email}}). DSP students who receive approved assignment accommodations will have the 2-day grace period added to the approved extension to the on-time deadline. Please note that any extension, plus the grace period combined, cannot exceed **7 days**.
+If you are registered with the Disabled Students' Program (DSP) and have accommodations, you should expect to receive an email from us. Otherwise, email our [{{page.course.comms_ta}}](mailto: {{page.course.comms_email}}). DSP students who receive approved assignment accommodations will have the 2-day grace period added to the approved extension to the on-time deadline. Please note that any extension, plus the grace period combined, cannot exceed **7 days**.
 
 You are responsible for reasonable communication with course staff. If you make a request close to the deadline, we can not guarantee that you will receive a response before the deadline. Additionally, simply submitting a request does not guarantee you will receive an extension. Even if your work is incomplete, please submit before the deadline so you can receive credit for the work you did complete.
 
