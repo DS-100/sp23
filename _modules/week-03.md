@@ -13,7 +13,8 @@ days:
 - date: 2023-02-02
   events:
     ? '**Lecture 6**{: .label .label-lecture } [Text Wrangling and Regex](lecture/lec06)'
-    ? '**Lecture Participation 6**{: .label .label-survey }'
+    : '[Note 6](https://ds100.org/course-notes/regex/regex.html)'
+    ? '**Lecture Participation 6**{: .label .label-survey } [Lecture Participation 6](https://app.sli.do/event/9JV7BTFXJ4NQRwEwXoQu5X/embed/polls/e7ba031d-fbce-4f1e-bae7-b501123b7377)'
     : ''
 - date: 2023-02-03
   events:
