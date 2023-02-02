@@ -12,7 +12,7 @@ days:
     : ''
 - date: 2023-02-02
   events:
-    ? '**Lecture 6**{: .label .label-lecture } Text Wrangling and Regex'
+    ? '**Lecture 6**{: .label .label-lecture } [Text Wrangling and Regex](lecture/lec06)'
     ? '**Lecture Participation 6**{: .label .label-survey }'
     : ''
 - date: 2023-02-03
