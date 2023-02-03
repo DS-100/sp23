@@ -18,7 +18,7 @@ days:
     : ''
 - date: 2023-02-03
   events:
-      ? '**Exam prep 1**{: .label .label-vit } [Pandas](https://drive.google.com/file/d/15xUzpsX1C3qSxow1oRCNHlg11W-UMrIK/view?usp=sharing)'
+      ? '**Exam prep 1**{: .label .label-vit } [Pandas](https://drive.google.com/file/d/1lZtWb7IA363ju_R5n5w5cuItlDKsngF5/view?usp=sharing)'
       : ''
       ? '**Lab 3**{: .label .label-lab } [Data Cleaning, EDA, Regex](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab03%2Flab03.ipynb) (due Feb 7)'
       ? '**Homework 3**{: .label .label-hw } [Tweets](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fhw%2Fhw03%2Fhw03.ipynb) (due Feb 9)'
