@@ -18,6 +18,8 @@ days:
     : ''
 - date: 2023-02-03
   events:
+      ? '**Exam prep 1**{: .label .label-vit } [Pandas](https://drive.google.com/file/d/15xUzpsX1C3qSxow1oRCNHlg11W-UMrIK/view?usp=sharing)'
+      : ''
       ? '**Lab 3**{: .label .label-lab } Data Cleaning, EDA, Regex'
       ? '**Homework 3**{: .label .label-hw } Tweets'
 ---
