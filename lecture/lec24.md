@@ -8,6 +8,8 @@ nav_exclude: true
 
 Presented by Fernando Pérez
 
+Content by many dedicated Data 100 instructors at UC Berkeley. See our [Acknowledgments](../../acks) page.
+
 
 <!--
 - [recording](https://youtu.be/RLQ2Qzx9f1Q){:target="_blank"}

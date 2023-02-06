@@ -8,6 +8,8 @@ nav_exclude: true
 
 To be presented by Will Fithian (postponed due to illness)
 
+Content by many dedicated Data 100 instructors at UC Berkeley. See our [Acknowledgments](../../acks) page.
+
 
 <!--
 - [slides](https://docs.google.com/presentation/d/1WvZQxcuKNkyJDlG-eLWneZ2Pzxxg8A7x1CVSTF6ekjE/edit?usp=sharing)

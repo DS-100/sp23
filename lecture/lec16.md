@@ -8,4 +8,4 @@ nav_exclude: true
 
 Presented by Chelle Gentemann and Fernando Pérez
 
-Content by Fernando Pérez, Alvin Wan, Suraj Rampure, Allen Shen, Joseph Gonzalez, Andrew Bray, Josh Hug, Lisa Yan, Ani Adhikari, and Sam Lau
+Content by many dedicated Data 100 instructors at UC Berkeley. See our [Acknowledgments](../../acks) page.
