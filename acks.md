@@ -23,7 +23,7 @@ course:
 # Course Acknowledgments
 {:.no_toc}
 
-The content and structure of Data 100 has been designed and developed over the years thanks to many dedicated faculty and instructors at UC Berkeley.
+The content and structure of Data 100 have been designed and developed over the years thanks to many dedicated faculty and instructors at UC Berkeley.
 
 The *Learning Data Science* textbook that this course follows is authored by Sam Lau, Joseph Gonzalez, and Deborah Nolan.
 
@@ -39,4 +39,4 @@ Suraj Rampure,
 Allen Shen,
 Alvin Wan,
 and
-Lisa Yan
+Lisa Yan.
