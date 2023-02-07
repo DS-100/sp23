@@ -5,7 +5,7 @@ days:
 - date: 2023-02-07
   events:
     ? '**Lecture 7**{: .label .label-lecture } [Visualization I](lecture/lec07)'
-    ? '**Discussion 3**{: .label .label-disc } EDA and Regex [worksheet](https://drive.google.com/file/d/1vjryD2ozLAAJblVT4JQLvsWlICKxKxDC/view?usp=sharing), [worksheet notebook](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fdisc%2Fdisc03)' 
+    ? '**Discussion 3**{: .label .label-disc } EDA and Regex [worksheet](https://drive.google.com/file/d/1vjryD2ozLAAJblVT4JQLvsWlICKxKxDC/view?usp=sharing), [worksheet notebook](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fdisc%2Fdisc03%2Fdisc03_coding_excercises_v2.ipynb)' 
     : ''
     ? '**Lecture Participation 7**{: .label .label-survey }'
     : ''
