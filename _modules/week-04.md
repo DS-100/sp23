@@ -16,6 +16,8 @@ days:
     : ''
 - date: 2023-02-10
   events:
+      ? '**Exam prep 2**{: .label .label-vit } Data Cleaning, EDA and Regex'
+      ? '**Lin Alg Review**{: .label .label-vit } [Linear Algebra Review #1](https://edstem.org/us/courses/33744/discussion/2525919)'
       ? '**Lab 4**{: .label .label-lab } Transformations'
       ? '**Homework 4**{: .label .label-hw } Bike Sharing'
 ---
