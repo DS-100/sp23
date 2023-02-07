@@ -39,6 +39,7 @@ This calendar contains times for
 
 - live lectures (in <span style="color:brown">**brown**</span>)
 - live discussion sections (in <span style="color:orange">**orange**</span>)
+- live exam prep and other reviews (in <span style="color:SeaGreen">**green**</span>)
 
 <!-- **Note: All events on this calendar are virtual.** -->
 
