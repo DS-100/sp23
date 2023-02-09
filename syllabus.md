@@ -81,12 +81,14 @@ UC Berkeley’s <a href="https://ophd.berkeley.edu/">Title IX website</a> provid
 
 Your reaction to this topic might be to laugh it off, or to make or think snide remarks about “political correctness” or jokes about consent or other things. You might think people just need to grow a thicker skin or learn to take a joke. This isn’t your decision to make. Research shows the consequences (emotional as well as physical) on people who experience harassment. When your behavior forces another student to focus on something other than their education, you have crossed a line. You have no right to take someone else’s education away from them.
 
-### Communicate Issues with Course Staff
+### Communicate Issues with Course Staff and/or the Department
 
 **We take all complaints about unprofessional or discriminatory behavior seriously.**
 Professionalism and respect for diversity are not just matters between students; they also apply to how the course staff treat the students. The staff of this course will treat you in a way that respects our differences. However, despite our best efforts, we might slip up, hopefully inadvertently. If you are concerned about classroom environment issues created by the staff or overall class dynamic, please feel free to talk to us about it. The instructors in particular welcome any comments or concerns regarding conduct of the course and the staff. See [below](#office-hours-and-communication) for how to best reach us.
 
-We are committed to creating a learning environment welcoming of all students that supports a diversity of thoughts, perspectives and experiences and respects your identities and backgrounds (including race, ethnicity, nationality, gender identity, socioeconomic class, sexual orientation, language, religion, ability, and more.) To help accomplish this:
+*From the Data Science Department*: [Data Science Undergraduate Studies](https://data.berkeley.edu/academics/undergraduate-programs) faculty and staff are committed to creating a community where every person feels [respected, included, and supported](https://data.berkeley.edu/equity-inclusion). We recognize that incidents may happen, sometimes unintentionally, that run counter to this goal. There are many things we can do to try to improve the climate for students, but we need to understand where the challenges lie. If you experience a remark, or disrespectful treatment, or if you feel you are being ignored, excluded or marginalized in a course or program-related activity, please speak up. Consider talking to your instructor, but you are also welcome to contact Executive Director Christina Teller at [cpteller@berkeley.edu](mailto: cpteller@berkeley.edu) or report an incident anonymously through this [online form](https://docs.google.com/forms/d/e/1FAIpQLSfBwaUe7VMQz6VzkYFvf4KYwNSTve9iJlBSQyAmsXoSE0LnWw/viewform).
+
+As course staff, we are committed to creating a learning environment welcoming of all students that supports a diversity of thoughts, perspectives and experiences and respects your identities and backgrounds (including race, ethnicity, nationality, gender identity, socioeconomic class, sexual orientation, language, religion, ability, and more.) To help accomplish this:
 
 - If your name and/or pronouns differ from those that appear in your official records, please let us know.
 - If you feel like your performance in the class is being affected by your experiences outside of class (e.g., family matters, current events), please don’t hesitate to come and talk with us. We want to be resources for you.
@@ -181,6 +183,7 @@ We want to enable everyone to succeed in this course. We encourage you to discus
 Course Communication:
 
 - **EdStem**, or **Ed** for short, is our course forum this semester. The course is [here]({{page.course.edstem}}). <i>**All course announcements will be through Ed.**</i> We are not using bCourses this semester. Please check out EdStem or the [FAQ]({{page.course.faq}}) page first before emailing course staff directly.
+  - Ed is a formal, academic space. We must demonstrate appropriate respect, consideration, and compassion for others. Please be friendly and thoughtful; our community draws from a wide spectrum of valuable experiences. For further reading, please reference [Berkeley’s Principles of Community](https://diversity.berkeley.edu/principles-community) and the [Berkeley Campus Code of Student Conduct](https://sa.berkeley.edu/sites/default/files/Code%20of%20Conduct_January%202016.pdf).
 
 - **Staff email**:
 Our course staff email is [{{page.course.email}}](mailto:{{page.course.email}}). Note that to ensure more timely responses, this address is monitored by a team of instructors ({{page.course.instructors}}), Head TAs (Kanu Grover and Bella Crouch), as well as several lead GSIs, to ensure more timely responses. 
