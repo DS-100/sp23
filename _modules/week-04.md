@@ -11,7 +11,7 @@ days:
     : ''
 - date: 2023-02-09
   events:
-    ? '**Lecture 8**{: .label .label-lecture } Probability & Visualization II'
+    ? '**Lecture 8**{: .label .label-lecture } [Visualization II](lecture/lec08)'
     ? '**Lecture Participation 8**{: .label .label-survey }'
     : ''
 - date: 2023-02-10
