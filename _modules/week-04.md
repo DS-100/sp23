@@ -12,7 +12,7 @@ days:
 - date: 2023-02-09
   events:
     ? '**Lecture 8**{: .label .label-lecture } [Visualization II](lecture/lec08)'
-    ? '**Lecture Participation 8**{: .label .label-survey }'
+    ? '**Lecture Participation 8**{: .label .label-survey } [Lecture Participation 8](https://app.sli.do/event/qynvCJxmiju7TtZL8EDVK9/embed/polls/e7af306f-fe1e-452b-bccf-6a2f1b362278)'
     : ''
 - date: 2023-02-10
   events:
