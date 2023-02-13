@@ -236,7 +236,9 @@ Sometimes emergencies just come up (personal health emergency, family emergency,
 For those of you in Data 100, this could be your first upper-division course. For those of you in Data 200, this could be your first time simultaneously exploring computing, statistics, and data.
 <i>**Our Grace Period Policy combined with the Extenuating Circumstances Form is meant to lower the barrier to reaching out to us, as well as build your independence in managing your academic career long-term.**</i> So please do not hesitate to reach out.
 
-**Update Monday 02/13**: Note that extenuating circumstances do not extend to logistical oversight, such as Datahub/Gradescope tests not passing, submitting only one portion of the homework, or not properly tagging pages on Gradescope. The grace period is intended to cushion submission errors; we will not grant accommodations for these cases. It is the student’s responsibility to identify and resolve these issues in advance of the on-time deadline.
+\[Update Monday 02/13\] Note that extenuating circumstances do not extend to logistical oversight, such as Datahub/Gradescope tests not passing, submitting only one portion of the homework, forgetting to save your notebook before exporting, submitting to the wrong assignment portal, or not properly tagging pages on Gradescope.
+**It is the student’s responsibility to identify and resolve these issues in advance of the on-time deadline.**
+We will not grant accommodations for these cases; instead, please use the grace period to cushion these submission errors. 
 
 ### DSP Accommodations
 
