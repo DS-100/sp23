@@ -16,6 +16,7 @@ days:
     : ''
 - date: 2023-02-17
   events:
+      ? '**Lin Alg Review**{: .label .label-vit } [Linear Algebra Review #1](https://edstem.org/us/courses/33744/discussion/2581425)'
       ? '**Lab 5**{: .label .label-lab } Modeling, Summary Statistics, and Loss Functions'
       ? '**Homework 5**{: .label .label-hw } Modeling'
 ---
