@@ -12,7 +12,7 @@ days:
 - date: 2023-02-16
   events:
     ? '**Lecture 10**{: .label .label-lecture } [Intro to Modeling, Simple Linear Regression](lecture/lec10)'
-    ? '**Lecture Participation 10**{: .label .label-survey }'
+    ? '**Lecture Participation 10**{: .label .label-survey } [Lecture Participation 10](https://app.sli.do/event/duxe7rifbQk5951Y5zkFum/embed/polls/fa9601e8-e268-4d04-9bdb-8b1504e2414f)'
     : ''
 - date: 2023-02-17
   events:
