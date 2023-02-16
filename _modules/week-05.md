@@ -11,7 +11,7 @@ days:
     : ''
 - date: 2023-02-16
   events:
-    ? '**Lecture 10**{: .label .label-lecture } Modeling, SLR'
+    ? '**Lecture 10**{: .label .label-lecture } [Intro to Modeling, Simple Linear Regression](lecture/lec10)'
     ? '**Lecture Participation 10**{: .label .label-survey }'
     : ''
 - date: 2023-02-17
