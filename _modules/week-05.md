@@ -17,8 +17,7 @@ days:
 - date: 2023-02-17
   events:
       ? '**Exam prep 3**{: .label .label-vit } [Visualizations](https://drive.google.com/file/d/13i5hZpjoJiKVBKq1VgVIB4SBDdJgS6O2/view?usp=sharing)'
-      ? '**Lin Alg Review**{: .label .label-vit } [Linear Algebra Review #2](https://edstem.org/us/courses/33744/discussion/2581425)'
-      : '[Slides](https://drive.google.com/file/d/19qhrj5vWdt-xTnebuK0CLoEElZGvoegs/view?usp=share_link)'
+      ? '**Lin Alg Review**{: .label .label-vit } [Linear Algebra Review #2](lecture/linalg02)'
       ? '**Lab 5**{: .label .label-lab } [Modeling, Loss Functions, and Summary Statistics](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab05%2Flab05.ipynb) (due Feb 21)'
       ? '**Homework 5A**{: .label .label-hw } [Modeling](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fhw%2Fhw05%2Fhw05.ipynb) (due Feb 23)'
       ? '**Homework 5B**{: .label .label-hw } [Modeling Handwritten](https://drive.google.com/file/d/1mAe0XJBqb4Ui0mkg68WRS9LogCRt4JQC/view?usp=sharing) ([LaTeX template](https://drive.google.com/file/d/1IjZMYWCHyAhCJ-mUzlEqI3gwAqmy2N8Q/view?usp=sharing)) (due Feb 23)'
