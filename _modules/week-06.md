@@ -4,7 +4,7 @@ weekNumber: 6
 days:
 - date: 2023-02-21
   events:
-    ? '**Lecture 11**{: .label .label-lecture } Constant model, loss, and transformations'
+    ? '**Lecture 11**{: .label .label-lecture } [Constant model, loss, and transformations](lecture/lec11)'
     ? '**Discussion 5**{: .label .label-disc } Probability, Sampling, and SLR' 
     : ''
     ? '**Lecture Participation 11**{: .label .label-survey }'
