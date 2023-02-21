@@ -20,7 +20,7 @@ days:
   events:
       ? '**Exam prep 2**{: .label .label-vit } [Data Cleaning, EDA and Regex](https://drive.google.com/file/d/1J9ax6-Q2iu1MNxew0nfNdpAfmwvNsPUl/view?usp=sharing)'
       : '[Solution](https://drive.google.com/file/d/15pfhDGIvNm1SU5KMrYx13RQkozRCe04f/view?usp=sharing), [Notebook](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fexam_prep%2Fprep02%2FExamPrep_2.ipynb)'
-      ? '**Lin Alg Review**{: .label .label-vit } [Linear Algebra Review #1](lecture/linalg01)'
+      ? '**Lin Alg Review 1**{: .label .label-vit } [Linear Algebra Review #1](lecture/linalg01)'
       ? '**Lab 4**{: .label .label-lab } [Visualization, Transformations and KDEs](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab04%2Flab04.ipynb) (due Feb 14)'
       ? '**Homework 4**{: .label .label-hw } [Bike Sharing](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fhw%2Fhw04%2Fhw04.ipynb) (due Feb 16)'
 ---
