@@ -5,7 +5,7 @@ days:
 - date: 2023-02-21
   events:
     ? '**Lecture 11**{: .label .label-lecture } [Constant model, loss, and transformations](lecture/lec11)'
-    ? '**Discussion 5**{: .label .label-disc } Probability, Sampling, and SLR' 
+    ? '**Discussion 5**{: .label .label-disc } [Probability, Sampling, and SLR](https://drive.google.com/file/d/1xQsDeTCwyCBbk9yhbxtWAlUXd73GCqTP/view?usp=sharing)' 
     : ''
     ? '**Lecture Participation 11**{: .label .label-survey }'
     : ''
