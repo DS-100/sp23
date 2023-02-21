@@ -5,7 +5,7 @@ days:
 - date: 2023-02-21
   events:
     ? '**Lecture 11**{: .label .label-lecture } [Constant model, loss, and transformations](lecture/lec11)'
-    ? '**Discussion 5**{: .label .label-disc } Probability, Sampling, and SLR [worksheet](https://drive.google.com/file/d/1xQsDeTCwyCBbk9yhbxtWAlUXd73GCqTP/view?usp=sharing), [notebook](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fdisc%2Fdisc05%2Fdisc05_coding_excercises.ipynb)' 
+    ? '**Discussion 5**{: .label .label-disc } Sampling and SLR [worksheet](https://drive.google.com/file/d/1xQsDeTCwyCBbk9yhbxtWAlUXd73GCqTP/view?usp=sharing), [notebook](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fdisc%2Fdisc05%2Fdisc05_coding_excercises.ipynb)' 
     : ''
     ? '**Lecture Participation 11**{: .label .label-survey }'
     : ''
