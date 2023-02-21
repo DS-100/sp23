@@ -16,6 +16,7 @@ days:
     : ''
 - date: 2023-02-24
   events:
+      ? '**Lin Alg Review 3**{: .label .label-vit } [Linear Algebra Review #3](https://edstem.org/us/courses/33744/discussion/2627925)'
       ? '**Lab 6**{: .label .label-lab } OLS'
       ? '**Homework 6**{: .label .label-hw } Regression'
 ---
