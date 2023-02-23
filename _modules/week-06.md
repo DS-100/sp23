@@ -12,7 +12,7 @@ days:
 - date: 2023-02-23
   events:
     ? '**Lecture 12**{: .label .label-lecture } [Ordinary Least Squares (Multiple Linear Regression)](lecture/lec12)'
-    ? '**Lecture Participation 12**{: .label .label-survey }'
+    ? '**Lecture Participation 12**{: .label .label-survey }[Lecture Participation 12](https://app.sli.do/event/8tkHU6AqfxoLtqYYknVT3W/embed/polls/df29dc2d-c00e-4c91-a009-b8f4399ebdf4)'
     : ''
 - date: 2023-02-24
   events:
