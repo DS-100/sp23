@@ -4,7 +4,7 @@ title: Optional Lecture - Linear Algebra 03
 nav_exclude: true
 ---
 
-# Optional Lecture - Linear Algebra 03
+# Optional Lecture - Linear Algebra 03 (Linear Regression)
 
 Presented by Narges Norouzi
 

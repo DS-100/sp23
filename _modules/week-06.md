@@ -18,7 +18,7 @@ days:
   events:
       ? '**Exam prep 4**{: .label .label-vit } [Sampling and SLR](https://drive.google.com/file/d/1GVhkT08kFKrUlRNIEP681VQOnDJPvn3K/view?usp=sharing)'
       : ''
-      ? '**Lin Alg Review 3**{: .label .label-vit } [Linear Algebra Review #3](lecture/linalg03)'
+      ? '**Lin Alg Review 3**{: .label .label-vit } [Linear Algebra Review #3 (Linear Regression)](lecture/linalg03)'
       ? '**Lab 6**{: .label .label-lab } OLS'
       ? '**Homework 6**{: .label .label-hw } Regression'
 ---
