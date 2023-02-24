@@ -20,5 +20,5 @@ days:
       : ''
       ? '**Lin Alg Review 3**{: .label .label-vit } [Linear Algebra Review #3 (Linear Regression)](lecture/linalg03)'
       ? '**Lab 6**{: .label .label-lab } OLS'
-      ? '**Homework 6**{: .label .label-hw } Regression'
+      ? '**Homework 6**{: .label .label-hw }[Regression](https://drive.google.com/file/d/1ruhL1qhLagoW7WiV3UUOWOTDh79GBBk-/view?usp=sharing)'
 ---
