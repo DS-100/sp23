@@ -255,6 +255,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  x86_64-darwin-19
   x86_64-darwin-20
   x86_64-darwin-21
 
@@ -262,4 +263,4 @@ DEPENDENCIES
   github-pages
 
 BUNDLED WITH
-   2.4.4
+   2.4.6
