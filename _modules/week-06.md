@@ -19,6 +19,6 @@ days:
       ? '**Exam prep 4**{: .label .label-vit } [Sampling and SLR](https://drive.google.com/file/d/1Ltp6kkBBTneoxqlXGhTK38PM8dX6aPnp/view?usp=sharing)'
       : ''
       ? '**Lin Alg Review 3**{: .label .label-vit } [Linear Algebra Review #3 (Linear Regression)](lecture/linalg03)'
-      ? '**Lab 6**{: .label .label-lab } OLS'
+      ? '**Lab 6**{: .label .label-lab } [OLS](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab06%2Flab06.ipynb)'
       ? '**Homework 6**{: .label .label-hw }[Regression](https://drive.google.com/file/d/1ruhL1qhLagoW7WiV3UUOWOTDh79GBBk-/view?usp=sharing)'
 ---
