@@ -16,7 +16,9 @@ days:
     : ''
 - date: 2023-02-24
   events:
-      ? '**Lin Alg Review 3**{: .label .label-vit } [Linear Algebra Review #3](https://edstem.org/us/courses/33744/discussion/2627925)'
+      ? '**Exam prep 4**{: .label .label-vit } [Sampling and SLR](https://drive.google.com/file/d/1GVhkT08kFKrUlRNIEP681VQOnDJPvn3K/view?usp=sharing)'
+      : ''
+      ? '**Lin Alg Review 3**{: .label .label-vit } [Linear Algebra Review #3](lecture/linalg03)'
       ? '**Lab 6**{: .label .label-lab } OLS'
       ? '**Homework 6**{: .label .label-hw } Regression'
 ---
