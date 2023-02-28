@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Lecture 12 – Gradient descent, sklearn
+title: Lecture 12 – Ordinary Least Squares (Multiple Linear Regression)
 nav_exclude: true
 ---
 
