@@ -16,7 +16,7 @@ days:
     : ''
 - date: 2023-03-17
   events:
-      ? '**Lab 9**{: .label .label-lab } Climate'
+      ? '**Lab 9**{: .label .label-lab } Probability'
       ? '**Project 1B**{: .label .label-hw } Housing'
       : ''
 ---

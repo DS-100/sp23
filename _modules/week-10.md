@@ -16,6 +16,6 @@ days:
     : ''
 - date: 2023-03-24
   events:
-      ? '**Lab 10**{: .label .label-lab } Probability & Inference'
+      ? '**Lab 10**{: .label .label-lab } Inference & Climate'
       ? '**Homework 7**{: .label .label-hw } Probability'
 ---
