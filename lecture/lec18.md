@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Lecture 18 – Probability II
+title: Lecture 14 – Fairness in Housing Appraisal
 nav_exclude: true
 ---
 
-# Lecture 18 – Probability II
+# Lecture 14 – Case Study (HCE): Fairness in Housing Appraisal
 
-Presented by Will Fithian
-
-Content by many dedicated Data 100 instructors at UC Berkeley. See our [Acknowledgments](../../acks) page.
+Presented by Ari Edmundson

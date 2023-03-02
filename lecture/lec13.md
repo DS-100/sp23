@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Lecture 13 – Gradient Descent
+title: Lecture 13 – sklearn, Gradient Descent I
 nav_exclude: true
 ---
 
-# Lecture 13 – Gradient Descent
+# Lecture 13 – sklearn, Gradient Descent I
 
 Presented by Lisa Yan
 
