@@ -12,7 +12,7 @@ days:
 - date: 2023-03-02
   events:
     ? '**Lecture 14**{: .label .label-lecture } [Gradient descent II / Feature Engineering](lecture/lec14)'
-    ? '**Lecture Participation 14**{: .label .label-survey }'
+    ? '**Lecture Participation 14**{: .label .label-survey } [Lecture Participation 14](https://app.sli.do/event/i6Xz13Vp6b54yie68PrxgH/embed/polls/61b4983a-fd66-4a16-a102-77fe34c416c9)'
     : ''
 - date: 2023-03-03
   events:
