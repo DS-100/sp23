@@ -16,5 +16,6 @@ days:
     : ''
 - date: 2023-03-03
   events:
+      ? '**Exam prep 5**{: .label .label-vit } [Ordinary Least Squares](https://drive.google.com/file/d/1ifPJlkWfukMHa40zDyGfX87ekf1sN9vX/view?usp=sharing)'
       ? '**Lab 7**{: .label .label-lab } Gradient descent / sklearn'
 ---
