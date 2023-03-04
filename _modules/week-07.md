@@ -17,5 +17,6 @@ days:
 - date: 2023-03-03
   events:
       ? '**Exam prep 5**{: .label .label-vit } [Ordinary Least Squares](https://drive.google.com/file/d/1ifPJlkWfukMHa40zDyGfX87ekf1sN9vX/view?usp=sharing)'
+      : '[Solution](https://drive.google.com/file/d/183T92RDetNcS7LRJ-ijnQOhP3Z66PgbZ/view?usp=sharing)'
       ? '**Lab 7**{: .label .label-lab } [Gradient descent / sklearn](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab07%2Flab07.ipynb) (due Mar 7)'
 ---
