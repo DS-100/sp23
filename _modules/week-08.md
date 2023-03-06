@@ -11,7 +11,7 @@ days:
     : ''
 - date: 2023-03-09
   events:
-    ? '**Lecture 16**{: .label .label-lecture } Probability I'
+    ? '**Lecture 16**{: .label .label-lecture } Random Variables'
     ? '**Lecture Participation 16**{: .label .label-survey }'
     : ''
     ? '**midterm**{: .label .label-exam } Midterm Exam (7-9 PM)'
