@@ -17,6 +17,6 @@ days:
 - date: 2023-04-14
   events:
     ? '**Lab 12**{: .label .label-lab } Logistic regression'
-    ? '**Project 2A**{: .label .label-hw } Spam & Ham I'
+    ? '**Project B1**{: .label .label-hw } Spam & Ham I'
     : ''
 ---

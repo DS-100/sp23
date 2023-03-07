@@ -19,6 +19,6 @@ days:
 - date: 2023-03-10
   events:
       ? '**Lab 8**{: .label .label-lab } Model Selection'
-      ? '**Project 1A**{: .label .label-hw } Housing'
+      ? '**Project A1**{: .label .label-hw } Housing'
       : ''
 ---

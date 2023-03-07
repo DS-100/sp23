@@ -17,6 +17,6 @@ days:
 - date: 2023-04-21
   events:
     ? '**Lab 13**{: .label .label-lab } PCA'
-    ? '**Project 2B**{: .label .label-hw } Spam & Ham II'
+    ? '**Project B2**{: .label .label-hw } Spam & Ham II'
     : ''
 ---
