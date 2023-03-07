@@ -5,7 +5,7 @@ days:
 - date: 2023-03-07
   events:
     ? '**Lecture 15**{: .label .label-lecture } [Cross-Validation / Regularization](lecture/lec15)'
-    ? '**Discussion 7**{: .label .label-disc } Gradient Descent, Feature Engineering' 
+    ? '**Discussion 7**{: .label .label-disc } [Gradient Descent, Feature Engineering](https://drive.google.com/file/d/1dUIFaoyvQjsqZ9kbD_xuAjOIgxeasV_h/view?usp=sharing)' 
     : ''
     ? '**Lecture Participation 15**{: .label .label-survey }'
     : ''
