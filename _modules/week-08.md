@@ -4,7 +4,7 @@ weekNumber: 8
 days:
 - date: 2023-03-07
   events:
-    ? '**Lecture 15**{: .label .label-lecture } Cross-Validation / Regularization'
+    ? '**Lecture 15**{: .label .label-lecture } [Cross-Validation / Regularization](lecture/lec15)'
     ? '**Discussion 7**{: .label .label-disc } Gradient Descent, Feature Engineering' 
     : ''
     ? '**Lecture Participation 15**{: .label .label-survey }'
