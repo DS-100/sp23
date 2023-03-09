@@ -28,6 +28,8 @@ nav_links:
   Links:
     Course FAQ:
       - 'https://ds100.org/sp23faq'
+    Course Notes:
+      - 'https://ds100.org/course-notes/'
     Datahub:
       - 'https://data100.datahub.berkeley.edu'
     Gradescope:
