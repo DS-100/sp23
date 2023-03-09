@@ -12,7 +12,7 @@ days:
 - date: 2023-03-09
   events:
     ? '**Lecture 16**{: .label .label-lecture } [Regularization + Random Variables](lecture/lec16)'
-    ? '**Lecture Participation 16**{: .label .label-survey }'
+    ? '**Lecture Participation 16**{: .label .label-survey } [Lecture Participation 16](https://app.sli.do/event/oXAdyEhC1FMr9pYR2Rqh21/embed/polls/e12f1cb8-19b4-479f-8f60-a3d251d48c49)'
     : ''
     ? '**midterm**{: .label .label-exam } Midterm Exam (7-9 PM)'
     : ''
