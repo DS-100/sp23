@@ -18,7 +18,7 @@ days:
     : ''
 - date: 2023-03-10
   events:
-      ? '**Lab 8**{: .label .label-lab } Model Selection'
-      ? '**Project A1**{: .label .label-hw } Housing'
+      ? '**Lab 8**{: .label .label-lab } [Model Selection](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab08%2Flab08.ipynb) (due Mar 14)'
+      ? '**Project A1**{: .label .label-hw } [Housing](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fproj%2FprojA1%2FprojA1.ipynb) (due Mar 16)'
       : ''
 ---
