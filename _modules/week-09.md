@@ -4,7 +4,7 @@ weekNumber: 9
 days:
 - date: 2023-03-14
   events:
-    ? '**Lecture 17**{: .label .label-lecture } Estimators, Bias and Variance'
+    ? '**Lecture 17**{: .label .label-lecture } [Estimators, Bias, and Variance](lecture/lec17)'
     ? '**Discussion 8**{: .label .label-disc } [Cross-Validation, Regularization and Random Variables](https://drive.google.com/file/d/1GyJKWkCSH2KFUZPuuQDeCBNOQH0mkJBU/view?usp=sharing)' 
     : ''
     ? '**Lecture Participation 17**{: .label .label-survey }'
