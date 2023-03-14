@@ -5,7 +5,7 @@ days:
 - date: 2023-03-14
   events:
     ? '**Lecture 17**{: .label .label-lecture } Estimators, Bias and Variance'
-    ? '**Discussion 8**{: .label .label-disc } Cross-Validation and Regularization' 
+    ? '**Discussion 8**{: .label .label-disc } [Cross-Validation and Regularization](https://drive.google.com/file/d/1GyJKWkCSH2KFUZPuuQDeCBNOQH0mkJBU/view?usp=sharing)' 
     : ''
     ? '**Lecture Participation 17**{: .label .label-survey }'
     : ''
