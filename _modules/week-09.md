@@ -7,7 +7,7 @@ days:
     ? '**Lecture 17**{: .label .label-lecture } [Estimators, Bias, and Variance](lecture/lec17)'
     ? '**Discussion 8**{: .label .label-disc } [Cross-Validation, Regularization and Random Variables](https://drive.google.com/file/d/1GyJKWkCSH2KFUZPuuQDeCBNOQH0mkJBU/view?usp=sharing)' 
     : ''
-    ? '**Lecture Participation 17**{: .label .label-survey }'
+    ? '**Lecture Participation 17**{: .label .label-survey }[Lecture Participation 17](https://app.sli.do/event/wAvWWitiNYF6gCS3Vxx3vi/embed/polls/d7c0b6b7-0023-4c9d-b7b2-ce39f65aada9)'
     : ''
 - date: 2023-03-16
   events:
