@@ -17,6 +17,6 @@ days:
 - date: 2023-03-17
   events:
       ? '**Lab 9**{: .label .label-lab } Probability'
-      ? '**Project A2**{: .label .label-hw } Housing'
+      ? '**Project A2**{: .label .label-hw } Housing II'
       : ''
 ---
