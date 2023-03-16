@@ -12,7 +12,7 @@ days:
 - date: 2023-03-16
   events:
     ? '**Lecture 18**{: .label .label-lecture } [Case study (HCE): CCAO](lecture/lec18)'
-    ? '**Lecture Participation 18**{: .label .label-survey }'
+    ? '**Lecture Participation 18**{: .label .label-survey } [Lecture Participation 18](https://app.sli.do/event/omukJd2iszpzBCEfEh9obq/embed/polls/292c3e78-f8d2-4326-9798-e2c692b7660f)'
     : ''
 - date: 2023-03-17
   events:

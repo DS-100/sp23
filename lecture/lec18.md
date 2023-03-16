@@ -9,5 +9,6 @@ nav_exclude: true
 Presented by Ari Edmundson
 
 - [slides](https://docs.google.com/presentation/d/1vdLEbf1anxfaNOYjb7hRyeapv_P8qNwhCbAPWFoqLmM/edit?usp=share_link){:target="_blank"}
+- [recording](https://youtu.be/PfEZ3gzsLfE)
 
 Content by Ari Edmundson and Margo Boenig-Lipstin
