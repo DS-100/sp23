@@ -11,7 +11,7 @@ days:
     : ''
 - date: 2023-03-16
   events:
-    ? '**Lecture 18**{: .label .label-lecture } Case study (HCE): CCAO'
+    ? '**Lecture 18**{: .label .label-lecture } [Case study (HCE): CCAO](lecture/lec18)'
     ? '**Lecture Participation 18**{: .label .label-survey }'
     : ''
 - date: 2023-03-17
