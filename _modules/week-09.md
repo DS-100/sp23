@@ -18,6 +18,6 @@ days:
   events:
       ? '**Exam prep 6**{: .label .label-vit } [Cross Validation and Random Variables](https://drive.google.com/file/d/1MlEM_uFLhmAKFdVIfneOkmvqP5Mv-DY8/view?usp=sharing)'
       ? '**Lab 9**{: .label .label-lab } Probability'
-      ? '**Project A2**{: .label .label-hw } Housing II'
+      ? '**Project A2**{: .label .label-hw } [Housing II](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fproj%2FprojA2%2FprojA2.ipynb) (due Mar 23)'
       : ''
 ---
