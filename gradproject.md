@@ -2,7 +2,7 @@
 layout: page
 title: Graduate Project
 nav_order: 6
-nav_exclude: true
+nav_exclude: false
 description: Specifications for the grad project for Data 200.
 markdown: kramdown
 ---
@@ -31,12 +31,12 @@ The purpose of the project is to give students experience in both open-ended dat
 |--------------------------	|---------------------------------------------	|---------------------------------------------	|
 | 3/24                      | Research proposal and project groups due    	| [Preliminary Form](https://docs.google.com/forms/d/e/1FAIpQLSfrQroy-EeNMJytEebl6z-WiJEKqjtK98dvlo1FR0JnBd1CyA/viewform?usp=sf_link) |
 | 4/7                       | Checkpoint                      | |
-| 4/10                      | Internal peer review open                     | |
-| 4/14                    	| Internal peer review due             	| |
+| 4/7                      | Internal peer review 1 due                     | |
+| 4/21                    	| Internal peer review 2 due             	| |
 | 4/28                   	| First draft of final report due                           	| |
-| 5/1                       | External peer review open                          	| |
+| 4/29                      | External peer review open                          	| |
 | 5/5                       | External peer review due                    	| |
-| 5/11                      | Revised final report due, Presentation video due                      	| |
+| 5/12                      | Revised final report due, Presentation video due                      	| |
 
 **Late Policy:** You may submit the **final report** and the **presentation video** late with a 10% penalty to that portion of your project for each day it is late. You may submit up to two days late. Submission times are rounded up to the next day. That is, 2 minutes late = 1 day late.
 
