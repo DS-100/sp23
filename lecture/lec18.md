@@ -8,7 +8,7 @@ nav_exclude: true
 
 Presented by Ari Edmundson
 
-- [slides](https://drive.google.com/file/d/1xKtYlffKjhCz53zCLD2HGQPlUmwWZuOM/view?usp=share_link){:target="_blank"}
+- [slides](https://docs.google.com/presentation/d/125881epVPE71VF0BV6NjlfYl-wh8kEoErabwj2sBouI/edit?usp=sharing){:target="_blank"}
 - [recording](https://youtu.be/PfEZ3gzsLfE)
 
 Content by Ari Edmundson and Margo Boenig-Lipstin
