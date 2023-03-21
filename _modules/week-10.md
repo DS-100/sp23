@@ -4,7 +4,7 @@ weekNumber: 10
 days:
 - date: 2023-03-21
   events:
-    ? '**Lecture 19**{: .label .label-lecture } Case Study: Climate & Physical Data'
+    ? '**Lecture 19**{: .label .label-lecture } [Case Study: Climate & Physical Data](lecture/lec19)'
     ? '**Discussion 9**{: .label .label-disc } Housing II and Probability I' 
     : ''
     ? '**Lecture Participation 19**{: .label .label-survey }'

@@ -1,11 +1,13 @@
 ---
 layout: page
-title: Lecture 19 – Causal Inference and Confounding
+title: Lecture 19 – Climate and Physical Data
 nav_exclude: true
 ---
 
-# Lecture 19 – Causal Inference and Confounding
+# Lecture 19 – Climate Data Science and XArray
 
-Presented by Will Fithian
+Presented by Fernando Perez
 
-Content by many dedicated Data 100 instructors at UC Berkeley. See our [Acknowledgments](../../acks) page.
+- [slides](https://docs.google.com/presentation/d/1LplB9SZU7pCsLZF12H78o0AP_NFFMQnbaUcETlqdInw/edit){:target="_blank"}
+
+Content by Fernando Perez
