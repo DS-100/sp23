@@ -8,6 +8,6 @@ nav_exclude: true
 
 Presented by Fernando Perez
 
-Content by Fernando Perez
+Content by Dr Chielle Gentemann, NASA
 
 - [slides](https://docs.google.com/presentation/d/1LplB9SZU7pCsLZF12H78o0AP_NFFMQnbaUcETlqdInw/edit){:target="_blank"}
