@@ -5,6 +5,7 @@ days:
 - date: 2023-03-07
   events:
     ? '**Lecture 15**{: .label .label-lecture } [Cross-Validation / Regularization](lecture/lec15)'
+    : '[Note 15](https://ds100.org/course-notes/cv_regularization/cv_reg.html)'
     ? '**Discussion 7**{: .label .label-disc } [Gradient Descent, Feature Engineering](https://drive.google.com/file/d/1dUIFaoyvQjsqZ9kbD_xuAjOIgxeasV_h/view?usp=sharing)' 
     : '[Solution](https://drive.google.com/file/d/1YJ81v748pxIrOqoUgHzh5MUCN6uUdTSI/view?usp=sharing)'
     ? '**Lecture Participation 15**{: .label .label-survey }[Lecture Participation 15](https://app.sli.do/event/jStDwuCJEg14D6by1r41ZR/embed/polls/ff078b4b-88ad-49ed-b0e0-54b605405d32)'
@@ -12,6 +13,7 @@ days:
 - date: 2023-03-09
   events:
     ? '**Lecture 16**{: .label .label-lecture } [Regularization + Random Variables](lecture/lec16)'
+    : '[Note 16](https://ds100.org/course-notes/probability_1/probability_1.html)'
     ? '**Lecture Participation 16**{: .label .label-survey } [Lecture Participation 16](https://app.sli.do/event/oXAdyEhC1FMr9pYR2Rqh21/embed/polls/e12f1cb8-19b4-479f-8f60-a3d251d48c49)'
     : ''
     ? '**midterm**{: .label .label-exam } Midterm Exam (7-9 PM)'
