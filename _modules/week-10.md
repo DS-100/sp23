@@ -11,7 +11,7 @@ days:
     : ''
 - date: 2023-03-23
   events:
-    ? '**Lecture 20**{: .label .label-lecture } Causal Inference and Confounding'
+    ? '**Lecture 20**{: .label .label-lecture } [Bias, Variance, and Inference](lecture/lec20)'
     ? '**Lecture Participation 20**{: .label .label-survey }'
     : ''
 - date: 2023-03-24
