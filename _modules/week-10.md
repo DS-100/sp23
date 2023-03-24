@@ -16,6 +16,7 @@ days:
     : ''
 - date: 2023-03-24
   events:
+      ? '**Exam prep 7**{: .label .label-vit } [Bias-Variance Tradeoff](https://drive.google.com/file/d/1fAbAkZ9ono8RHQw-KzmREcEwj9nAiKck/view?usp=sharing)'
       ? '**Lab 10**{: .label .label-lab } Inference & Climate'
       ? '**Homework 7**{: .label .label-hw } Probability'
 ---
