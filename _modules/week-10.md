@@ -18,6 +18,6 @@ days:
   events:
       ? '**Exam prep 7**{: .label .label-vit } [Bias-Variance Tradeoff](https://drive.google.com/file/d/1fAbAkZ9ono8RHQw-KzmREcEwj9nAiKck/view?usp=sharing)'
       : '[Solution](https://drive.google.com/file/d/1K3_zvmaa4TEWZMOkII4CK9KctDlnTFA7/view?usp=sharing)'
-      ? '**Lab 10**{: .label .label-lab } Inference & Climate'
-      ? '**Homework 7**{: .label .label-hw } Probability'
+      ? '**Lab 10**{: .label .label-lab } [Climate & Inference](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab10%2Flab10.ipynb&branch=main) (due April 4)'
+      ? '**Homework 7**{: .label .label-hw } [Probability](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&urlpath=lab%2Ftree%2Fsp23%2Fhw%2Fhw07%2Fhw07.ipynb&branch=main) (due April 6)'
 ---
