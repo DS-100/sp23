@@ -29,9 +29,9 @@ The purpose of the project is to give students experience in both open-ended dat
 
 | Date (by EOD at 11:59pm Pacific) 	| Event / Deliverable           | Link           |
 |--------------------------	|---------------------------------------------	|---------------------------------------------	|
-| 3/24                      | Research proposal and project groups due    	| [Preliminary Form](https://docs.google.com/forms/d/e/1FAIpQLSfrQroy-EeNMJytEebl6z-WiJEKqjtK98dvlo1FR0JnBd1CyA/viewform?usp=sf_link) |
-| 4/7                       | Checkpoint                      | |
-| 4/7                      | Internal peer review 1 due                     | |
+| 3/24                      | Research proposal and project groups due    	|[Preliminary Form](https://docs.google.com/forms/d/e/1FAIpQLSfrQroy-EeNMJytEebl6z-WiJEKqjtK98dvlo1FR0JnBd1CyA/viewform?usp=sf_link) |
+| 4/7                       | Checkpoint                                    |[Ed Post](https://edstem.org/us/courses/33744/discussion/2881698) |
+| 4/7                       | Internal peer review 1 due                    |[Review Form 1](https://docs.google.com/forms/d/e/1FAIpQLScjI7MBR7h54RWAOJNGMPNdpGjalkbqBOTq8iw3p3nE_UjyLA/viewform?usp=sf_link) |
 | 4/21                    	| Internal peer review 2 due             	| |
 | 4/28                   	| First draft of final report due                           	| |
 | 4/29                      | External peer review open                          	| |
@@ -52,8 +52,6 @@ The purpose of the project is to give students experience in both open-ended dat
 | Final report: Analysis notebook      	| 20%    	|
 | Final report: Project writeup        	| 30%    	|
 | Final presentation video             	| 15%    	|
-
-For project checkpoint, you will need to submit exploration data analysis results (a minimum of 3 figures required) on the gradescope.
 
 ## Datasets
 
@@ -175,6 +173,23 @@ You can access all the data within the `Topic 3/Dataset B` directory on Google D
 - `fitness_recommendation.txt` contains a link to access the fitness data from sequential sensors for various workouts. ([documentation](https://sites.google.com/eng.ucsd.edu/fitrec-project/home))
 - `amazon_reviews.txt` contains a link to access the data on a subset of Amazon product reviews. The report includes metadata such as ratings and text on the reviews and general information about the product. ([documentation](https://nijianmo.github.io/amazon/index.html))
 
+## Checkpoint
+
+The checkpoint is intended to keep you on track to meet your project goals. You will need to submit exploration data analysis results on Gradescope. See the rubric [here](#checkpoint-rubric).
+
+- **Project Introduction and Goals** Please briefly introduce your project. Think about introducing your project to someone who has a background of data science but does not know the dataset and your research question. This part should not exceed 500 words. Here are some components to help you started:
+  - What is the dataset about? How was the data collected? What are the available features and information? What is the size of the dataset?
+  - What questions do you plan to ask about the dataset? Why do we care about such a problem?
+  - What is your workflow for the project? Your first step, second step…
+  - What are the models you plan to use? Why could the model be a good fit for your project?
+  - What is your goal for the project? What are the expected deliverables?
+
+- **EDA** Show two results from your EDA work. For both parts, you should include:
+  - Your EDA questions. (for example, are there any relationships between A and B? What is the distribution of A?)
+  - Figures of good quality (tables, plots, etc.)
+  - Descriptions of your figures. Takeaways from the figures.
+- **Other Preliminary Results (optional)**: Please optionally post any other preliminary results here for our information. 
+
 ## Report Format and Submission
 The project submission should include the following two components.
 
@@ -249,11 +264,23 @@ studentIDs/
 For groups with multiple members, please use student IDs joined by `_` as the name for the top-level directory. The analysis notebooks must be runnable within this directory structure. If the narrative PDF includes any figures that are created in the analysis notebooks, the figures should be saved to `figures/` by the analysis notebooks.
 
 ## Rubrics
-### Internel Peer Review
 
-The internal peer review is a simple google form checking if each member of the group is contributing to the project and how the tasks are distributed among members.
+### Checkpoint Rubric
 
-### Externel Peer Review
+See the checkpoint description [here](#checkpoint).
+
+| Criterion | Points |
+| --- | --- |
+| Project Introduction and Goals | 4 |
+| EDA 1 | 3 |
+| EDA 2 | 3 |
+| Other Preliminary Results (optional) | 0 |
+
+### Internal Peer Review
+
+The internal peer review is a simple google form checking if each member of the group is contributing to the project and how the tasks are distributed among members. This is graded on completion.
+
+### External Peer Review
 
 Each group will peer review the projects from another group. The review will be graded by staff out of a total of 5 points. Each review should include the following components:
 
