@@ -5,7 +5,7 @@ days:
 - date: 2023-04-04
   events:
     ? '**Lecture 21**{: .label .label-lecture } SQL I'
-    ? '**Discussion 10**{: .label .label-disc } Bias and Variance' 
+    ? '**Discussion 10**{: .label .label-disc } [Bias and Variance](https://drive.google.com/file/d/1pugLsvX30UIOWmfTr-oJAsb-VuRGw8Zn/view?usp=sharing)' 
     : ''
     ? '**Lecture Participation 21**{: .label .label-survey }'
     : ''
