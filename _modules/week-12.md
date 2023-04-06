@@ -12,7 +12,7 @@ days:
 - date: 2023-04-06
   events:
     ? '**Lecture 22**{: .label .label-lecture } [SQL II / Data Serialization](lecture/lec22)'
-    ? '**Lecture Participation 22**{: .label .label-survey }'
+    ? '**Lecture Participation 22**{: .label .label-survey } [Lecture Participation](https://app.sli.do/event/pK8RoRaibpYnu7YHbR8aoo/embed/polls/a44f55c2-76b0-400f-a1cd-9dff2ca8b90f)'
     : ''
 - date: 2023-04-07
   events:
