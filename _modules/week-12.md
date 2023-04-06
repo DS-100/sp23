@@ -6,7 +6,7 @@ days:
   events:
     ? '**Lecture 21**{: .label .label-lecture } [SQL I](lecture/lec21)'
     ? '**Discussion 10**{: .label .label-disc } [Bias and Variance](https://drive.google.com/file/d/1pugLsvX30UIOWmfTr-oJAsb-VuRGw8Zn/view?usp=sharing)' 
-    : ''
+    : '[Solution](https://drive.google.com/file/d/1SQQfceqRpJeOdPiDyyDDu77UwDgSaJZd/view?usp=sharing)'
     ? '**Lecture Participation 21**{: .label .label-survey }[Lecture Participation](https://app.sli.do/event/jAcAuqhHy8iS6PtzX6fcrY/embed/polls/33b81efa-33bf-4d2b-80ba-ce6ff8db7af4)'
     : ''
 - date: 2023-04-06
