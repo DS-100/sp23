@@ -11,7 +11,7 @@ days:
     : ''
 - date: 2023-04-06
   events:
-    ? '**Lecture 22**{: .label .label-lecture } SQL II / Cloud Data'
+    ? '**Lecture 22**{: .label .label-lecture } [SQL II / Data Serialization](lecture/lec22)'
     ? '**Lecture Participation 22**{: .label .label-survey }'
     : ''
 - date: 2023-04-07
