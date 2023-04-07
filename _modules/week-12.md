@@ -16,6 +16,7 @@ days:
     : ''
 - date: 2023-04-07
   events:
+    ? '**Exam prep 8**{: .label .label-vit } [SQL](https://drive.google.com/file/d/1DhOrurNexJ-cxPtvAOsI_SuT2jzWmfT9/view?usp=sharing)'
     ? '**Lab 11**{: .label .label-lab } SQL'
     ? '**Homework 8**{: .label .label-hw } SQL'
     : ''
