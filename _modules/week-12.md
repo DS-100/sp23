@@ -17,6 +17,7 @@ days:
 - date: 2023-04-07
   events:
     ? '**Exam prep 8**{: .label .label-vit } [SQL](https://drive.google.com/file/d/1DhOrurNexJ-cxPtvAOsI_SuT2jzWmfT9/view?usp=sharing)'
+    : '[Solution](https://drive.google.com/file/d/1EqRoEloPRIT4292RMGNjxO7bFD3wqEPy/view?usp=sharing)'
     ? '**Lab 11**{: .label .label-lab } [SQL](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab11%2Flab11.ipynb) (due April 11)'
     ? '**Homework 8**{: .label .label-hw } [SQL](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fhw%2Fhw08%2Fhw08.ipynb) (due April 13)'
     : ''
