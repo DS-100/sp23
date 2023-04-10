@@ -4,7 +4,7 @@ weekNumber: 12
 days:
 - date: 2023-04-11
   events:
-    ? '**Lecture 23**{: .label .label-lecture } Logistic regression I'
+    ? '**Lecture 23**{: .label .label-lecture } [Classification and Logistic Regression I](lecture/lec23)'
     ? '**Discussion 11**{: .label .label-disc } SQL' 
     : ''
     ? '**Lecture Participation 23**{: .label .label-survey }'
