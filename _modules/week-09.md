@@ -5,7 +5,7 @@ days:
 - date: 2023-03-14
   events:
     ? '**Lecture 17**{: .label .label-lecture } [Estimators, Bias, and Variance](lecture/lec17)'
-    : '[Note 17](https://ds100.org/course-notes/case_study_HCE/case_study_HCE.html)'
+    : '[Note 17](https://ds100.org/course-notes/probability_2/probability_2.html)'
     ? '**Discussion 8**{: .label .label-disc } [Cross-Validation, Regularization and Random Variables](https://drive.google.com/file/d/1GyJKWkCSH2KFUZPuuQDeCBNOQH0mkJBU/view?usp=sharing)' 
     : '[Solution](https://drive.google.com/file/d/1gCIevnK1wuA0sBiKN24DuGz1Cg99KSLl/view?usp=sharing)'
     ? '**Lecture Participation 17**{: .label .label-survey }[Lecture Participation 17](https://app.sli.do/event/wAvWWitiNYF6gCS3Vxx3vi/embed/polls/c5192b15-1a06-4901-a9dc-83ac810b2da4)'
