@@ -13,6 +13,7 @@ days:
 - date: 2023-03-23
   events:
     ? '**Lecture 20**{: .label .label-lecture } [Bias, Variance, and Inference](lecture/lec20)'
+    : '[Note 20](https://ds100.org/course-notes/inference_causality/inference_causality.html)'
     ? '**Lecture Participation 20**{: .label .label-survey } [Lecture Participation 20](https://app.sli.do/event/8CZTbwidXBs863gmrpP7dY/embed/polls/1ea97c3a-09e5-461c-b470-2403961357e5)'
     : ''
 - date: 2023-03-24
