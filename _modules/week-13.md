@@ -5,7 +5,7 @@ days:
 - date: 2023-04-11
   events:
     ? '**Lecture 23**{: .label .label-lecture } [Classification and Logistic Regression I](lecture/lec23)'
-    ? '**Discussion 11**{: .label .label-disc } SQL' 
+    ? '**Discussion 11**{: .label .label-disc } SQL [worksheet](https://drive.google.com/file/d/1cM6oRbmPBZbqidlW20xP5lu-NrbLubbz/view?usp=sharing), [notebook](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fdisc%2Fdisc11%2Fdisc11.ipynb)' 
     : ''
     ? '**Lecture Participation 23**{: .label .label-survey }'
     : ''
