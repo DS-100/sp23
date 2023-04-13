@@ -1,19 +1,19 @@
 ---
 layout: page
-title: Lecture 24 – Logistic Regression I
+title: Lecture 24 – Logistic Regression II
 nav_exclude: true
 ---
 
-# Lecture 24 – Logistic Regression I
+# Lecture 24 – Logistic Regression II
 
-Presented by Fernando Pérez
+Presented by Narges Norouzi
 
 Content by many dedicated Data 100 instructors at UC Berkeley. See our [Acknowledgments](../../acks) page.
 
+- [slides](https://docs.google.com/presentation/d/15TXuhOqz2u_f93L5Ag5fL6igVfT66Oi8lp3zxJZSpsI/edit?usp=sharing){:target="_blank"}
+- [code](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flecture%2Flec24%2Flec24.ipynb){:target="_blank"}
+- [code HTML](../../resources/assets/lectures/lec24/lec24.html){:target="_blank"}
 
-<!--
-- [recording](https://youtu.be/RLQ2Qzx9f1Q){:target="_blank"}
---> 
 
 <!--
 A reminder – the right column of the table below contains _Quick Checks_. These are **not** required but suggested to help you check your understanding.

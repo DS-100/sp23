@@ -11,7 +11,7 @@ days:
     : ''
 - date: 2023-04-13
   events:
-    ? '**Lecture 24**{: .label .label-lecture } Logistic regression II'
+    ? '**Lecture 24**{: .label .label-lecture } [Logistic Regression II](lecture/lec24)'
     ? '**Lecture Participation 24**{: .label .label-survey }'
     : ''
 - date: 2023-04-14
