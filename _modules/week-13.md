@@ -18,6 +18,6 @@ days:
   events:
     ? '**Exam prep 9**{: .label .label-vit } [Logistic Regression](https://drive.google.com/file/d/15QekevXLc-I8kIvQOb_1_6u3azKOV36x/view?usp=sharing)'
     ? '**Lab 12**{: .label .label-lab } [Logistic regression](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab12%2Flab12.ipynb) (due Apr 18)'
-    ? '**Project B1**{: .label .label-hw } Spam & Ham I'
+    ? '**Project B1**{: .label .label-hw } [Spam & Ham I](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Fproj%2FprojB1%2FprojB1.ipynb) (due Apr 20)'
     : ''
 ---
