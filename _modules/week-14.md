@@ -4,7 +4,7 @@ weekNumber: 13
 days:
 - date: 2023-04-18
   events:
-    ? '**Lecture 25**{: .label .label-lecture } PCA I'
+    ? '**Lecture 25**{: .label .label-lecture } [PCA I](lecture/lec25)'
     ? '**Discussion 12**{: .label .label-disc } [Logistic Regression](https://drive.google.com/file/d/1VQ4R-jgvzWOmoQYScBnoR-DbpXlVIHFz/view?usp=sharing)' 
     : ''
     ? '**Lecture Participation 25**{: .label .label-survey }'
