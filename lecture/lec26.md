@@ -12,7 +12,8 @@ Content by many dedicated Data 100 instructors at UC Berkeley. See our [Acknowle
 
 - [slides](https://docs.google.com/presentation/d/19-UPcjAV5jDsOB2BuF7dOREJ1441L-D8VaZMjvZgBFg/edit?usp=sharing){:target="_blank"}
 - code: [votes](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flecture%2Flec26%2Flec26-votes.ipynb){:target="_blank"}, [fashion MNIST](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flecture%2Flec26%2Flec26-fashion-mnist.ipynb){:target="_blank"}
-- code HTML: [votes](../../resources/assets/lectures/lec26/lec26-votes.html){:target="_blank"},  [Fashion MNIST](../../resources/assets/lectures/lec26/lec26-fashion-mnist.html){:target="_blank"}, 
+- code HTML: [votes](../../resources/assets/lectures/lec26/lec26-votes.html){:target="_blank"},  [Fashion MNIST](../../resources/assets/lectures/lec26/lec26-fashion-mnist.html){:target="_blank"}
+- [recording](https://youtu.be/wbyP1DuM4MY)
 
 
 <!--
