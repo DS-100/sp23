@@ -11,7 +11,7 @@ days:
     : ''
 - date: 2023-04-20
   events:
-    ? '**Lecture 26**{: .label .label-lecture } PCA II'
+    ? '**Lecture 26**{: .label .label-lecture } [PCA II](lecture/lec26)'
     ? '**Lecture Participation 26**{: .label .label-survey }'
     : ''
 - date: 2023-04-21
