@@ -16,7 +16,7 @@ days:
     : ''
 - date: 2023-04-21
   events:
-    ? '**Lab 13**{: .label .label-lab } PCA'
+    ? '**Lab 13**{: .label .label-lab } [PCA](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab13%2Flab13.ipynb) (due April 25)'
     ? '**Project B2**{: .label .label-hw } Spam & Ham II'
     : ''
 ---
