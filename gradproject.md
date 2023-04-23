@@ -38,7 +38,10 @@ The purpose of the project is to give students experience in both open-ended dat
 | 5/5                       | External peer review due                    	| |
 | 5/12                      | Revised final report due, Presentation video due                      	| |
 
-**Late Policy:** You may submit the **final report** and the **presentation video** late with a 10% penalty to that portion of your project for each day it is late. You may submit up to two days late. Submission times are rounded up to the next day. That is, 2 minutes late = 1 day late.
+### Late Policy
+* You may submit the **first draft**, **final report** and the **presentation video** late with a 5% penalty to that portion of your project for each day it is late. You may submit up to two days late. Submission times are rounded up to the next day. That is, 2 minutes late = 1 day late.
+* Internal and external peer reviews must be completed on-time (there is no grace period for these).
+* Everything else (proposal and checkpoint) will be graded when you have completed them.
 
 ## Deliverables and Grade Breakdown
 

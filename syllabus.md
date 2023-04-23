@@ -215,7 +215,7 @@ Data 200S students will receive separate communication about course grading in t
 
 All assignments are due at <i>**11:59 PM Pacific Time**</i> on the due date specified on the [Home / Schedule](../) page. The date and time of this deadline are firm. Submitting even a minute past is considered late.
 
-<i>**Submitting by this "on-time" deadline earns an extra-credit on-time bonus, typically a ~3% perk.**</i> This is available for homeworks, projects, and labs. Graduate Final Project on-time grading policies are forthcoming and will be announced soon.
+<i>**Submitting by this "on-time" deadline earns an extra-credit on-time bonus, typically a ~3% perk.**</i> This is available for homeworks, projects, and labs. Graduate Final Project on-time grading policies are [here](../gradproject/#late-policy).
 
 ### Grace Period
 
