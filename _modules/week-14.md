@@ -5,6 +5,7 @@ days:
 - date: 2023-04-18
   events:
     ? '**Lecture 25**{: .label .label-lecture } [PCA I](lecture/lec25)'
+    : '[Note 25](https://ds100.org/course-notes/pca_1/pca_1.html)'
     ? '**Discussion 12**{: .label .label-disc } [Logistic Regression](https://drive.google.com/file/d/1VQ4R-jgvzWOmoQYScBnoR-DbpXlVIHFz/view?usp=sharing)' 
     : '[Solution](https://drive.google.com/file/d/1h9HRcJkCTSB1hVTdH05DBt3jA9-fz9h1/view?usp=sharing)'
     ? '**Lecture Participation 25**{: .label .label-survey } [Lecture Participation 25](https://app.sli.do/event/byycxcVGbDTdBNZLxFqSDB/embed/polls/c957d4a6-de32-4311-bdb2-321fb6adc73b)'
@@ -12,6 +13,7 @@ days:
 - date: 2023-04-20
   events:
     ? '**Lecture 26**{: .label .label-lecture } [PCA II](lecture/lec26)'
+    : '[Note 26](https://ds100.org/course-notes/pca_2/pca_2.html)'
     ? '**Lecture Participation 26**{: .label .label-survey } [Lecture Participation 26](https://app.sli.do/event/1ApfrJ86B4e4Nh4nd1Yawf/embed/polls/de98e3aa-e188-4127-956b-24ece1988aec)'
     : ''
 - date: 2023-04-21
