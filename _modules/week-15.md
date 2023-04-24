@@ -4,7 +4,7 @@ weekNumber: 14
 days:
 - date: 2023-04-25
   events:
-    ? '**Lecture 27**{: .label .label-lecture } KMeans Clustering'
+    ? '**Lecture 27**{: .label .label-lecture } [Clustering](lecture/lec27)'
     ? '**Discussion 13**{: .label .label-disc } PCA' 
     : ''
     ? '**Lecture Participation 27**{: .label .label-survey }'
