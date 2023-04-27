@@ -11,7 +11,7 @@ days:
     : ''
 - date: 2023-04-27
   events:
-    ? '**Lecture 28**{: .label .label-lecture } Guest + Closing'
+    ? '**Lecture 28**{: .label .label-lecture } [Guest Lecture and Conclusion](lecture/lec28)'
     ? '**Lecture Participation 28**{: .label .label-survey }'
     : ''
 - date: 2023-04-28
