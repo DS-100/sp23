@@ -17,6 +17,6 @@ days:
     : ''
 - date: 2023-04-28
   events:
-    ? '**Lab 14**{: .label .label-lab } Clustering'
+    ? '**Lab 14**{: .label .label-lab } [Clustering](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp23&branch=main&urlpath=lab%2Ftree%2Fsp23%2Flab%2Flab14%2Flab14.ipynb) (due May 2)'
     : ''
 ---
