@@ -12,6 +12,7 @@ days:
 - date: 2023-04-27
   events:
     ? '**Exam prep 11**{: .label .label-vit } [PCA and Clustering](https://drive.google.com/file/d/1TSNKGboLzZPI8K89FbaLgixYPxCHbPxB/view?usp=sharing)'
+    : '[Solution](https://drive.google.com/file/d/1YkwY5F-BlzV1LHd7uF_b97irTEFsOBkL/view?usp=sharing)'
     ? '**Lecture 28**{: .label .label-lecture } [Guest Lecture and Conclusion](lecture/lec28)'
     ? '**Lecture Participation 28**{: .label .label-survey } [Lecture Participation 28](https://app.sli.do/event/bJxg9w9zAbnY5JfNTGez3f/embed/polls/22c1ceea-eacf-486b-a3d3-7204889af979)'
     : ''
