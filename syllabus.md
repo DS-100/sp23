@@ -8,7 +8,7 @@ markdown: kramdown
 course:
     semester: Spring 2023
     edstem: https://edstem.org/us/courses/33744/
-    faq: https://ds100.org/sp23faq
+    faq: https://ds100.org/faqs/sp23
     bcourses: ""
     instructors: Lisa and Narges
     head_ta_1: Kanu Grover 
