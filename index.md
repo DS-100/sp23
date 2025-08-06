@@ -5,7 +5,7 @@ nav_order: 1
 description: A week-to-week description of the content covered in the course.
 course:
   edstem: https://edstem.org/us/courses/33744/
-  faq: https://ds100.org/sp23faq
+  faq: https://ds100.org/faqs/sp23
 currWeekNumber: 14
 ---
 
